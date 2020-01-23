@@ -33,3 +33,10 @@
 * [Clover](efi/clover.md)
 * [Mount EFI](efi/mount-efi.md)
 
+## Tools
+
+* [MaciASL](tools/maciasl.md)
+* [gfxutil](tools/gfxutil.md)
+* [Clover Configurator](tools/clover-configurator.md)
+* [IORegistryExplorer](tools/ioregistryexplorer.md)
+
