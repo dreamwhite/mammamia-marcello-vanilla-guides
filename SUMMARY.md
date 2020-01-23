@@ -35,6 +35,7 @@
 
 ## Tools
 
+* [Useful tools](tools/useful-tools.md)
 * [MaciASL](tools/maciasl.md)
 * [gfxutil](tools/gfxutil.md)
 * [Clover Configurator](tools/clover-configurator.md)
