@@ -44,6 +44,8 @@ Don't add those renames in Clover
 Please note that Hackintool suggest you some Layout IDs. In any case check the official AppleALC page for all layout ids
 {% endhint %}
 
+![Audio section](../.gitbook/assets/image%20%281%29.png)
+
 ### Layout ID
 
 Note the "layoutXX.xml" and proceed to the Installation step
