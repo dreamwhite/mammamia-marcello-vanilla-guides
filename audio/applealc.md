@@ -38,15 +38,17 @@ Don't add those renames in Clover
 * DPCIManager
 * Hackintool
 
-![Status/Devices section](../.gitbook/assets/image.png)
+![Status/Devices section](../.gitbook/assets/image%20%2810%29.png)
 
 {% hint style="warning" %}
 Please note that Hackintool suggest you some Layout IDs. In any case check the official AppleALC page for all layout ids
 {% endhint %}
 
-![Audio section](../.gitbook/assets/image%20%281%29.png)
+![Audio section](../.gitbook/assets/image%20%284%29.png)
 
 ### Layout ID
+
+![e.g. ALC295 layout ids](../.gitbook/assets/image%20%282%29.png)
 
 Note the "layoutXX.xml" and proceed to the Installation step
 
@@ -55,7 +57,11 @@ Note the "layoutXX.xml" and proceed to the Installation step
 1. Verify that your Codec name is present in AppleALC layout id list
 2. Put the compiled kexts inside /Volumes/EFI/EFI/CLOVER/kexts/Other folder
 
+![Step 2: kext installation](../.gitbook/assets/image%20%287%29.png)
+
 ### Get PCIRoot address using gfxutil
+
+![...and drag the executable &quot;gfxutil&quot; inside the terminal window and type &quot;-f HDEF&quot; ](../.gitbook/assets/image%20%286%29.png)
 
 Copy the DevicePath, "PciRoot\(0x0\)/Pci\(0x1f,0x3\)" and proceed to the next step
 
@@ -65,6 +71,10 @@ Copy the DevicePath, "PciRoot\(0x0\)/Pci\(0x1f,0x3\)" and proceed to the next st
 2. Open your config.plist
 3. Go in Devices/Properties section
 4. Fill the fields as below
+
+![Mount EFI and open config.plist](../.gitbook/assets/image%20%281%29.png)
+
+![Set Audio/Inject to No and change 77 with your layout-id](../.gitbook/assets/image%20%283%29.png)
 
 
 
@@ -90,7 +100,7 @@ Make sure that _Internal Speakers_ is in Output devices
 Test only your speakers. For the 3.5mm combojack follow the next section
 {% endhint %}
 
-
+![System Preferences, Sound and check Output section](../.gitbook/assets/image%20%288%29.png)
 
 ## Credits
 
