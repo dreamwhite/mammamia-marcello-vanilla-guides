@@ -24,3 +24,7 @@
 * [Bluetooth](connectivity/bluetooth.md)
 * [Ethernet](connectivity/ethernet.md)
 
+## USB
+
+* [USB Mapping](usb/usb-mapping.md)
+
