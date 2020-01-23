@@ -8,5 +8,5 @@
 
 ## Graphics
 
-* [Untitled](graphics/untitled.md)
+* [Patching Intel framebuffer](graphics/patching-intel-fb.md)
 
