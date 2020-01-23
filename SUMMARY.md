@@ -40,4 +40,5 @@
 * [gfxutil](tools/gfxutil.md)
 * [Clover Configurator](tools/clover-configurator.md)
 * [IORegistryExplorer](tools/ioregistryexplorer.md)
+* [GenI2C](tools/geni2c.md)
 
