@@ -28,3 +28,8 @@
 
 * [USB Mapping](usb/usb-mapping.md)
 
+## EFI
+
+* [Clover](efi/clover.md)
+* [Mount EFI](efi/mount-efi.md)
+
