@@ -106,7 +106,9 @@ Now just look for each port you've discovered before and fill a table like the b
 
 | Name | Connector type |
 | :--- | :--- |
-| HS01 | USB 3 Standard-A connector |
+| HS01 | USB 3 Power-B connector |
+| HS03 | Type C connector - USB2 and SS with Switch |
+| HS04 | USB 3 Standard-A Connector |
 
 
 
