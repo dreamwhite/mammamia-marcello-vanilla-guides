@@ -23,7 +23,7 @@ description: USB mapping procedure
 
 [Mount EFI](../../bootloaders/mount-efi.md) and place in _/Volumes/EFI/EFI/CLOVER/kexts/Other_ **USBInjectAll.kext**
 
-![](../../.gitbook/assets/image%20%2839%29.png)
+![](../../.gitbook/assets/image%20%2840%29.png)
 
 ## Step 2: extract ACPI Tables
 
@@ -37,7 +37,7 @@ On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open eve
 
  
 
-![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2832%29.png)
+![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2833%29.png)
 
 ## Step 4: identify which port is active or not
 
@@ -47,7 +47,7 @@ Open Hackintool and go in USB section
 
 Click on the Clear button \(the third button from left\)
 
-![](../../.gitbook/assets/image%20%2819%29.png)
+![](../../.gitbook/assets/image%20%2820%29.png)
 
 Then click on Refresh button
 
@@ -67,7 +67,7 @@ You should have a result like the depicted one below
 Open the previously identified SSDT with MaciASL  
 
 
-![](../../.gitbook/assets/image%20%2837%29.png)
+![](../../.gitbook/assets/image%20%2838%29.png)
 
 According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method return the following Package:
 
@@ -109,8 +109,82 @@ Now just look for each port you've discovered before and fill a table like the b
 | HS01 | USB 3 Power-B connector |
 | HS03 | Type C connector - USB2 and SS with Switch |
 | HS04 | USB 3 Standard-A Connector |
+| HS05 | Proprietary connector |
+| HS06 | Type ‘A’ connector |
+| HS07 | Type ‘A’ connector |
+| SS01 | USB 3 Standard-B connector |
+| SS04 | USB 3 Standard-A connector |
+
+## Step 6: add the SSDT methods
+
+If you look closely to `GUPC` method, you can see that it assigns for each port the **Connector Type** _**Internal**._ We need to copy this method for defining the behaviour of USB2, USB3 and USB3 powered ports.
+
+Just add those methods:
+
+```text
+        Method (USB2, 1, Serialized)
+        {
+            Name (PCKG, Package (0x04)
+            {
+                Zero, 
+                0xFF, //Proprietary connector aka USB2
+                Zero, 
+                Zero
+            })
+            PCKG [Zero] = Arg0
+            Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.USB2.PCKG */
+        }
+
+        Method (USB3, 1, Serialized)
+        {
+            Name (PCKG, Package (0x04)
+            {
+                Zero, 
+                0x03, //USB3 connector not powered
+                Zero, 
+                Zero
+            })
+            PCKG [Zero] = Arg0
+            Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.USB3.PCKG */
+        }
+
+        Method (SB3P, 1, Serialized)
+        {
+            Name (PCKG, Package (0x04)
+            {
+                Zero, 
+                0x07, //USB3 connector powered 
+                Zero, 
+                Zero
+            })
+            PCKG [Zero] = Arg0
+            Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.SB3P.PCKG */
+        }
+
+```
+
+Add those methods and replace GUPC with the port type that we've discovered previously
+
+Look at the figure below
+
+![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2816%29.png)
+
+![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%2859%29.png)
+
+Enjoy your USB ports mapped
+
+## Credits
+
+* [Olarila Native USB FIX for desktop ](https://olarila.com/forum/viewtopic.php?f=28&t=10171)
+  * it's valid also for laptops :\)
 
 
+
+
+
+
+
+ 
 
 
 
