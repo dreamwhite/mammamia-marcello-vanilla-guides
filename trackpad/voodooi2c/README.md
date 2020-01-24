@@ -24,7 +24,7 @@ What you mean?
 {% endhint %}
 
 {% hint style="warning" %}
-Activating I2C devices requires working EC and [patched framebuffer](../../graphics/patching-intel-fb.md)
+Activating I2C devices requires **working** [EC](../../acpi/ec.md) and [patched framebuffer](../../graphics/patching-intel-fb.md)
 {% endhint %}
 
 ### Requirements
@@ -42,7 +42,7 @@ Activating I2C devices requires working EC and [patched framebuffer](../../graph
 
 Open GenI2C and go in Diagnosis section
 
-![](../../.gitbook/assets/image%20%2826%29.png)
+![](../../.gitbook/assets/image%20%2828%29.png)
 
 {% hint style="danger" %}
 If CPU Generation Support led is red you can't add support for I2C devices on your laptop
@@ -75,7 +75,7 @@ Please use the Rename(s) above in the given order
 ++++++++++++++++++++++++++++++++++++++
 ```
 
-![](../../.gitbook/assets/image%20%2823%29.png)
+![](../../.gitbook/assets/image%20%2824%29.png)
 
 ```text
 <key>KextsToPatch</key>
@@ -120,6 +120,8 @@ Please use the Rename(s) above in the given order
 	</dict>
 ```
 
+Furthermore, force the loading of **IOGraphicsFamily.kext** by adding 
+
 ### MaciASL
 
 After extracting DSDT.aml and cleaning it from errors, with MaciASL, open Patch menu and apply the following patches
@@ -135,7 +137,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
 ```
 
-![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%2833%29.png)
+![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%2837%29.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
@@ -145,6 +147,16 @@ Add VoodooI2C.kext and the satellite kext
 More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Satellite%20Kexts)
 
 ![](../../.gitbook/assets/image%20%287%29.png)
+
+Furthermore don't forget to remove **VoodooPS2Mouse.kext** and **VoodooPS2Trackpad.kext** inside **VoodooPS2Controller.kext**
+
+![](../../.gitbook/assets/image%20%2832%29.png)
+
+![](../../.gitbook/assets/image%20%2835%29.png)
+
+![](../../.gitbook/assets/image%20%2826%29.png)
+
+
 
 ### GenI2C
 
