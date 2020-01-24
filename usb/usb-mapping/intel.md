@@ -69,10 +69,24 @@ Open the previously identified SSDT with MaciASL
 
 ![](../../.gitbook/assets/image%20%2837%29.png)
 
-According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method accept the following port types:  
+According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method return the following Package:
 
+```text
+Return Value Information:
+Package {
+ Connectable // Integer (BYTE)
+Type // Integer (BYTE)
+ Reserved0 // Integer
+ Reserved1 // Integer)
+}
+```
 
-| Type | USB Type |
+| Parameter | Values | Explanation |
+| :--- | :--- | :--- |
+| **Connectable** | Zero/One | Disabled port/Enabled port |
+| **Type** | table below | Specifies the host connector type |
+
+| Hex | USB Type |
 | :--- | :--- |
 | 0x00 | Type ‘A’ connector |
 | 0x01 | Mini-AB connector |
@@ -87,6 +101,12 @@ According to [Advanced Configuration and Power Interface \(ACPI\) Specification,
 | 0x0A | Type C connector - USB2 and SS without Switch |
 | 0x0B-0xFE | Reserved |
 | 0xFF | Proprietary connector |
+
+Now just look for each port you've discovered before and fill a table like the below one e.g.
+
+| Name | Connector type |
+| :--- | :--- |
+| HS01 | USB 3 Standard-A connector |
 
 
 
