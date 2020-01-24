@@ -51,6 +51,7 @@
 
 * [EC](acpi/ec.md)
 * [Unused scopes and devices](acpi/unused-scopes-and-devices.md)
+* [Renames](acpi/renames.md)
 
 ## Installation
 
