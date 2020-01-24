@@ -5,6 +5,7 @@
 ## Audio
 
 * [AppleALC](audio/applealc.md)
+* [VoodooHDA](audio/voodoohda.md)
 * [3.5mm combojack](audio/3.5mm-combojack.md)
 
 ## Graphics
