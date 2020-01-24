@@ -27,7 +27,7 @@ Open GenI2C, Diagnosis section
 #### Steps
 
 1. Open IORegistryExplorer
-2. [Mount EFI](../../efi/mount-efi.md)
+2. [Mount EFI](../../bootloaders/mount-efi.md)
 3. Navigate to /Volumes/EFI/EFI/CLOVER/ACPI/patched
 4. Open DSDT.aml with MaciASL
 
