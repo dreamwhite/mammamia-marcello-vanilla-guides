@@ -122,7 +122,7 @@ Please use the Rename(s) above in the given order
 
 Furthermore, force the loading of **IOGraphicsFamily.kext** by adding
 
-`\System\Library\Extensions\IOGraphicsFamily.kext`
+`\System\Library\Extensions\IOGraphicsFamily.kext` inside config.plist/Kernel and Kext Patches/ForceKextsToLoad
 
 ![](../../.gitbook/assets/image%20%2826%29.png)
 
