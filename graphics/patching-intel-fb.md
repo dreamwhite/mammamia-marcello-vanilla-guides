@@ -1,2 +1,0 @@
-# Patching Intel framebuffer
-

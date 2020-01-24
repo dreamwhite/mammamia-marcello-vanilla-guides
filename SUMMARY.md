@@ -10,7 +10,7 @@
 
 ## Graphics
 
-* [Intel](graphics/patching-intel-fb.md)
+* [Intel](graphics/intel.md)
 * [AMD](graphics/amd/README.md)
   * [iGPU](graphics/amd/igpu.md)
 
@@ -22,7 +22,10 @@
 
 ## Connectivity
 
-* [WiFi](connectivity/wifi.md)
+* [WiFi](connectivity/wifi/README.md)
+  * [PCIe](connectivity/wifi/pcie.md)
+  * [Mini PCIe](connectivity/wifi/mini-pcie.md)
+  * [M.2](connectivity/wifi/m.2.md)
 * [Bluetooth](connectivity/bluetooth.md)
 * [Ethernet](connectivity/ethernet.md)
 
@@ -32,20 +35,20 @@
 
 ## Bootloaders
 
-* [Clover](efi/clover.md)
+* [Clover](bootloaders/clover.md)
 * [Opencore](bootloaders/opencore.md)
-* [Mount EFI](efi/mount-efi.md)
+* [Mount EFI](bootloaders/mount-efi.md)
 
 ## Tools
 
-* [ACPI](tools/useful-tools.md)
-  * [MaciASL](tools/maciasl.md)
+* [ACPI](tools/useful-tools/README.md)
+  * [MaciASL](tools/useful-tools/maciasl.md)
 * [GenI2C](tools/geni2c.md)
 * [Debugging](tools/debugging/README.md)
   * [DPCIManager](tools/debugging/dpcimanager.md)
-  * [gfxutil](tools/gfxutil.md)
+  * [gfxutil](tools/debugging/gfxutil.md)
   * [Hackintool](tools/debugging/hackintool.md)
-  * [IORegistryExplorer](tools/ioregistryexplorer.md)
+  * [IORegistryExplorer](tools/debugging/ioregistryexplorer.md)
 
 ## ACPI
 

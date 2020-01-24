@@ -24,7 +24,7 @@ What you mean?
 {% endhint %}
 
 {% hint style="danger" %}
-Activating I2C devices requires **working** [EC](../../acpi/ec.md) and [patched framebuffer](../../graphics/patching-intel-fb.md)
+Activating I2C devices requires **working** [EC](../../acpi/ec.md) and [patched framebuffer](../../graphics/intel.md)
 {% endhint %}
 
 ### Requirements
