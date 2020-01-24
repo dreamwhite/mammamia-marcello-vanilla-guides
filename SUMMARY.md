@@ -33,6 +33,7 @@
 ## EFI
 
 * [Clover](efi/clover.md)
+* [Opencore](efi/opencore.md)
 * [Mount EFI](efi/mount-efi.md)
 
 ## Tools
