@@ -18,17 +18,13 @@ What you mean?
 
 ## This is how to map USB on hackintosh
 
-{% hint style="info" %}
-**Q:** Can this procedure break my hackintosh?  
-**A:** The following procedure is safe your hackintosh. Just fix the ACPI errors. 
-{% endhint %}
+{% page-ref page="intel.md" %}
 
-### Requirements
+{% page-ref page="amd.md" %}
 
-* DSDT.aml
-* *  [Extracting ACPI tables]()
-* MaciASL
-* Clover Configurator
-* USBMap
-* IORegistryExplorer
+
+
+
+
+
 

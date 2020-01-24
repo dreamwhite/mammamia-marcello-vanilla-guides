@@ -37,7 +37,9 @@
 
 ## USB
 
-* [USB Mapping](usb/usb-mapping.md)
+* [USB Mapping](usb/usb-mapping/README.md)
+  * [AMD](usb/usb-mapping/amd.md)
+  * [Intel](usb/usb-mapping/intel.md)
 
 ## Bootloaders
 
