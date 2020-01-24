@@ -12,7 +12,7 @@ description: The following is a collection of fixes that I've found during the t
 
 Open GenI2C, Diagnosis section
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 #### Requirements
 
@@ -22,12 +22,15 @@ Open GenI2C, Diagnosis section
 
 #### Steps
 
-1. [Mount EFI](../../efi/mount-efi.md)
-2. Navigate to /Volumes/EFI/EFI/CLOVER/ACPI/patched
-3. Open DSDT.aml with MaciASL
-4. Search for "USTP"
+1. Open IORegistryExplorer
+2. [Mount EFI](../../efi/mount-efi.md)
+3. Navigate to /Volumes/EFI/EFI/CLOVER/ACPI/patched
+4. Open DSDT.aml with MaciASL
+5. Search for "USTP"
 
-![](../../.gitbook/assets/image%20%2818%29.png)
+![Step 1: search &quot;I2C&quot;](../../.gitbook/assets/image%20%289%29.png)
+
+![](../../.gitbook/assets/image%20%2819%29.png)
 
 Change "USTP" to "One" as depicted in the following screenshot
 
