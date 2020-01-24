@@ -36,12 +36,15 @@
 
 * [ACPI](tools/useful-tools/README.md)
   * [MaciASL](tools/useful-tools/maciasl.md)
-* [Clover Configurator](tools/clover-configurator.md)
+* [Bootloaders](tools/bootloaders/README.md)
+  * [Clover](tools/bootloaders/clover/README.md)
+    * [Clover Configurator](tools/bootloaders/clover/clover-configurator.md)
 * [GenI2C](tools/geni2c.md)
 * [Debugging](tools/debugging/README.md)
+  * [DPCIManager](tools/debugging/dpcimanager.md)
   * [gfxutil](tools/debugging/gfxutil.md)
-  * [IORegistryExplorer](tools/debugging/ioregistryexplorer.md)
   * [Hackintool](tools/debugging/hackintool.md)
+  * [IORegistryExplorer](tools/debugging/ioregistryexplorer.md)
 
 ## ACPI
 
