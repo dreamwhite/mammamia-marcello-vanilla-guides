@@ -2,7 +2,7 @@
 description: Remove unused USB ports
 ---
 
-# USB Mapping
+# Mapping
 
 ### Marcello, what is it?
 

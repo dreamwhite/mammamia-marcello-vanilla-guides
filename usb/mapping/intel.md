@@ -17,7 +17,7 @@ description: USB mapping procedure
 * Hackintool
 * Clover Configurator
 * IORegistryExplorer
-* [USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/RehabMan-USBInjectAll-2018-1108.zip)
+* [USBInjectAll](../../installation/kexts/usb/usbinjectall.md#download-link)
 
 ## Step 1: Installing the kext
 

@@ -42,10 +42,11 @@ Currently, only Intel controllers are supported. The most commonly used SMBIOS m
 
 ## Download link
 
-* [BitBucket](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/RehabMan-USBInjectAll-2018-1108.zip)
+* [GitHub](https://github.com/Sniki/OS-X-USB-Inject-All/releases)
 
 ## Credits
 
-* RehabMan
-* [USBInjectAll GitHub repo](https://github.com/RehabMan/OS-X-USB-Inject-All)
+* RehabMan for initial contribution
+* [USBInjectAll GitHub repo](https://github.com/RehabMan/OS-X-USB-Inject-All) Rehabman
+* [USBInjectAll Github repo](https://github.com/Sniki/OS-X-USB-Inject-All/) Sniki
 
