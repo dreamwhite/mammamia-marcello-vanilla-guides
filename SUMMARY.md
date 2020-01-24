@@ -9,7 +9,7 @@
 
 ## Graphics
 
-* [Intel](graphics/intel.md)
+* [Intel](graphics/patching-intel-fb.md)
 * [AMD](graphics/amd/README.md)
   * [iGPU](graphics/amd/igpu.md)
 
@@ -36,17 +36,17 @@
 
 ## Tools
 
-* [ACPI](tools/useful-tools/README.md)
-  * [MaciASL](tools/useful-tools/maciasl.md)
+* [ACPI](tools/useful-tools.md)
+  * [MaciASL](tools/maciasl.md)
 * [Bootloaders](tools/bootloaders/README.md)
   * [Clover](tools/bootloaders/clover/README.md)
-    * [Clover Configurator](tools/bootloaders/clover/clover-configurator.md)
+    * [Clover Configurator](tools/clover-configurator.md)
 * [GenI2C](tools/geni2c.md)
 * [Debugging](tools/debugging/README.md)
   * [DPCIManager](tools/debugging/dpcimanager.md)
-  * [gfxutil](tools/debugging/gfxutil.md)
+  * [gfxutil](tools/gfxutil.md)
   * [Hackintool](tools/debugging/hackintool.md)
-  * [IORegistryExplorer](tools/debugging/ioregistryexplorer.md)
+  * [IORegistryExplorer](tools/ioregistryexplorer.md)
 
 ## ACPI
 
@@ -59,4 +59,9 @@
   * [Asus](installation/bioses/asus.md)
   * [Gigabyte](installation/bioses/gigabyte.md)
   * [MSI](installation/bioses/msi.md)
+
+## CPU
+
+* [AMD](cpu/amd.md)
+* [Intel](cpu/intel.md)
 
