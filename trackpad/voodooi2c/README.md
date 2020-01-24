@@ -162,7 +162,7 @@ Furthermore don't forget to remove **VoodooPS2Mouse.kext** and **VoodooPS2Trackp
 
 ![](../../.gitbook/assets/image%20%2811%29.png)
 
-Finally copy VoodooPS2Controller.kext to _/Volumes/EFI/EFI/CLOVER/kexts/Other_ 
+Finally copy **VoodooPS2Controller.kext** to _/Volumes/EFI/EFI/CLOVER/kexts/Other_ 
 
 
 
