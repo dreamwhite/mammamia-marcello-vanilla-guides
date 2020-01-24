@@ -148,7 +148,7 @@ More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Sa
 
 ![](../../.gitbook/assets/image%20%288%29.png)
 
-Furthermore don't forget to remove **VoodooPS2Mouse.kext** and **VoodooPS2Trackpad.kext** inside **VoodooPS2Controller.kext**
+Furthermore don't forget to remove **VoodooPS2Mouse.kext** and **VoodooPS2Trackpad.kext** inside **VoodooPS2Controller.kext** to avoid trackpad conflicts
 
 ![](../../.gitbook/assets/image%20%2836%29.png)
 
