@@ -10,7 +10,7 @@
 
 ## Graphics
 
-* [Intel](graphics/intel.md)
+* [Intel](graphics/patching-intel-fb.md)
 * [AMD](graphics/amd/README.md)
   * [iGPU](graphics/amd/igpu.md)
 
@@ -32,26 +32,26 @@
 
 ## Bootloaders
 
-* [Clover](bootloaders/clover.md)
+* [Clover](efi/clover.md)
 * [Opencore](bootloaders/opencore.md)
-* [Mount EFI](bootloaders/mount-efi.md)
+* [Mount EFI](efi/mount-efi.md)
 
 ## Tools
 
-* [ACPI](tools/useful-tools/README.md)
-  * [MaciASL](tools/useful-tools/maciasl.md)
+* [ACPI](tools/useful-tools.md)
+  * [MaciASL](tools/maciasl.md)
 * [GenI2C](tools/geni2c.md)
 * [Debugging](tools/debugging/README.md)
   * [DPCIManager](tools/debugging/dpcimanager.md)
-  * [gfxutil](tools/debugging/gfxutil.md)
+  * [gfxutil](tools/gfxutil.md)
   * [Hackintool](tools/debugging/hackintool.md)
-  * [IORegistryExplorer](tools/debugging/ioregistryexplorer.md)
+  * [IORegistryExplorer](tools/ioregistryexplorer.md)
 
 ## ACPI
 
 * [EC](acpi/ec.md)
-* [Unused scopes and devices](acpi/unused-scopes-and-devices.md)
 * [Renames](acpi/renames.md)
+* [Unused scopes and devices](acpi/unused-scopes-and-devices.md)
 
 ## Installation
 
@@ -60,6 +60,12 @@
   * [Asus](installation/bioses/asus.md)
   * [Gigabyte](installation/bioses/gigabyte.md)
   * [MSI](installation/bioses/msi.md)
+* [USB Creation](usb-creation/README.md)
+  * [gibMacOS](usb-creation/gibmacos/README.md)
+    * [Windows](usb-creation/gibmacos/windows/README.md)
+      * [Internet recovery install](usb-creation/gibmacos/windows/internet-recovery-install.md)
+  * [createinstallmedia](usb-creation/createinstallmedia.md)
+  * [\[Beta\] Premade vanilla images](usb-creation/beta-premade-vanilla-images.md)
 
 ## CPU
 
