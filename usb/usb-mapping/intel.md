@@ -17,11 +17,13 @@ description: USB mapping procedure
 * Clover Configurator
 * USBMap
 * IORegistryExplorer
-* USBInjectAll
+* [USBInjectAll](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/RehabMan-USBInjectAll-2018-1108.zip)
 
-## Step 1
+## Step 1: Installing the kext
 
-[Mount EFI](../../bootloaders/mount-efi.md) and place in _/Volumes/EFI/EFI/CLOVER/kexts/Other_ USBInjectAll.kext
+[Mount EFI](../../bootloaders/mount-efi.md) and place in _/Volumes/EFI/EFI/CLOVER/kexts/Other_ **USBInjectAll.kext**
+
+![](../../.gitbook/assets/image%20%2832%29.png)
 
 
 
