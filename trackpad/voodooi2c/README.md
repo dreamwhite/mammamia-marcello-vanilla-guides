@@ -38,7 +38,7 @@ What you mean?
 
 Open GenI2C and go in Diagnosis section
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 {% hint style="danger" %}
 If CPU Generation Support led is red you can't add support for I2C devices on your laptop
@@ -71,7 +71,7 @@ Please use the Rename(s) above in the given order
 ++++++++++++++++++++++++++++++++++++++
 ```
 
-![](../../.gitbook/assets/image%20%2818%29.png)
+![](../../.gitbook/assets/image%20%2819%29.png)
 
 ```text
 <key>KextsToPatch</key>
@@ -131,7 +131,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
 ```
 
-![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%2828%29.png)
+![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%2829%29.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
