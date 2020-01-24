@@ -64,6 +64,7 @@
 * [Renames](acpi/renames.md)
 * [Unused scopes and devices](acpi/unused-scopes-and-devices.md)
 * [\[EXTREME\] DSDT cleaning 100%](acpi/extreme-dsdt-cleaning-100.md)
+* [Extracting ACPI tables](acpi/extracting-acpi-tables.md)
 
 ## Installation
 
