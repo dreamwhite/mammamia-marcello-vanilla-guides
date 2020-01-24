@@ -9,7 +9,9 @@
 
 ## Graphics
 
-* [Patching Intel framebuffer](graphics/patching-intel-fb.md)
+* [Intel](graphics/intel.md)
+* [AMD](graphics/amd/README.md)
+  * [iGPU](graphics/amd/igpu.md)
 
 ## Trackpad
 
