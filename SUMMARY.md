@@ -10,9 +10,11 @@
 
 ## Graphics
 
-* [Intel](graphics/intel.md)
 * [AMD](graphics/amd/README.md)
   * [iGPU](graphics/amd/igpu.md)
+* [Intel](graphics/intel.md)
+* [NVidia](graphics/nvidia.md)
+* [Web Drivers](graphics/web-drivers.md)
 
 ## Trackpad
 
