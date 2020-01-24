@@ -42,3 +42,7 @@
 * [IORegistryExplorer](tools/ioregistryexplorer.md)
 * [GenI2C](tools/geni2c.md)
 
+## ACPI
+
+* [EC](acpi/ec.md)
+

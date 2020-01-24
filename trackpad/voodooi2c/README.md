@@ -23,6 +23,10 @@ What you mean?
 **A:** The following procedure is safe your hackintosh. Just fix the ACPI errors. 
 {% endhint %}
 
+{% hint style="warning" %}
+Activating I2C devices requires working EC and [patched framebuffer](../../graphics/patching-intel-fb.md)
+{% endhint %}
+
 ### Requirements
 
 * At least Intel Core Broadwell generation
