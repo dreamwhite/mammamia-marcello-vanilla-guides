@@ -23,9 +23,9 @@ description: USB mapping procedure
 
 [Mount EFI](../../bootloaders/mount-efi.md) and place in _/Volumes/EFI/EFI/CLOVER/kexts/Other_ **USBInjectAll.kext**
 
-![](../../.gitbook/assets/image%20%2834%29.png)
+![](../../.gitbook/assets/image%20%2839%29.png)
 
-## Step 2: Extract ACPI Tables
+## Step 2: extract ACPI Tables
 
 {% page-ref page="../../acpi/extracting-acpi-tables.md" %}
 
@@ -37,13 +37,58 @@ On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open eve
 
  
 
-![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2828%29.png)
+![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2832%29.png)
 
 ## Step 4: identify which port is active or not
 
 Open Hackintool and go in USB section
 
-![](../../.gitbook/assets/image%20%2827%29.png)
+![](../../.gitbook/assets/image%20%2812%29.png)
+
+Click on the Clear button \(the third button from left\)
+
+![](../../.gitbook/assets/image%20%2819%29.png)
+
+Then click on Refresh button
+
+![](../../.gitbook/assets/image%20%282%29.png)
+
+Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for USB3.0 etc.\)  
+Then remove any port that isn't highlighted with the second button.  
+  
+You should have a result like the depicted one below
+
+ 
+
+![](../../.gitbook/assets/image%20%281%29.png)
+
+## Step 5: setup the ports inside SSDT
+
+Open the previously identified SSDT with MaciASL  
+
+
+![](../../.gitbook/assets/image%20%2837%29.png)
+
+According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method accept the following port types:  
+
+
+| Type | USB Type |
+| :--- | :--- |
+| 0x00 | Type ‘A’ connector |
+| 0x01 | Mini-AB connector |
+| 0x02 | ExpressCard |
+| 0x03 | USB 3 Standard-A connector |
+| 0x04 | USB 3 Standard-B connector |
+| 0x05 | USB 3 Micro-B connector |
+| 0x06 | USB 3 Micro-AB connector |
+| 0x07 | USB 3 Power-B connector |
+| 0x08 | Type C connector - USB2-only |
+| 0x09 | Type C connector - USB2 and SS with Switch |
+| 0x0A | Type C connector - USB2 and SS without Switch |
+| 0x0B-0xFE | Reserved |
+| 0xFF | Proprietary connector |
+
+
 
 
 
