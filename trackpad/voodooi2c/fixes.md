@@ -36,5 +36,9 @@ Change "USTP" to "One" as depicted in the following screenshot
 
 ![Change &quot;If \(USTP&quot; to &quot;If \(One&quot;](../../.gitbook/assets/image%20%288%29.png)
 
+Change "I2C1" to "I2C0" as depicted in the following screenshot
+
+![Change &quot;If \(USTP&quot; to &quot;If \(One&quot;](../../.gitbook/assets/image%20%288%29.png)
+
 ![](../../.gitbook/assets/image%20%2818%29.png)
 
