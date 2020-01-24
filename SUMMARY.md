@@ -10,7 +10,6 @@
 ## Graphics
 
 * [Patching Intel framebuffer](graphics/patching-intel-fb.md)
-* [Hackintool](graphics/hackintool.md)
 
 ## Trackpad
 
