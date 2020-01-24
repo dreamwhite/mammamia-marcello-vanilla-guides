@@ -42,7 +42,7 @@ Activating I2C devices requires **working** [EC](../../acpi/ec.md) and [patched 
 
 Open GenI2C and go in Diagnosis section
 
-![](../../.gitbook/assets/image%20%2831%29.png)
+![](../../.gitbook/assets/image%20%2832%29.png)
 
 {% hint style="danger" %}
 If CPU Generation Support led is red you can't add support for I2C devices on your laptop
@@ -75,7 +75,7 @@ Please use the Rename(s) above in the given order
 ++++++++++++++++++++++++++++++++++++++
 ```
 
-![](../../.gitbook/assets/image%20%2826%29.png)
+![](../../.gitbook/assets/image%20%2827%29.png)
 
 ```text
 <key>KextsToPatch</key>
@@ -137,7 +137,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
 ```
 
-![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%2842%29.png)
+![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%2844%29.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
@@ -150,17 +150,19 @@ More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Sa
 
 Furthermore don't forget to remove **VoodooPS2Mouse.kext** and **VoodooPS2Trackpad.kext** inside **VoodooPS2Controller.kext**
 
-![](../../.gitbook/assets/image%20%2835%29.png)
+![](../../.gitbook/assets/image%20%2836%29.png)
 
-![](../../.gitbook/assets/image%20%2839%29.png)
+![](../../.gitbook/assets/image%20%2840%29.png)
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/image%20%2829%29.png)
 
-![Remove those two kexts](../../.gitbook/assets/image%20%2830%29.png)
+![Remove those two kexts](../../.gitbook/assets/image%20%2831%29.png)
 
 ![](../../.gitbook/assets/image.png)
 
-Finally copy the kext to _/Volumes/EFI/EFI/CLOVER/kexts/Other_ 
+![](../../.gitbook/assets/image%20%2811%29.png)
+
+Finally copy VoodooPS2Controller.kext to _/Volumes/EFI/EFI/CLOVER/kexts/Other_ 
 
 
 
@@ -168,7 +170,7 @@ Finally copy the kext to _/Volumes/EFI/EFI/CLOVER/kexts/Other_
 
 After saving the DSDT.dsl file, open GenI2C and go in GenSSDT section
 
-![Tick &quot;Generate patches for this computer&quot; and click next](../../.gitbook/assets/image%20%2822%29.png)
+![Tick &quot;Generate patches for this computer&quot; and click next](../../.gitbook/assets/image%20%2823%29.png)
 
 ![Select &quot;Interrupt \(APIC or GPIO\)&quot; and then click on Generate](../../.gitbook/assets/image%20%286%29.png)
 
@@ -186,11 +188,11 @@ Save and reboot
 
 ### Configure trackpad
 
-![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image%20%2812%29.png)
+![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image%20%2813%29.png)
 
-![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2838%29.png)
+![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2839%29.png)
 
-![](../../.gitbook/assets/image%20%2845%29.png)
+![](../../.gitbook/assets/image%20%2847%29.png)
 
 **Enjoy the gestures &lt;3**
 
