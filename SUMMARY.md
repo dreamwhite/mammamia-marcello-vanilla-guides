@@ -90,3 +90,8 @@
 * [AMD](cpu/amd.md)
 * [Intel](cpu/intel.md)
 
+## Keyboard
+
+* [PS2](keyboard/ps2.md)
+* [USB](keyboard/usb.md)
+
