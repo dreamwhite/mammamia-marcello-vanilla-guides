@@ -35,12 +35,14 @@
 
 ## Tools
 
-* [Useful tools](tools/useful-tools.md)
-* [MaciASL](tools/maciasl.md)
-* [gfxutil](tools/gfxutil.md)
+* [ACPI](tools/useful-tools/README.md)
+  * [MaciASL](tools/useful-tools/maciasl.md)
 * [Clover Configurator](tools/clover-configurator.md)
-* [IORegistryExplorer](tools/ioregistryexplorer.md)
 * [GenI2C](tools/geni2c.md)
+* [Debugging](tools/debugging/README.md)
+  * [gfxutil](tools/debugging/gfxutil.md)
+  * [IORegistryExplorer](tools/debugging/ioregistryexplorer.md)
+  * [Hackintool](tools/debugging/hackintool.md)
 
 ## ACPI
 
