@@ -169,7 +169,7 @@ Look at the figure below
 
 ![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2824%29.png)
 
-![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%2886%29.png)
+![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%2887%29.png)
 
 Repeat **Step 4** and you should see something like the depicted one below
 
