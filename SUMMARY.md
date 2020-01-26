@@ -63,6 +63,7 @@
 * [EC](acpi/ec.md)
 * [Renames](acpi/renames.md)
 * [Remove unused scopes and devices](acpi/unused-scopes-and-devices.md)
+* [Original ACPI and IORegistryExplorer from Macs](acpi/original-acpi-and-ioregistryexplorer-from-macs.md)
 * [\[EXTREME\] DSDT cleaning 100%](acpi/extreme-dsdt-cleaning-100.md)
 * [Extracting ACPI tables](acpi/extracting-acpi-tables.md)
 
