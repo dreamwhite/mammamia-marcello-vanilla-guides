@@ -46,7 +46,7 @@ Then search for every single device that is in IORegistryExplorer and compare wi
 
 You should have a result like the depicted below:
 
-![From my hackintosh](../../.gitbook/assets/image%20%2867%29.png)
+![From my hackintosh](../../.gitbook/assets/image%20%2868%29.png)
 
 ![From a MacBookPro 15,1  ](../../.gitbook/assets/image%20%2818%29.png)
 
@@ -60,7 +60,7 @@ Syntax for MaciASL patches is available [here](https://sourceforge.net/p/maciasl
 
 Open _DSDT.aml_ with MaciASL, clean it from errors and search for each device that you've wrote down previously. 
 
-![AMW0 needs to be removed](../../.gitbook/assets/image%20%2889%29.png)
+![AMW0 needs to be removed](../../.gitbook/assets/image%20%2890%29.png)
 
 {% hint style="info" %}
 Note that _AMW0_ path is _**\_SB.AMW0**_
@@ -76,7 +76,7 @@ _AMW0_  is the device we need to remove, _\_SB_ is the path.
 
 ![Click on &quot;Apply&quot; and then &quot;Compile&quot;](../../.gitbook/assets/image%20%2851%29.png)
 
-![There&apos;s only one error. Click on it and fix it as depicted below](../../.gitbook/assets/image%20%2872%29.png)
+![There&apos;s only one error. Click on it and fix it as depicted below](../../.gitbook/assets/image%20%2873%29.png)
 
 ![There are two AMW0 references](../../.gitbook/assets/image%20%2847%29.png)
 
@@ -86,7 +86,7 @@ Open again patch menu and apply the following patch
 into method label WMNF remove_entry;
 ```
 
-![Click on &quot;Apply&quot; then &quot;Compile&quot;](../../.gitbook/assets/image%20%2873%29.png)
+![Click on &quot;Apply&quot; then &quot;Compile&quot;](../../.gitbook/assets/image%20%2874%29.png)
 
 ![Another error](../../.gitbook/assets/image%20%2837%29.png)
 

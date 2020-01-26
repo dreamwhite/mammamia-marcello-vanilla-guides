@@ -169,7 +169,7 @@ Look at the figure below
 
 ![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2824%29.png)
 
-![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%2891%29.png)
+![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%2892%29.png)
 
 Save SSDT in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` __and reboot
 
