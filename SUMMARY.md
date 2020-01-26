@@ -62,7 +62,8 @@
 
 * [EC](acpi/ec.md)
 * [Renames](acpi/renames.md)
-* [Remove unused scopes and devices](acpi/unused-scopes-and-devices.md)
+* [Remove unused scopes and devices](acpi/unused-scopes-and-devices/README.md)
+  * [CPU](acpi/unused-scopes-and-devices/cpu.md)
 * [Original ACPI and IORegistryExplorer from Macs](acpi/original-acpi-and-ioregistryexplorer-from-macs/README.md)
   * [Reading dump](acpi/original-acpi-and-ioregistryexplorer-from-macs/download-link.md)
 * [\[EXTREME\] DSDT cleaning 100%](acpi/extreme-dsdt-cleaning-100.md)
