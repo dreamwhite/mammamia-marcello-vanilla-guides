@@ -14,7 +14,7 @@ What you mean?
 
 ## This is how to enable audio on hackintosh
 
-### Requirements
+## Requirements
 
 * [AppleALC compiled kext](https://github.com/acidanthera/AppleALC/releases)
 * [Lilu compiled kext](https://github.com/acidanthera/Lilu/releases)
@@ -33,7 +33,7 @@ Please note that AppleALC automatically renames HDAS/HDAU/BOD3 to HDEF
 Don't add those renames in Clover
 {% endhint %}
 
-### Identify your Codec name
+### Step 1: identify codec name
 
 * DPCIManager
 * Hackintool
@@ -46,26 +46,26 @@ Please note that Hackintool suggest you some Layout IDs. In any case check the o
 
 ![Audio section](../.gitbook/assets/image%20%2841%29.png)
 
-### Layout ID
+### Step: identify layout ID
 
 ![e.g. ALC295 layout ids](../.gitbook/assets/image%20%2836%29.png)
 
 Note the "layoutXX.xml" and proceed to the Installation step
 
-### Installation:
+### Step 3: installation:
 
 1. Verify that your Codec name is present in AppleALC layout id list
 2. Put the compiled kexts inside /Volumes/EFI/EFI/CLOVER/kexts/Other folder
 
 ![Step 2: kext installation](../.gitbook/assets/image%20%2875%29.png)
 
-### Get PCIRoot address using gfxutil
+### Step 4: get PCIRoot address using gfxutil
 
 ![...and drag the executable &quot;gfxutil&quot; inside the terminal window and type &quot;-f HDEF&quot; ](../.gitbook/assets/image%20%2874%29.png)
 
 Copy the DevicePath, "PciRoot\(0x0\)/Pci\(0x1f,0x3\)" and proceed to the next step
 
-### Clover Configurator
+### Step 5: Clover Configurator
 
 1. Mount your ESP 
 2. Open your config.plist
@@ -78,7 +78,7 @@ Copy the DevicePath, "PciRoot\(0x0\)/Pci\(0x1f,0x3\)" and proceed to the next st
 
 
 
-### Code editor
+#### Code editor
 
 Add the following code inside config.plist/Devices/Properties section
 
@@ -90,14 +90,14 @@ Add the following code inside config.plist/Devices/Properties section
 			</dict>
 ```
 
-### Check if audio is working
+### Step 6: check if audio is working
 
 {% hint style="warning" %}
 Make sure that _Internal Speakers_ is in Output devices
 {% endhint %}
 
 {% hint style="info" %}
-Test only your speakers. For the 3.5mm combojack follow the next section
+Test only speakers. For the 3.5mm combojack follow the next section
 {% endhint %}
 
 ![System Preferences, Sound and check Output section](../.gitbook/assets/image%20%2877%29.png)
