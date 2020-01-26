@@ -4,7 +4,7 @@ description: Remove unnecessary CPUs from IORegistryExplorer
 
 # CPU
 
-In order to remove unused processors from IORegistryExplorer you need to know how many cores/threads does your CPU have \(e.g. 4/8 cpu/thread cpu will have `PR00-PR07` entries in IORegistryExplorer
+In order to remove unused processors from IORegistryExplorer you need to know how many cores/threads does your CPU have \(e.g. 4/8 cores/threads CPUz will have `PR00-PR07` entries in IORegistryExplorer
 
 ## Requirements:
 
