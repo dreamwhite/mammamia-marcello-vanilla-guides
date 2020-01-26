@@ -26,7 +26,7 @@ After extracting DSDT.aml and cleaning it from errors, with MaciASL, open Patch 
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzI_kiUfZn2d5fK0Ufq%2F-LzIaKrHrrtz4w43iI2Q%2Fimage.png?alt=media&token=26436759-812d-40ac-8b67-f4610ea85997)
 
-Click on Apply, save DSDT.aml in /Volumes/EFI/CLOVER/ACPI/patched and reboot
+Click on Apply, save DSDT.aml in `/Volumes/EFI/CLOVER/ACPI/patched` and reboot
 
 ### IORegistryExplorer <a id="ioregistryexplorer"></a>
 
