@@ -27,7 +27,7 @@ What you mean?
 Activating I2C devices requires **working** [EC](../../acpi/ec.md) and [patched framebuffer](../../graphics/intel.md)
 {% endhint %}
 
-### Requirements
+## Requirements
 
 * At least Intel Core Broadwell generation
 * DSDT.aml
@@ -38,7 +38,7 @@ Activating I2C devices requires **working** [EC](../../acpi/ec.md) and [patched 
 * VoodooI2C
 * IORegistryExplorer
 
-### CPU Support
+### Step 1: CPU Support
 
 Open GenI2C and go in Diagnosis section
 
@@ -48,7 +48,7 @@ Open GenI2C and go in Diagnosis section
 If CPU Generation Support led is red you can't add support for I2C devices on your laptop
 {% endhint %}
 
-### Edit config.plist
+### Step 2: editing config.plist
 
 {% hint style="warning" %}
 The following patches prevent Apple I2C kexts from attaching to I2C controllers. Without them, VoodooI2C can't never attach
@@ -135,7 +135,7 @@ Furthermore, force the loading of **IOGraphicsFamily.kext** by adding
 
 
 
-### MaciASL
+### Step 3: patching DSDT
 
 After extracting DSDT.aml and cleaning it from errors, with MaciASL, open Patch menu and apply the following patches
 
@@ -154,7 +154,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_ma
 
 Save the file also in "Disassemled ASL File" for the next step
 
-### Kexts Installation
+### Step 4: kexts installation
 
 Add VoodooI2C.kext and the satellite kext  
 More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Satellite%20Kexts)
@@ -179,7 +179,7 @@ Finally copy **VoodooPS2Controller.kext** to _/Volumes/EFI/EFI/CLOVER/kexts/Othe
 
 
 
-### GenI2C
+### Step 5: GenI2C
 
 After saving the DSDT.dsl file, open GenI2C and go in GenSSDT section
 
@@ -187,7 +187,7 @@ After saving the DSDT.dsl file, open GenI2C and go in GenSSDT section
 
 ![Select &quot;Interrupt \(APIC or GPIO\)&quot; and then click on Generate](../../.gitbook/assets/image%20%2812%29.png)
 
-It will open a folder with Finder. Just copy the .aml file inside /Volumes/EFI/CLOVER/ACPI/patched directory
+It will open a folder with Finder. Just copy the .aml file inside `/Volumes/EFI/CLOVER/ACPI/patched` directory
 
 ![](../../.gitbook/assets/image%20%2820%29.png)
 
@@ -199,7 +199,7 @@ Then open your config.plist and add the renames inside Readme.txt
 
 Save and reboot
 
-### Configure trackpad
+### Step 6: configure trackpad
 
 ![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image%20%2825%29.png)
 

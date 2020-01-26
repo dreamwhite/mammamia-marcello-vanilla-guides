@@ -13,8 +13,8 @@
 * [AMD](graphics/amd/README.md)
   * [iGPU](graphics/amd/igpu.md)
 * [Intel](graphics/intel.md)
-* [NVidia](graphics/nvidia.md)
-* [Web Drivers](graphics/web-drivers.md)
+* [NVidia](graphics/nvidia/README.md)
+  * [Web Drivers](graphics/nvidia/web-drivers.md)
 
 ## Trackpad
 
