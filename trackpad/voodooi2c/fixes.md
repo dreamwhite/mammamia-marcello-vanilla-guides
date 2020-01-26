@@ -16,7 +16,7 @@ description: The following is a collection of fixes that I've found during the t
 
 Open GenI2C, Diagnosis section
 
-![](../../.gitbook/assets/image%20%2845%29.png)
+![](../../.gitbook/assets/image%20%2846%29.png)
 
 #### Requirements
 
@@ -33,7 +33,7 @@ Open GenI2C, Diagnosis section
 
 ![Step 1: search &quot;I2C&quot;](../../.gitbook/assets/image%20%2822%29.png)
 
-![](../../.gitbook/assets/image%20%2838%29.png)
+![](../../.gitbook/assets/image%20%2839%29.png)
 
 Change `USTP` to `One` as depicted in the following screenshot
 

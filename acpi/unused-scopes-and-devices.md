@@ -34,7 +34,11 @@ What you mean?
 
 ### Step 1: identify unused devices
 
-Open IORegistryExplorer 
+Open IORegistryExplorer and open the previously downloaded same SMBIOS Mac IORegistryExplorer exported file.
+
+![](../.gitbook/assets/image%20%2838%29.png)
+
+
 
 ### 
 
