@@ -112,7 +112,7 @@ Proceed by fixing other errors in the same way
 
 ![Remove the lines which contains the removed method](../../.gitbook/assets/image%20%2862%29.png)
 
-After cleaning DSDT from errors save it in _/Volumes/EFI/EFI/CLOVER/ACPI/patched_ and reboot.
+After cleaning DSDT from errors save it in _`/Volumes/EFI/EFI/CLOVER/ACPI/patched`_and reboot.
 
 The new IORegistryExplorer structure should be similar to the same SMBIOS machine.
 
