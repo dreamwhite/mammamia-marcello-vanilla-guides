@@ -23,7 +23,7 @@ description: USB mapping procedure
 
 [Mount EFI](../../bootloaders/mount-efi.md) and place in _/Volumes/EFI/EFI/CLOVER/kexts/Other_ **USBInjectAll.kext**
 
-![](../../.gitbook/assets/image%20%2843%29.png)
+![](../../.gitbook/assets/image%20%2845%29.png)
 
 ## Step 2: extract ACPI Tables
 
@@ -37,17 +37,17 @@ On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open eve
 
  
 
-![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2835%29.png)
+![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2837%29.png)
 
 ## Step 4: identify which port is active or not
 
 Open Hackintool and go in USB section
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/image%20%2814%29.png)
 
 Click on the Clear button \(the third button from left\)
 
-![](../../.gitbook/assets/image%20%2822%29.png)
+![](../../.gitbook/assets/image%20%2824%29.png)
 
 Then click on Refresh button
 
@@ -67,7 +67,7 @@ You should have a result like the depicted one below
 Open the previously identified SSDT with MaciASL  
 
 
-![](../../.gitbook/assets/image%20%2841%29.png)
+![](../../.gitbook/assets/image%20%2843%29.png)
 
 According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method return the following Package:
 
@@ -167,9 +167,9 @@ Add those methods and replace GUPC with the port type that we've discovered prev
 
 Look at the figure below
 
-![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2818%29.png)
+![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2820%29.png)
 
-![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%2863%29.png)
+![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%2866%29.png)
 
 Repeat **Step 4** and you should see something like the depicted one below
 

@@ -6,7 +6,7 @@ description: The following is a collection of fixes that I've found during the t
 
 ### Trackpad is unresponsive and no trackpad preference panel in System Preferences
 
-![From gitter.im/alexandred/VoodooI2C](../../.gitbook/assets/image%20%2812%29.png)
+![From gitter.im/alexandred/VoodooI2C](../../.gitbook/assets/image%20%2813%29.png)
 
 ### Missing SSCN or FMCN bus speed config
 
@@ -16,7 +16,7 @@ description: The following is a collection of fixes that I've found during the t
 
 Open GenI2C, Diagnosis section
 
-![](../../.gitbook/assets/image%20%2848%29.png)
+![](../../.gitbook/assets/image%20%2851%29.png)
 
 #### Requirements
 
@@ -31,23 +31,23 @@ Open GenI2C, Diagnosis section
 3. Navigate to /Volumes/EFI/EFI/CLOVER/ACPI/patched
 4. Open DSDT.aml with MaciASL
 
-![Step 1: search &quot;I2C&quot;](../../.gitbook/assets/image%20%2823%29.png)
+![Step 1: search &quot;I2C&quot;](../../.gitbook/assets/image%20%2825%29.png)
 
-![](../../.gitbook/assets/image%20%2840%29.png)
+![](../../.gitbook/assets/image%20%2842%29.png)
 
 Change `USTP` to `One` as depicted in the following screenshot
 
-![Change &quot;If \(USTP\)&quot; in &quot;If \(One&quot;\)](../../.gitbook/assets/image%20%2817%29.png)
+![Change &quot;If \(USTP\)&quot; in &quot;If \(One&quot;\)](../../.gitbook/assets/image%20%2819%29.png)
 
 Change `I2C1` to `I2C0`
 
 ![Change \_SB.PCI0.I2C1 to...](../../.gitbook/assets/image%20%287%29.png)
 
-![](../../.gitbook/assets/image%20%2837%29.png)
+![](../../.gitbook/assets/image%20%2839%29.png)
 
 Save and reboot and test again with GenI2C diagnosis section
 
 It should be as depicted in the following screenshot
 
-![No more &quot;Missing SSCN or FFMC bus speed config&quot;](../../.gitbook/assets/image%20%2829%29.png)
+![No more &quot;Missing SSCN or FFMC bus speed config&quot;](../../.gitbook/assets/image%20%2831%29.png)
 

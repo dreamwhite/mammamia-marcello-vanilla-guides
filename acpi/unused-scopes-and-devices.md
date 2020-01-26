@@ -34,9 +34,23 @@ What you mean?
 
 ### Step 1: identify unused devices
 
-Open IORegistryExplorer and the previously downloaded same SMBIOS Mac IORegistryExplorer exported file.
+{% hint style="info" %}
+Same family Macs \(_MacBookPro14,x_ etc\) have a similar IORegistryExplorer structure
+{% endhint %}
 
-![e.g. SMBIOS is MacBookPro15,2 ](../.gitbook/assets/image%20%2814%29.png)
+Open IORegistryExplorer and the previously downloaded same SMBIOS Mac IORegistryExplorer export file.
+
+![e.g. SMBIOS is MacBookPro15,2](../.gitbook/assets/image%20%2812%29.png)
+
+Then search for every single device that is in IORegistryExplorer and compare with the same SMBIOS Mac IORegistryExplorer export file.
+
+You should have a result like the depicted below:
+
+![From my hackintosh](../.gitbook/assets/image%20%2848%29.png)
+
+![From a MacBookPro ](../.gitbook/assets/image%20%2815%29.png)
+
+
 
 
 
