@@ -1,7 +1,9 @@
 # Mammamia Marcello Vanilla Guides
 
 {% hint style="danger" %}
-**The following guide is still a work in progress. ETA: 3 months**
+**The following guide is still a work in progress.   
+Start: Mon 20 Jan 2020  
+ETA: 3 months**
 {% endhint %}
 
 {% hint style="warning" %}
