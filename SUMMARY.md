@@ -20,11 +20,11 @@
 
 * [VoodooI2C](trackpad/voodooi2c/README.md)
   * [Fixes](trackpad/voodooi2c/fixes.md)
-  * [Expert mode](trackpad/voodooi2c/untitled.md)
+  * [Expert mode](trackpad/voodooi2c/expert-mode.md)
 
 ## Connectivity
 
-* [WiFi](connectivity/wifi/README.md)
+* [WiFi](connectivity/wifi.md)
 * [Bluetooth](connectivity/bluetooth.md)
 * [Ethernet](connectivity/ethernet/README.md)
   * [Intel](connectivity/ethernet/intel.md)
