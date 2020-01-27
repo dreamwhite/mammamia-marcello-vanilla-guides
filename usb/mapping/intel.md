@@ -25,7 +25,7 @@ description: USB mapping procedure
 
 [Mount EFI](../../bootloaders/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2867%29.png)
 
 ## Step 2: extract ACPI Tables
 
@@ -39,7 +39,7 @@ On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open eve
 
  
 
-![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2849%29.png)
+![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2850%29.png)
 
 ## Step 4: identify which port is active or not
 
@@ -49,33 +49,33 @@ On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open eve
 
 Open Hackintool and go in USB section
 
-![](../../.gitbook/assets/image%20%2818%29.png)
+![](../../.gitbook/assets/image%20%286%29.png)
 
 Click on the `Clear` button \(the third button from left\)
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](../../.gitbook/assets/image%20%2857%29.png)
 
 Then click on `Refresh` button \(the third from right\)
 
-![](../../.gitbook/assets/image%20%2880%29.png)
+![](../../.gitbook/assets/image%20%2881%29.png)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for right port of mobo etc.\)  
 Then remove any port that isn't highlighted with the second button.  
   
 You should have a result like the depicted one below
 
-![](../../.gitbook/assets/image%20%2863%29.png)
+![](../../.gitbook/assets/image%20%2864%29.png)
 
  
 
-![](../../.gitbook/assets/image%20%2821%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 ## Step 5: setup the ports inside SSDT
 
 Open the previously identified SSDT with MaciASL  
 
 
-![](../../.gitbook/assets/image%20%2862%29.png)
+![](../../.gitbook/assets/image%20%2863%29.png)
 
 According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method return the following Package:
 
@@ -175,15 +175,15 @@ Add those methods and replace `GUPC` with the method that defines the USB which 
 
 Look at the figure below
 
-![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2826%29.png)
+![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2827%29.png)
 
-![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%2898%29.png)
+![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%2899%29.png)
 
 Save SSDT in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` __remove `USBInjectAll.kext` from `/Volumes/EFI/EFI/CLOVER/kexts/Other` and reboot.
 
 Repeat **Step 4** and you should see something like the depicted one below
 
-![Mapped USB](../../.gitbook/assets/image%20%2810%29.png)
+![Mapped USB](../../.gitbook/assets/image%20%2811%29.png)
 
 Enjoy your USB ports mapped
 
