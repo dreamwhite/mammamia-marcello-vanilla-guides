@@ -4,8 +4,6 @@ description: USB mapping procedure
 
 # Intel
 
-
-
 {% hint style="info" %}
 **Q:** Can this procedure break my hackintosh?  
 **A:** The following procedure is safe your hackintosh. Just fix the ACPI errors.
