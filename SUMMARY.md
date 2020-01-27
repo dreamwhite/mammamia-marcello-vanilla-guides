@@ -25,6 +25,7 @@
 ## Connectivity
 
 * [WiFi](connectivity/wifi/README.md)
+* [Bluetooth](connectivity/bluetooth.md)
 * [Ethernet](connectivity/ethernet/README.md)
   * [Intel](connectivity/ethernet/intel.md)
   * [Realtek](connectivity/ethernet/realtek.md)
