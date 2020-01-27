@@ -23,7 +23,7 @@ description: USB mapping procedure
 
 [Mount EFI](../../bootloaders/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
 
-![](../../.gitbook/assets/image%20%2861%29.png)
+![](../../.gitbook/assets/image%20%2863%29.png)
 
 ## Step 2: extract ACPI Tables
 
@@ -37,9 +37,13 @@ On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open eve
 
  
 
-![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2846%29.png)
+![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2847%29.png)
 
 ## Step 4: identify which port is active or not
+
+{% hint style="info" %}
+**SSxx**, where **SS** stands for **S**uper **S**peed, ports are for USB3.0 \(meaning that **HS01** can have **SS01** etc.\) 
+{% endhint %}
 
 Open Hackintool and go in USB section
 
@@ -54,20 +58,24 @@ Then click on Refresh button
 ![](../../.gitbook/assets/image%20%283%29.png)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for USB3.0 etc.\)  
-Then remove any port that isn't highlighted with the second button.  
+Then remove any port that isn't highlighted with the second button.
+
+  
   
 You should have a result like the depicted one below
 
+![](../../.gitbook/assets/image%20%2860%29.png)
+
  
 
-![](../../.gitbook/assets/image%20%282%29.png)
+![](../../.gitbook/assets/image%20%2845%29.png)
 
 ## Step 5: setup the ports inside SSDT
 
 Open the previously identified SSDT with MaciASL  
 
 
-![](../../.gitbook/assets/image%20%2858%29.png)
+![](../../.gitbook/assets/image%20%2859%29.png)
 
 According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method return the following Package:
 
@@ -169,7 +177,7 @@ Look at the figure below
 
 ![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2824%29.png)
 
-![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%2892%29.png)
+![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%2894%29.png)
 
 Save SSDT in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` __and reboot
 

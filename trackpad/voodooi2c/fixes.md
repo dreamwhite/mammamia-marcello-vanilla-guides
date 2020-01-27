@@ -16,7 +16,7 @@ description: The following is a collection of fixes that I've found during the t
 
 Open GenI2C, Diagnosis section
 
-![](../../.gitbook/assets/image%20%2872%29.png)
+![](../../.gitbook/assets/image%20%2874%29.png)
 
 #### Requirements
 
@@ -33,7 +33,7 @@ Open GenI2C, Diagnosis section
 
 ![Step 1: search &quot;I2C&quot;](../../.gitbook/assets/image%20%2830%29.png)
 
-![](../../.gitbook/assets/image%20%2857%29.png)
+![](../../.gitbook/assets/image%20%2858%29.png)
 
 Change `USTP` to `One` as depicted in the following screenshot
 
@@ -43,7 +43,7 @@ Change `I2C1` to `I2C0`
 
 ![Change \_SB.PCI0.I2C1 to...](../../.gitbook/assets/image%20%2810%29.png)
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
 Save and reboot and test again with GenI2C diagnosis section
 
