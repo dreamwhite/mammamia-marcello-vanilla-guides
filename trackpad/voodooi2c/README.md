@@ -213,9 +213,5 @@ Save and reboot
 
 * [https://voodooi2c.github.io/\#GPIO%20Pinning/GPIO%20Pinning](https://voodooi2c.github.io/#GPIO%20Pinning/GPIO%20Pinning)
 
-## Notes
-
-For any trouble use official [Gitter chat](https://gitter.im/alexandred/VoodooI2C) from VoodooI2C.
-
 ### 
 
