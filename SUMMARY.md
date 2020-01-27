@@ -24,13 +24,7 @@
 
 ## Connectivity
 
-* [WiFi](connectivity/wifi/README.md)
-  * [PCIe](connectivity/wifi/pcie.md)
-  * [Mini PCIe](connectivity/wifi/mini-pcie.md)
-  * [M.2](connectivity/wifi/m.2.md)
-  * [USB](connectivity/wifi/usb.md)
-* [Bluetooth](connectivity/bluetooth/README.md)
-  * [USB](connectivity/bluetooth/usb.md)
+* [WiFi](connectivity/wifi.md)
 * [Ethernet](connectivity/ethernet/README.md)
   * [Intel](connectivity/ethernet/intel.md)
   * [Realtek](connectivity/ethernet/realtek.md)
