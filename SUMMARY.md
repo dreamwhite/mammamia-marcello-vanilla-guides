@@ -55,8 +55,9 @@
 
 ## ACPI
 
-* [Renames](acpi/renames/README.md)
+* [Renames](acpi/renames.md)
   * [EC](acpi/ec.md)
+  * [USB](acpi/renames/usb.md)
 * [Remove unused scopes and devices](acpi/unused-scopes-and-devices/README.md)
   * [CPU](acpi/unused-scopes-and-devices/cpu.md)
 * [Original ACPI and IORegistryExplorer from Macs](acpi/original-acpi-and-ioregistryexplorer-from-macs/README.md)
