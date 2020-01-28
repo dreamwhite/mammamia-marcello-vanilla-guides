@@ -86,7 +86,13 @@ You have arrived at this step because Apple's drivers do not support APIC pins g
 We must first determine whether or not your device is properly configured to support GPIO pins. Search for your device ACPI ID in your DSDT until you reach its device entry. Look for a `Name` that looks like this:
 
 ```text
-    Name (SBFG, ResourceTemplate ()    {        GpioInt (Level, ActiveLow, ExclusiveAndWake, PullDefault, 0x0000,            "\\_SB.PCI0.GPI0", 0x00, ResourceConsumer, ,            )            {   // Pin list                0x0000            }    })
+    Name (SBFG, ResourceTemplate ()    {
+            GpioInt (Level, ActiveLow, ExclusiveAndWake, PullDefault, 0x0000,
+                     "\\_SB.PCI0.GPI0", 0x00, ResourceConsumer, ,)  
+                      {   // Pin list                
+                          0x0000            
+                      }    
+              })
 ```
 
 This `Name` may appear in the root level of your device entry or it could possibly appear in the `_CRS` method. In the first case we shall say that your device is **root pinned**. In the second case, we shall say that your device is **CRS pinned**. If, furthermore, the numbers that appear under pin list are non-zero then we shall furthermore append **well-** to the previous names as follows: **well-root pinned** and **well-CRS pinned**. We shall just say **well-pinned** to mean either of these latter cases. If you cannot find such a `Name` then we shall say that your device is **unpinned**.
