@@ -18,13 +18,13 @@ In order to remove unused processors from IORegistryExplorer you need to know ho
 
 Open IORegistryExplorer and look for PR entries. Write down the unused entires, whom doesn't have `AppleACPICPU` entry below. \(e.g. in the depicted screenshot `PR08 to PR15` are unused\)
 
-![](../../.gitbook/assets/image%20%2875%29.png)
+![](../../.gitbook/assets/image%20%2878%29.png)
 
 ### Step 2: remove unused PRxx from DSDT.aml
 
 Open DSDT.aml with MaciASL and search the previously found `PRxx` like in the following screenshot
 
-![PR08 till PR15 are unused](../../.gitbook/assets/image%20%2865%29.png)
+![PR08 till PR15 are unused](../../.gitbook/assets/image%20%2867%29.png)
 
 Now open Patch menu and apply the following patch, where `xx` is the `PRxx` that is unused.
 
@@ -32,13 +32,13 @@ Now open Patch menu and apply the following patch, where `xx` is the `PRxx` that
 into processor label PRxx parent_label _SB remove_entry; 
 ```
 
-![Click on &quot;Apply&quot;](../../.gitbook/assets/image%20%2854%29.png)
+![Click on &quot;Apply&quot;](../../.gitbook/assets/image%20%2856%29.png)
 
 Repeat the patching process for each `Processor` that you need to remove.
 
 Then compile and fix the remaining errors
 
-![](../../.gitbook/assets/image%20%2860%29.png)
+![](../../.gitbook/assets/image%20%2862%29.png)
 
 We need to remove those lines because they call `_SB.PRxx` which we've removed before.
 
@@ -46,7 +46,7 @@ Fix the remaing errors with the same patching process.
 
 Now save DSDT.aml in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` and reboot
 
-![Removed PRxx unused](../../.gitbook/assets/image%20%2869%29.png)
+![Removed PRxx unused](../../.gitbook/assets/image%20%2871%29.png)
 
 
 
