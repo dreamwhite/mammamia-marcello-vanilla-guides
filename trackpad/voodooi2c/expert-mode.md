@@ -8,9 +8,11 @@ The following section is only for expert. Don't follow these steps if you don't 
 
 ## Manual GPIO Pinning <a id="manual-gpio-pinning"></a>
 
+{% hint style="info" %}
 **You must apply this process for each I2C device you wish to use**.
+{% endhint %}
 
-### Get ACPI ID using Windows Device Manager <a id="get-acpi-id-using-windows-device-manager"></a>
+## Step 1: get ACPI ID using Windows Device Manager
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzImQenF-Cog1yCLqaL%2F-LzImy5wO7m868iNrnLE%2Fimage.png?alt=media&token=108a99b1-2888-4339-8106-b007260e21f2)
 
@@ -21,7 +23,11 @@ The following section is only for expert. Don't follow these steps if you don't 
 After extracting DSDT.aml and cleaning it from errors, with MaciASL, open Patch menu and apply the following patches
 
 ```text
-# Windows 10 DSDT Patch for VoodooI2C# Allows I2C controllers and devices to be discovered by OS X.# Based off patches written by RehabMan​into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2009\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2009"))) end;into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2012\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2012"))) end;into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2013"))) end;into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
+# Windows # DSDT Patch for VoodooI2C# Allows I2C controllers and devices to be discovered by OS X.# Based off patches written by RehabMan​
+into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2009\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2009"))) end;
+into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2012\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2012"))) end;
+into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2013"))) end;
+into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
 ```
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzI_kiUfZn2d5fK0Ufq%2F-LzIaKrHrrtz4w43iI2Q%2Fimage.png?alt=media&token=26436759-812d-40ac-8b67-f4610ea85997)
