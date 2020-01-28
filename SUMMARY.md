@@ -55,8 +55,8 @@
 
 ## ACPI
 
-* [EC](acpi/ec.md)
-* [Renames](acpi/renames.md)
+* [Renames](acpi/renames/README.md)
+  * [EC](acpi/renames/ec.md)
 * [Remove unused scopes and devices](acpi/unused-scopes-and-devices/README.md)
   * [CPU](acpi/unused-scopes-and-devices/cpu.md)
 * [Original ACPI and IORegistryExplorer from Macs](acpi/original-acpi-and-ioregistryexplorer-from-macs/README.md)
@@ -97,4 +97,11 @@
 
 * [PS2](keyboard/ps2.md)
 * [USB](keyboard/usb.md)
+
+## EFI
+
+* [ACPI](efi/acpi.md)
+* [config.plist](efi/config.plist.md)
+* [kexts](efi/kexts.md)
+* [drivers](efi/drivers.md)
 
