@@ -12,7 +12,8 @@
 
 * [AMD](graphics/amd/README.md)
   * [iGPU](graphics/amd/igpu.md)
-* [Intel](graphics/intel.md)
+* [Intel](graphics/intel/README.md)
+  * [HD3000 series](graphics/intel/hd3000-series.md)
 * [NVidia](graphics/nvidia/README.md)
   * [Web Drivers](graphics/nvidia/web-drivers.md)
 
@@ -55,7 +56,7 @@
 
 ## ACPI
 
-* [Renames](acpi/renames.md)
+* [Renames](acpi/renames/README.md)
   * [EC](acpi/renames/ec.md)
   * [USB](acpi/renames/usb.md)
 * [Remove unused scopes and devices](acpi/unused-scopes-and-devices/README.md)
