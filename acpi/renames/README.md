@@ -64,9 +64,9 @@ Note that if the device name length is less than 4 char add as many "\_" as ther
 
 Add the rename as depicted below
 
-
-
 ![](../../.gitbook/assets/image%20%2873%29.png)
 
 Save `config.plist` and reboot
+
+
 

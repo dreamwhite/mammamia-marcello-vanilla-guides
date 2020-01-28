@@ -52,14 +52,14 @@ Please note that Hackintool suggest you some Layout IDs. In any case check the o
 
 Note the "layoutXX.xml" and proceed to the Installation step
 
-### Step 3: installation
+### Step 3: installation:
 
 1. Verify that your Codec name is present in AppleALC layout id list
 2. Put the compiled kexts inside /Volumes/EFI/EFI/CLOVER/kexts/Other folder
 
 ![Step 2: kext installation](../.gitbook/assets/image%20%2888%29.png)
 
-### Step 4: get DevicePath address using gfxutil
+### Step 4: get PCIRoot address using gfxutil
 
 ![...and drag the executable &quot;gfxutil&quot; inside the terminal window and type &quot;-f HDEF&quot; ](../.gitbook/assets/image%20%2887%29.png)
 
