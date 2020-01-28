@@ -56,7 +56,7 @@
 ## ACPI
 
 * [Renames](acpi/renames.md)
-  * [EC](acpi/ec.md)
+  * [EC](acpi/renames/ec.md)
   * [USB](acpi/renames/usb.md)
 * [Remove unused scopes and devices](acpi/unused-scopes-and-devices/README.md)
   * [CPU](acpi/unused-scopes-and-devices/cpu.md)
