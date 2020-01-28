@@ -49,6 +49,27 @@ Now take note of the devices that you've found previously and calculate the HEX 
 ## Step 2: add renames from Clover
 
 {% hint style="info" %}
+TgtBridge is not needed for the majority of renames. Thus leave it blank. It's needed only for some renames like as done in GenI2C
+{% endhint %}
+
+#### Renames:
+
+| Find | Replace |
+| :--- | :--- |
+| EC0 | EC |
+| ECDV | EC |
+| EHC1 | EH01 |
+| EHC2 | EH02 |
+| EUSB | EH01 |
+| USBE | EH02 |
+| GFX0 | IGPU |
+| PEGP | GFX0 |
+| HECI | IMEI |
+| MEI | IMEI |
+| SAT0 | SATA |
+| LPC | LPCB |
+
+{% hint style="info" %}
 You can use **any** HEX calculator
 {% endhint %}
 
