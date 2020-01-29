@@ -103,7 +103,8 @@
 ## EFI
 
 * [ACPI](efi/acpi.md)
-* [config.plist](efi/config.plist.md)
+* [config.plist](efi/config.plist/README.md)
+  * [ACPI](efi/config.plist/acpi.md)
 * [kexts](efi/kexts.md)
 * [drivers](efi/drivers.md)
 
