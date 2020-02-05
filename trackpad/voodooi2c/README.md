@@ -210,7 +210,7 @@ Finally copy **VoodooPS2Controller.kext** to _/Volumes/EFI/EFI/CLOVER/kexts/Othe
 
 
 
-### Step 5: GenI2C
+### Step 6: GenI2C
 
 After saving the DSDT.dsl file, open GenI2C and go in GenSSDT section
 
@@ -230,7 +230,7 @@ Then open your config.plist and add the renames inside Readme.txt
 
 Save and reboot
 
-### Step 6: configure trackpad
+### Step 7: configure trackpad
 
 ![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image%20%2830%29.png)
 
