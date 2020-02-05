@@ -11,7 +11,7 @@ description: USB mapping procedure
 
 ##  Requirements
 
-* SSDT-USB.aml
+* DSDT/SSDT-USB.aml
 * *  [Extracting ACPI tables](../../acpi/extracting-acpi-tables.md)
 * MaciASL
 * Hackintool
@@ -43,6 +43,10 @@ kextstat | grep USBInjectAll
 ## Step 3: identify the SSDT which defines USB ports
 
 From Intel Haswell generation onwards, USB ports are no more defined inside `DSDT.aml` but in an SSDT table.
+
+{% hint style="info" %}
+Some newer machines have USB ports still defined in DSDT, just look for **HS01**
+{% endhint %}
 
 On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open every single `SSDT.aml` with MaciASL and look for a tree like depicted in the following screenshot
 
