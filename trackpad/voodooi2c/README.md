@@ -140,7 +140,7 @@ Furthermore, force the loading of **IOGraphicsFamily.kext** by adding
 After extracting DSDT.aml and cleaning it from errors, with MaciASL, open Patch menu and apply the following patches
 
 ```text
-# Windows 10 DSDT Patch for VoodooI2C
+# Windows DSDT Patch for VoodooI2C
 # Allows I2C controllers and devices to be discovered by OS X.
 # Based off patches written by RehabMan
 
@@ -156,12 +156,43 @@ Save the file also in "Disassemled ASL File" for the next step
 
 ### Step 4: kexts installation
 
-Add VoodooI2C.kext and the satellite kext  
+Add `VoodooI2C.kext` and the `satellite kext`  
 More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Satellite%20Kexts)
 
 ![](../../.gitbook/assets/image%20%2817%29.png)
 
-Furthermore don't forget to remove **VoodooPS2Mouse.kext** and **VoodooPS2Trackpad.kext** inside **VoodooPS2Controller.kext** to avoid trackpad conflicts
+### Step 5: disable VoodooPS2Controller Mouse and Trackpad conflict
+
+There are two ways for disabling `VoodooPS2Controller.kext` plugins `VoodooPS2Mouse.kext` and `VoodooPS2Trackpad.kext`. My favourite is the SSDT method:
+
+```text
+DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
+{
+
+    // Disable any VoodooPS2Trackpad and VoodooPS2Mouse devices from loading
+    Name(_SB.PCI0.LPCB.PS2K.RMCF, Package()
+    {
+        "Mouse", Package()
+        {
+            "DisableDevice", ">y",
+        },
+        "Synaptics TouchPad", Package()
+        {
+            "DisableDevice", ">y",
+        },
+        "ALPS GlidePoint", Package()
+        {
+            "DisableDevice", ">y",
+        },
+        "Sentelic FSP", Package()
+        {
+            "DisableDevice", ">y",
+        },
+    })
+}
+```
+
+But there is also a second method, more brutal which removes them from `VoodooPS2Controller.kext` . Right click on the kext and click on `Show Package Contents`.
 
 ![](../../.gitbook/assets/image%20%2890%29.png)
 
