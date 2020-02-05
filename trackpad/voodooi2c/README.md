@@ -42,7 +42,7 @@ Activating I2C devices requires **working** [EC](../../acpi/renames/ec.md) and [
 
 Open GenI2C and go in Diagnosis section
 
-![](../../.gitbook/assets/image%20%2880%29.png)
+![](../../.gitbook/assets/image%20%2881%29.png)
 
 {% hint style="danger" %}
 If CPU Generation Support led is red you can't add support for I2C devices on your laptop
@@ -75,7 +75,7 @@ Please use the Rename(s) above in the given order
 ++++++++++++++++++++++++++++++++++++++
 ```
 
-![](../../.gitbook/assets/image%20%2858%29.png)
+![](../../.gitbook/assets/image%20%2859%29.png)
 
 ```text
 <key>KextsToPatch</key>
@@ -124,7 +124,7 @@ Furthermore, force the loading of **IOGraphicsFamily.kext** by adding
 
 `\System\Library\Extensions\IOGraphicsFamily.kext` inside config.plist/Kernel and Kext Patches/ForceKextsToLoad
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
 ```text
 <key>ForceKextsToLoad</key>
@@ -150,7 +150,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
 ```
 
-![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%2899%29.png)
+![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%28100%29.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
@@ -163,13 +163,13 @@ More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Sa
 
 Furthermore don't forget to remove **VoodooPS2Mouse.kext** and **VoodooPS2Trackpad.kext** inside **VoodooPS2Controller.kext** to avoid trackpad conflicts
 
-![](../../.gitbook/assets/image%20%2889%29.png)
+![](../../.gitbook/assets/image%20%2890%29.png)
 
 ![Open Contents folder](../../.gitbook/assets/image%20%2831%29.png)
 
-![Open Plugins folder](../../.gitbook/assets/image%20%2868%29.png)
+![Open Plugins folder](../../.gitbook/assets/image%20%2869%29.png)
 
-![Remove those two kexts](../../.gitbook/assets/image%20%2875%29.png)
+![Remove those two kexts](../../.gitbook/assets/image%20%2876%29.png)
 
 ![](../../.gitbook/assets/image%20%281%29.png)
 
@@ -203,9 +203,9 @@ Save and reboot
 
 ![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image%20%2830%29.png)
 
-![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2892%29.png)
+![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2893%29.png)
 
-![](../../.gitbook/assets/image%20%28104%29.png)
+![](../../.gitbook/assets/image%20%28106%29.png)
 
 **Enjoy the gestures &lt;3**
 
