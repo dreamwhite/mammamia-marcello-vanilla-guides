@@ -23,7 +23,7 @@ description: USB mapping procedure
 
 [Mount EFI](../../bootloaders/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
 
-![](../../.gitbook/assets/image%20%2870%29.png)
+![](../../.gitbook/assets/image%20%2872%29.png)
 
 To ensure that the kext is correctly loaded in kernel cache type in a terminal window  
 
@@ -32,7 +32,7 @@ To ensure that the kext is correctly loaded in kernel cache type in a terminal w
 kextstat | grep USBInjectAll
 ```
 
-![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](../../.gitbook/assets/image%20%28105%29.png)
+![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](../../.gitbook/assets/image%20%28107%29.png)
 
 
 
@@ -52,9 +52,52 @@ On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open eve
 
  
 
-![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2853%29.png)
+![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2855%29.png)
 
-## Step 4: identify which port is active or not
+## Step 4: drop SSDT table loading
+
+In order to load custom USB SSDT, drop the SSDT table which defines it. 
+
+According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page 1009, `DefinitionBlock` has the following syntax:
+
+```text
+DefinitionBlock (AMLFileName, TableSignature, ComplianceRevision, OEMID, TableID, OEMRevision)
+{TermList}
+```
+
+| Parameter | Allowed value |
+| :--- | :--- |
+| AMLFileName | Desired name of the translated output AML file |
+| TableSignature | 4-character ACPI signature |
+| ComplianceRevision | 8-bit value |
+| OEMID | 6-character string |
+| TableId | 8-character string |
+| OEMRevision | 32-bit value |
+| TermList | Sequence of executable ASL expressions |
+
+Open the SSDT and identify the `TableId` as depicted in the example below:
+
+![&quot;xh\_OEMBD&quot; is the TableId](../../.gitbook/assets/image%20%2817%29.png)
+
+After identifying the TableId of the SSDT that must be dropped add it inside `config.plist` 
+
+![Clover Configurator](../../.gitbook/assets/image%20%2815%29.png)
+
+Or via code:
+
+```text
+<key>DropTables</key>
+		<array>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>xh_OEMBD</string>
+			</dict>
+		</array>
+```
+
+## Step 5: identify which port is active or not
 
 {% hint style="info" %}
 **SSxx**, where **SS** stands for **S**uper **S**peed, ports are for USB3.0 \(meaning that **HS01** can have **SS01** etc.\). Their maximum speed is 5 Gbps while for USB2.0 are 480 Mbps
@@ -66,29 +109,29 @@ Open Hackintool and go in USB section
 
 Click on the `Clear` button \(the third button from left\)
 
-![](../../.gitbook/assets/image%20%2860%29.png)
+![](../../.gitbook/assets/image%20%2862%29.png)
 
 Then click on `Refresh` button \(the third from right\)
 
-![](../../.gitbook/assets/image%20%2887%29.png)
+![](../../.gitbook/assets/image%20%2889%29.png)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for right port of mobo etc.\)  
 Then remove any port that isn't highlighted with the second button.  
   
 You should have a result like the depicted one below
 
-![](../../.gitbook/assets/image%20%2867%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
  
 
-![](../../.gitbook/assets/image%20%2823%29.png)
+![](../../.gitbook/assets/image%20%2825%29.png)
 
-## Step 5: setup the ports inside SSDT
+## Step 6: setup the ports inside SSDT
 
 Open the previously identified SSDT with MaciASL  
 
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2868%29.png)
 
 According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method return the following Package:
 
@@ -136,7 +179,7 @@ Now just look for each port you've discovered before and fill a table like the b
 | SS01 | USB 3 Standard-B connector |
 | SS04 | USB 3 Standard-A connector |
 
-## Step 6: add the SSDT methods
+## Step 7: add the SSDT methods
 
 If we look closely to `GUPC` method, we can see that it assigns for each port the **Connector Type** _**Internal**._ We need to copy this method for defining the behaviour of USB2, USB3 and USB3 powered ports.
 
@@ -188,15 +231,15 @@ Add those methods and replace `GUPC` with the method that defines the USB which 
 
 Look at the figure below
 
-![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2829%29.png)
+![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2831%29.png)
 
-![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%28107%29.png)
+![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%28109%29.png)
 
 Save SSDT in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` __remove `USBInjectAll.kext` from `/Volumes/EFI/EFI/CLOVER/kexts/Other` and reboot.
 
 Repeat **Step 4** and you should see something like the depicted one below
 
-![Mapped USB ports](../../.gitbook/assets/image%20%2848%29.png)
+![Mapped USB ports](../../.gitbook/assets/image%20%2850%29.png)
 
 Enjoy your USB ports mapped
 

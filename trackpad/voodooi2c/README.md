@@ -42,7 +42,7 @@ Activating I2C devices requires **working** [EC](../../acpi/renames/ec.md) and [
 
 Open GenI2C and go in Diagnosis section
 
-![](../../.gitbook/assets/image%20%2881%29.png)
+![](../../.gitbook/assets/image%20%2883%29.png)
 
 {% hint style="danger" %}
 If CPU Generation Support led is red you can't add support for I2C devices on your laptop
@@ -75,7 +75,7 @@ Please use the Rename(s) above in the given order
 ++++++++++++++++++++++++++++++++++++++
 ```
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](../../.gitbook/assets/image%20%2861%29.png)
 
 ```text
 <key>KextsToPatch</key>
@@ -124,7 +124,7 @@ Furthermore, force the loading of **IOGraphicsFamily.kext** by adding
 
 `\System\Library\Extensions\IOGraphicsFamily.kext` inside config.plist/Kernel and Kext Patches/ForceKextsToLoad
 
-![](../../.gitbook/assets/image%20%2850%29.png)
+![](../../.gitbook/assets/image%20%2852%29.png)
 
 ```text
 <key>ForceKextsToLoad</key>
@@ -150,7 +150,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
 ```
 
-![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%28100%29.png)
+![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%28102%29.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
@@ -159,7 +159,7 @@ Save the file also in "Disassemled ASL File" for the next step
 Add `VoodooI2C.kext` and the `satellite kext`  
 More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Satellite%20Kexts)
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/image%20%2819%29.png)
 
 ### Step 5: disable VoodooPS2Controller Mouse and Trackpad conflict
 
@@ -194,17 +194,17 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 
 But there is also a second method, more brutal which removes them from `VoodooPS2Controller.kext` . Right click on the kext and click on `Show Package Contents`.
 
-![](../../.gitbook/assets/image%20%2890%29.png)
+![](../../.gitbook/assets/image%20%2892%29.png)
 
-![Open Contents folder](../../.gitbook/assets/image%20%2831%29.png)
+![Open Contents folder](../../.gitbook/assets/image%20%2833%29.png)
 
-![Open Plugins folder](../../.gitbook/assets/image%20%2869%29.png)
+![Open Plugins folder](../../.gitbook/assets/image%20%2871%29.png)
 
-![Remove those two kexts](../../.gitbook/assets/image%20%2876%29.png)
+![Remove those two kexts](../../.gitbook/assets/image%20%2878%29.png)
 
 ![](../../.gitbook/assets/image%20%281%29.png)
 
-![](../../.gitbook/assets/image%20%2826%29.png)
+![](../../.gitbook/assets/image%20%2828%29.png)
 
 Finally copy **VoodooPS2Controller.kext** to _/Volumes/EFI/EFI/CLOVER/kexts/Other_ 
 
@@ -214,13 +214,13 @@ Finally copy **VoodooPS2Controller.kext** to _/Volumes/EFI/EFI/CLOVER/kexts/Othe
 
 After saving the DSDT.dsl file, open GenI2C and go in GenSSDT section
 
-![Tick &quot;Generate patches for this computer&quot; and click next](../../.gitbook/assets/image%20%2847%29.png)
+![Tick &quot;Generate patches for this computer&quot; and click next](../../.gitbook/assets/image%20%2849%29.png)
 
 ![Select &quot;Interrupt \(APIC or GPIO\)&quot; and then click on Generate](../../.gitbook/assets/image%20%2814%29.png)
 
 It will open a folder with Finder. Just copy the .aml file inside `/Volumes/EFI/CLOVER/ACPI/patched` directory
 
-![](../../.gitbook/assets/image%20%2825%29.png)
+![](../../.gitbook/assets/image%20%2827%29.png)
 
 Then open your config.plist and add the renames inside Readme.txt
 
@@ -232,11 +232,11 @@ Save and reboot
 
 ### Step 7: configure trackpad
 
-![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image%20%2830%29.png)
+![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image%20%2832%29.png)
 
-![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2893%29.png)
+![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2895%29.png)
 
-![](../../.gitbook/assets/image%20%28106%29.png)
+![](../../.gitbook/assets/image%20%28108%29.png)
 
 **Enjoy the gestures &lt;3**
 
