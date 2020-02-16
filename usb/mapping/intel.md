@@ -58,7 +58,7 @@ On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open eve
 
 In order to load custom USB SSDT, drop the SSDT table which defines it. 
 
-According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page 1009, `DefinitionBlock` has the following syntax:
+According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [1009](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=1009), `DefinitionBlock` has the following syntax:
 
 ```text
 DefinitionBlock (AMLFileName, TableSignature, ComplianceRevision, OEMID, TableID, OEMRevision)
