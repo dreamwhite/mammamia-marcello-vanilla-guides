@@ -179,6 +179,26 @@ Now just look for each port you've discovered before and fill a table like the b
 | SS01 | USB 3 Standard-B connector |
 | SS04 | USB 3 Standard-A connector |
 
+Then remove the unused ports from SSDT by applying the following patch
+
+{% hint style="warning" %}
+Replace **xx** with the unused port number previously found 
+{% endhint %}
+
+{% tabs %}
+{% tab title="HSxx" %}
+```text
+into scope label \_SB.PCI0.XHC.RHUB.HSxx remove_entry; 
+```
+{% endtab %}
+
+{% tab title="SSxx" %}
+```
+into scope label \_SB.PCI0.XHC.RHUB.SSxx remove_entry;
+```
+{% endtab %}
+{% endtabs %}
+
 ## Step 7: add the SSDT methods
 
 If we look closely to `GUPC` method, we can see that it assigns for each port the **Connector Type** _**Internal**._ We need to copy this method for defining the behaviour of USB2, USB3 and USB3 powered ports.
