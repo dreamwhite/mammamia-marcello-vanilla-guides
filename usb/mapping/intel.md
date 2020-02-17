@@ -275,7 +275,11 @@ end;
 {% endtab %}
 {% endtabs %}
 
-Add those methods and replace `GUPC` with the method that defines the USB which we've discovered previously
+{% hint style="info" %}
+For better reading, thought is useless, just place the methods from bottom file next to **GUPC** method
+{% endhint %}
+
+Replace `GUPC` call with the method that defines the USB which we've discovered previously
 
 Look at the figure below
 
