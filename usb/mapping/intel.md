@@ -293,7 +293,7 @@ Enjoy your USB ports mapped
 
 ## Credits
 
-* [Olarila Native USB FIX for desktop ](https://olarila.com/forum/viewtopic.php?f=28&t=10171)
+* [Olarila Native USB FIX for desktop ](https://www.olarila.com/topic/6181-guide-native-usb-fix-for-desktops-no-injectorkext-required-skylake/#comments)
   * it's valid also for laptops :\)
 
 
