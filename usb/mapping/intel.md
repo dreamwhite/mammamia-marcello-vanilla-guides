@@ -23,7 +23,7 @@ description: USB mapping procedure
 
 [Mount EFI](../../bootloaders/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
 
-![](../../.gitbook/assets/image%20%2872%29.png)
+![](../../.gitbook/assets/image%20%2873%29.png)
 
 To ensure that the kext is correctly loaded in kernel cache type in a terminal window  
 
@@ -32,7 +32,7 @@ To ensure that the kext is correctly loaded in kernel cache type in a terminal w
 kextstat | grep USBInjectAll
 ```
 
-![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](../../.gitbook/assets/image%20%28107%29.png)
+![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](../../.gitbook/assets/image%20%28109%29.png)
 
 
 
@@ -113,7 +113,7 @@ Click on the `Clear` button \(the third button from left\)
 
 Then click on `Refresh` button \(the third from right\)
 
-![](../../.gitbook/assets/image%20%2889%29.png)
+![](../../.gitbook/assets/image%20%2890%29.png)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for right port of mobo etc.\)  
 Then remove any port that isn't highlighted with the second button.  
@@ -199,6 +199,10 @@ into scope label \_SB.PCI0.XHC.RHUB.SSxx remove_entry;
 {% endtab %}
 {% endtabs %}
 
+Finally remove the unused external references to unused ports as depicted below
+
+![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image%20%2870%29.png)
+
 ## Step 7: add the SSDT methods
 
 If we look closely to `GUPC` method, we can see that it assigns for each port the **Connector Type** _**Internal**._ We need to copy this method for defining the behaviour of USB2, USB3 and USB3 powered ports.
@@ -277,7 +281,7 @@ Look at the figure below
 
 ![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2831%29.png)
 
-![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%28109%29.png)
+![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%28111%29.png)
 
 Save SSDT in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` __remove `USBInjectAll.kext` from `/Volumes/EFI/EFI/CLOVER/kexts/Other` and reboot.
 

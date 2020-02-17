@@ -42,7 +42,7 @@ Activating I2C devices requires **working** [EC](../../acpi/renames/ec.md) and [
 
 Open GenI2C and go in Diagnosis section
 
-![](../../.gitbook/assets/image%20%2883%29.png)
+![](../../.gitbook/assets/image%20%2884%29.png)
 
 {% hint style="danger" %}
 If CPU Generation Support led is red you can't add support for I2C devices on your laptop
@@ -150,7 +150,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
 ```
 
-![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%28102%29.png)
+![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%28104%29.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
@@ -194,13 +194,13 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 
 But there is also a second method, more brutal which removes them from `VoodooPS2Controller.kext` . Right click on the kext and click on `Show Package Contents`.
 
-![](../../.gitbook/assets/image%20%2892%29.png)
+![](../../.gitbook/assets/image%20%2893%29.png)
 
 ![Open Contents folder](../../.gitbook/assets/image%20%2833%29.png)
 
-![Open Plugins folder](../../.gitbook/assets/image%20%2871%29.png)
+![Open Plugins folder](../../.gitbook/assets/image%20%2872%29.png)
 
-![Remove those two kexts](../../.gitbook/assets/image%20%2878%29.png)
+![Remove those two kexts](../../.gitbook/assets/image%20%2879%29.png)
 
 ![](../../.gitbook/assets/image%20%281%29.png)
 
@@ -234,9 +234,9 @@ Save and reboot
 
 ![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image%20%2832%29.png)
 
-![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2895%29.png)
+![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2897%29.png)
 
-![](../../.gitbook/assets/image%20%28108%29.png)
+![](../../.gitbook/assets/image%20%28110%29.png)
 
 **Enjoy the gestures &lt;3**
 
