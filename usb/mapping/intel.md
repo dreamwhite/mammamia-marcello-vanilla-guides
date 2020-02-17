@@ -185,47 +185,71 @@ If we look closely to `GUPC` method, we can see that it assigns for each port th
 
 Just add those methods:
 
+{% tabs %}
+{% tab title="USB2" %}
 ```text
-        Method (USB2, 1, Serialized)
-        {
-            Name (PCKG, Package (0x04)
-            {
-                Zero, 
-                0x00, //Proprietary connector aka USB2
-                Zero, 
-                Zero
-            })
-            PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed
-            Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.USB2.PCKG */
-        }
+# USB 2 METHOD #
 
-        Method (USB3, 1, Serialized)
-        {
-            Name (PCKG, Package (0x04)
-            {
-                Zero, 
-                0x03, //USB3 connector not powered
-                Zero, 
-                Zero
-            })
-            PCKG [Zero] = Arg0
-            Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.USB3.PCKG */
-        }
-
-        Method (SB3P, 1, Serialized)
-        {
-            Name (PCKG, Package (0x04)
-            {
-                Zero, 
-                0x07, //USB3 connector powered 
-                Zero, 
-                Zero
-            })
-            PCKG [Zero] = Arg0
-            Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.SB3P.PCKG */
-        }
-
+into scope label \_SB.PCI0.XHC.RHUB insert
+begin
+Method ( USB2, 4, NotSerialized)\n
+{\n
+Name (PCKG, Package (0x04)\n
+{\n
+Zero, \n
+0x00, //Proprietary connector aka USB2\n
+Zero, \n
+Zero\n
+})\n
+PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed\n
+Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.USB2.PCKG */
+}}
+end;
 ```
+{% endtab %}
+
+{% tab title="USB3" %}
+```
+# USB 3.0 METHOD #
+into scope label \_SB.PCI0.XHC.RHUB insert
+begin
+Method ( USB3, 4, NotSerialized)\n
+{\n
+Name (PCKG, Package (0x04)\n
+{\n
+Zero, \n
+0x03, //Proprietary connector aka USB3\n
+Zero, \n
+Zero\n
+})\n
+PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed\n
+Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.USB3.PCKG */
+}}
+end;
+```
+{% endtab %}
+
+{% tab title="USB3 Powered" %}
+```
+# USB 3.0 Powered METHOD #
+into scope label \_SB.PCI0.XHC.RHUB insert
+begin
+Method ( SB3P, 4, NotSerialized)\n
+{\n
+Name (PCKG, Package (0x04)\n
+{\n
+Zero, \n
+0x07, //Proprietary connector aka USB3 Powered\n
+Zero, \n
+Zero\n
+})\n
+PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed\n
+Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.SB3P.PCKG */
+}}
+end;
+```
+{% endtab %}
+{% endtabs %}
 
 Add those methods and replace `GUPC` with the method that defines the USB which we've discovered previously
 
