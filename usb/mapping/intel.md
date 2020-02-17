@@ -183,7 +183,7 @@ Now just look for each port you've discovered before and fill a table like the b
 
 If we look closely to `GUPC` method, we can see that it assigns for each port the **Connector Type** _**Internal**._ We need to copy this method for defining the behaviour of USB2, USB3 and USB3 powered ports.
 
-Just add those methods:
+Just add those methods using MaciASL patch menu:
 
 {% tabs %}
 {% tab title="USB2" %}
