@@ -216,7 +216,7 @@ Just add those methods using MaciASL patch menu:
 
 into scope label \_SB.PCI0.XHC.RHUB insert
 begin
-Method ( USB2, 4, NotSerialized)\n
+Method ( USB2, 1, NotSerialized)\n
 {\n
 Name (PCKG, Package (0x04)\n
 {\n
@@ -227,7 +227,7 @@ Zero\n
 })\n
 PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed\n
 Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.USB2.PCKG */
-}}
+}
 end;
 ```
 {% endtab %}
@@ -237,7 +237,7 @@ end;
 # USB 3.0 METHOD #
 into scope label \_SB.PCI0.XHC.RHUB insert
 begin
-Method ( USB3, 4, NotSerialized)\n
+Method ( USB3, 1, NotSerialized)\n
 {\n
 Name (PCKG, Package (0x04)\n
 {\n
@@ -248,7 +248,7 @@ Zero\n
 })\n
 PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed\n
 Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.USB3.PCKG */
-}}
+}
 end;
 ```
 {% endtab %}
@@ -258,7 +258,7 @@ end;
 # USB 3.0 Powered METHOD #
 into scope label \_SB.PCI0.XHC.RHUB insert
 begin
-Method ( SB3P, 4, NotSerialized)\n
+Method ( SB3P, 1, NotSerialized)\n
 {\n
 Name (PCKG, Package (0x04)\n
 {\n
@@ -269,7 +269,7 @@ Zero\n
 })\n
 PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed\n
 Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.SB3P.PCKG */
-}}
+}
 end;
 ```
 {% endtab %}
