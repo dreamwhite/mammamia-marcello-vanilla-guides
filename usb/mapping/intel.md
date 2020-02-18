@@ -257,7 +257,7 @@ Finally remove the unused external references to unused ports as depicted below
 
 ![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image%20%2870%29.png)
 
-## Step 78: add the SSDT methods
+## Step 8: add the SSDT methods
 
 If we look closely to `GUPC` method, we can see that it assigns for each port the **Connector Type** _**Internal**._ We need to copy this method for defining the behaviour of USB2, USB3 and USB3 powered ports.
 
