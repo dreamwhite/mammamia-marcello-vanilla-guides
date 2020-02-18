@@ -236,7 +236,7 @@ Save and reboot
 
 ![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2897%29.png)
 
-![](../../.gitbook/assets/image%20%28110%29.png)
+![](../../.gitbook/assets/image%20%28111%29.png)
 
 **Enjoy the gestures &lt;3**
 

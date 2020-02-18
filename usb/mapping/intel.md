@@ -19,7 +19,61 @@ description: USB mapping procedure
 * IORegistryExplorer
 * [USBInjectAll](../../installation/kexts/usb/usbinjectall.md#download-link)
 
-## Step 1: Installing the kext
+## Step 1: Adding port limit patch
+
+With the release of every macOS version you'll probably need a port-limit removal patch to begin your USB configuration on a new build.
+
+![Port Limit Patch for macOS 10.15.x](../../.gitbook/assets/image%20%28108%29.png)
+
+List of port limit patches
+
+### El Capitan \(10.11.x\)
+
+| Name | Find | Replace |
+| :--- | :--- | :--- |
+| com.apple.driver.usb.AppleUSBXHCIPCI | 83BD8CFE FFFF10 | 83BD8CFE FFFF1B |
+
+### Sierra \(10.12.x\)
+
+| Name | Find | Replace |
+| :--- | :--- | :--- |
+| com.apple.driver.usb.AppleUSBXHCIPCI | 83BD74FF FFFF10 | 83BD74FF FFFF1B |
+
+### High Sierra \(10.13.0 to 10.13.3\)
+
+| Name | Find | Replace |
+| :--- | :--- | :--- |
+| com.apple.driver.usb.AppleUSBXHCIPCI | 837D8C10 | 837D8C1B |
+
+### High Sierra \(10.13.4 to 10.13.5\)
+
+| Name | Find | Replace |
+| :--- | :--- | :--- |
+| com.apple.driver.usb.AppleUSBXHCIPCI | 837D940F 0F839704 0000 | 837D940F 90909090 9090 |
+
+### High Sierra \(10.13.6\)
+
+| Name | Find | Replace |
+| :--- | :--- | :--- |
+| com.apple.driver.usb.AppleUSBXHCIPCI | 837D880F 0F83A704 0000 | 837D880F 90909090 9090 |
+
+### Mojave \(10.14.x\)
+
+| Name | Find | Replace |
+| :--- | :--- | :--- |
+| com.apple.iokit.IOUSBHostFamily | 83FB0F0F | 83FB3F0F |
+| com.apple.iokit.IOUSBHostFamily | 83E30FD3 | 83E33FD3 |
+| com.apple.driver.usb.AppleUSBXHCI | 83FB0F0F | 83FB3F0F |
+| com.apple.driver.usb.AppleUSBXHCI | 83FF0F0F | 83FF3F0F |
+
+### Catalina \(10.15.x\)
+
+| Name | Find |  |
+| :--- | :--- | :--- |
+| com.apple.iokit.IOUSBHostFamily | 83FB0F0F | 83FB3F0F |
+| com.apple.driver.usb.AppleUSBXHCI | 83F90F0F | 83F93F0F |
+
+## Step 2: Installing the kext
 
 [Mount EFI](../../bootloaders/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
 
@@ -32,15 +86,15 @@ To ensure that the kext is correctly loaded in kernel cache type in a terminal w
 kextstat | grep USBInjectAll
 ```
 
-![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](../../.gitbook/assets/image%20%28109%29.png)
+![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](../../.gitbook/assets/image%20%28110%29.png)
 
 
 
-## Step 2: extract ACPI Tables
+## Step 3: extract ACPI Tables
 
 {% page-ref page="../../acpi/extracting-acpi-tables.md" %}
 
-## Step 3: identify the SSDT which defines USB ports
+## Step 4: identify the SSDT which defines USB ports
 
 From Intel Haswell generation onwards, USB ports are no more defined inside `DSDT.aml` but in an SSDT table.
 
@@ -48,13 +102,13 @@ From Intel Haswell generation onwards, USB ports are no more defined inside `DSD
 Some newer machines have USB ports still defined in DSDT, just look for **HS01**
 {% endhint %}
 
-On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open every single `SSDT.aml` with MaciASL and look for a tree like depicted in the following screenshot
+On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open every single `SSDT-X-YYYYY.aml` with MaciASL and look for a tree like depicted in the following screenshot
 
  
 
 ![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2855%29.png)
 
-## Step 4: drop SSDT table loading
+## Step 5: drop SSDT table loading
 
 In order to load custom USB SSDT, drop the SSDT table which defines it. 
 
@@ -97,7 +151,7 @@ Or via code:
 		</array>
 ```
 
-## Step 5: identify which port is active or not
+## Step 6: identify which port is active or not
 
 {% hint style="info" %}
 **SSxx**, where **SS** stands for **S**uper **S**peed, ports are for USB3.0 \(meaning that **HS01** can have **SS01** etc.\). Their maximum speed is 5 Gbps while for USB2.0 are 480 Mbps
@@ -126,7 +180,7 @@ You should have a result like the depicted one below
 
 ![](../../.gitbook/assets/image%20%2825%29.png)
 
-## Step 6: setup the ports inside SSDT
+## Step 7: setup the ports inside SSDT
 
 Open the previously identified SSDT with MaciASL  
 
@@ -188,7 +242,7 @@ Replace **xx** with the unused port number previously found
 {% tabs %}
 {% tab title="HSxx" %}
 ```text
-into scope label \_SB.PCI0.XHC.RHUB.HSxx remove_entry; 
+into scope label \_SB.PCI0.XHC.RHUB.HSxx remove_entry;
 ```
 {% endtab %}
 
@@ -203,7 +257,7 @@ Finally remove the unused external references to unused ports as depicted below
 
 ![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image%20%2870%29.png)
 
-## Step 7: add the SSDT methods
+## Step 78: add the SSDT methods
 
 If we look closely to `GUPC` method, we can see that it assigns for each port the **Connector Type** _**Internal**._ We need to copy this method for defining the behaviour of USB2, USB3 and USB3 powered ports.
 
@@ -285,7 +339,7 @@ Look at the figure below
 
 ![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2831%29.png)
 
-![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%28111%29.png)
+![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%28112%29.png)
 
 Save SSDT in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` __remove `USBInjectAll.kext` from `/Volumes/EFI/EFI/CLOVER/kexts/Other` and reboot.
 

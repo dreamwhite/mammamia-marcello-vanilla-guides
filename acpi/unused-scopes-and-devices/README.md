@@ -60,7 +60,7 @@ Syntax for MaciASL patches is available [here](https://sourceforge.net/p/maciasl
 
 Open _DSDT.aml_ with MaciASL, clean it from errors and search for each device that you've wrote down previously. 
 
-![AMW0 needs to be removed](../../.gitbook/assets/image%20%28108%29.png)
+![AMW0 needs to be removed](../../.gitbook/assets/image%20%28109%29.png)
 
 {% hint style="info" %}
 Note that _AMW0_ path is _**\_SB.AMW0**_
