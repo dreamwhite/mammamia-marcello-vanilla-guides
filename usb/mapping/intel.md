@@ -25,7 +25,7 @@ With the release of every macOS version you'll probably need a port-limit remova
 
 ![Port Limit Patch for macOS 10.15.x](../../.gitbook/assets/image%20%28108%29.png)
 
-List of port limit patches
+Choose the patches for your OS version
 
 ### El Capitan \(10.11.x\)
 
