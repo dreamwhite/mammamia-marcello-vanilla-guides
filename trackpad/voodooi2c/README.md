@@ -170,6 +170,8 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 {
 
     // Disable any VoodooPS2Trackpad and VoodooPS2Mouse devices from loading
+    External (_SB.PCI0.LPCB.PS2K.RMCF, PkgObj)
+
     Name(_SB.PCI0.LPCB.PS2K.RMCF, Package()
     {
         "Mouse", Package()
