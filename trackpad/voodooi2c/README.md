@@ -212,6 +212,10 @@ Finally copy **VoodooPS2Controller.kext** to _/Volumes/EFI/EFI/CLOVER/kexts/Othe
 
 ### Step 6: GenI2C
 
+{% hint style="info" %}
+Marcello suggests using GenI2C on the target machine
+{% endhint %}
+
 After saving the DSDT.dsl file, open GenI2C and go in GenSSDT section
 
 ![Tick &quot;Generate patches for this computer&quot; and click next](../../.gitbook/assets/image%20%2849%29.png)
