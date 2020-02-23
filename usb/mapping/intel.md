@@ -23,7 +23,7 @@ description: USB mapping procedure
 
 With the release of every macOS version you'll probably need a port-limit removal patch to begin your USB configuration on a new build.
 
-![Port Limit Patch for macOS 10.15.x](../../.gitbook/assets/image%20%28108%29.png)
+![Port Limit Patch for macOS 10.15.x](../../.gitbook/assets/image%20%28113%29.png)
 
 Choose the patches for your OS version
 
@@ -77,7 +77,7 @@ Choose the patches for your OS version
 
 [Mount EFI](../../bootloaders/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
 
-![](../../.gitbook/assets/image%20%2873%29.png)
+![](../../.gitbook/assets/image%20%2874%29.png)
 
 To ensure that the kext is correctly loaded in kernel cache type in a terminal window  
 
@@ -86,7 +86,7 @@ To ensure that the kext is correctly loaded in kernel cache type in a terminal w
 kextstat | grep USBInjectAll
 ```
 
-![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](../../.gitbook/assets/image%20%28110%29.png)
+![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](../../.gitbook/assets/image%20%28115%29.png)
 
 
 
@@ -167,14 +167,14 @@ Click on the `Clear` button \(the third button from left\)
 
 Then click on `Refresh` button \(the third from right\)
 
-![](../../.gitbook/assets/image%20%2890%29.png)
+![](../../.gitbook/assets/image%20%2893%29.png)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for right port of mobo etc.\)  
 Then remove any port that isn't highlighted with the second button.  
   
 You should have a result like the depicted one below
 
-![](../../.gitbook/assets/image%20%2869%29.png)
+![](../../.gitbook/assets/image%20%2870%29.png)
 
  
 
@@ -185,7 +185,7 @@ You should have a result like the depicted one below
 Open the previously identified SSDT with MaciASL  
 
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method return the following Package:
 
@@ -255,7 +255,7 @@ into scope label \_SB.PCI0.XHC.RHUB.SSxx remove_entry;
 
 Finally remove the unused external references to unused ports as depicted below
 
-![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image%20%2870%29.png)
+![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image%20%2871%29.png)
 
 ## Step 8: add the SSDT methods
 
@@ -339,7 +339,7 @@ Look at the figure below
 
 ![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2831%29.png)
 
-![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%28112%29.png)
+![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%28117%29.png)
 
 Save SSDT in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` __remove `USBInjectAll.kext` from `/Volumes/EFI/EFI/CLOVER/kexts/Other` and reboot.
 

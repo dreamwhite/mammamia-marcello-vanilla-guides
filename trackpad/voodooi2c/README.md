@@ -42,7 +42,7 @@ Activating I2C devices requires **working** [EC](../../acpi/renames/ec.md) and [
 
 Open GenI2C and go in Diagnosis section
 
-![](../../.gitbook/assets/image%20%2884%29.png)
+![](../../.gitbook/assets/image%20%2887%29.png)
 
 {% hint style="danger" %}
 If CPU Generation Support led is red you can't add support for I2C devices on your laptop
@@ -150,7 +150,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
 ```
 
-![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%28104%29.png)
+![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%28109%29.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
@@ -194,17 +194,17 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 
 But there is also a second method, more brutal which removes them from `VoodooPS2Controller.kext` . Right click on the kext and click on `Show Package Contents`.
 
-![](../../.gitbook/assets/image%20%2893%29.png)
+![](../../.gitbook/assets/image%20%2896%29.png)
 
-![Open Contents folder](../../.gitbook/assets/image%20%2833%29.png)
+![Open &quot;Contents&quot; folder](../../.gitbook/assets/image%20%28108%29.png)
 
-![Open Plugins folder](../../.gitbook/assets/image%20%2872%29.png)
+![Open &quot;Plugins&quot; folder](../../.gitbook/assets/image%20%28101%29.png)
 
-![Remove those two kexts](../../.gitbook/assets/image%20%2879%29.png)
+![Remove highlighted kexts](../../.gitbook/assets/image%20%2863%29.png)
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](../../.gitbook/assets/image%20%2886%29.png)
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![ and copy &quot;VoodooPS2Controller.kext&quot;](../../.gitbook/assets/image%20%2883%29.png)
 
 Finally copy **VoodooPS2Controller.kext** to _/Volumes/EFI/EFI/CLOVER/kexts/Other_ 
 
@@ -238,9 +238,9 @@ Save and reboot
 
 ![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image%20%2832%29.png)
 
-![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2897%29.png)
+![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%28100%29.png)
 
-![](../../.gitbook/assets/image%20%28111%29.png)
+![](../../.gitbook/assets/image%20%28116%29.png)
 
 **Enjoy the gestures &lt;3**
 
