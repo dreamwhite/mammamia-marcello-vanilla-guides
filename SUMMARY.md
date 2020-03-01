@@ -39,7 +39,8 @@
 
 ## Bootloaders
 
-* [Clover](bootloaders/clover.md)
+* [Clover](bootloaders/clover/README.md)
+  * [Conventions](bootloaders/clover/conventions.md)
 * [Opencore](bootloaders/opencore.md)
 * [Mount EFI](bootloaders/mount-efi.md)
 

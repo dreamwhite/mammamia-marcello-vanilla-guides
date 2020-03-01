@@ -15,27 +15,27 @@ Download the file which name corresponds to your SMBIOS \(e.g. _MacBookPro14.1_ 
 
 #### Dump.ioreg
 
-![iMac Pro IORegistryExplorer dump](../../.gitbook/assets/image%20%2881%29.png)
+![iMac Pro IORegistryExplorer dump](../../.gitbook/assets/image%20%2882%29.png)
 
 #### DarwinDump 
 
-![Open IORegFileViewer.html using Safari](../../.gitbook/assets/image%20%2895%29.png)
+![Open IORegFileViewer.html using Safari](../../.gitbook/assets/image%20%2896%29.png)
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
-![](../../.gitbook/assets/image%20%2857%29.png)
+![](../../.gitbook/assets/image%20%2858%29.png)
 
 Tick `Show Developer menu in menu bar` from Safari preferences
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 
 ![](../../.gitbook/assets/image%20%285%29.png)
 
 Then from `Develop` menu tick `Disable Local Restriction`
 
-![](../../.gitbook/assets/image%20%28132%29.png)
+![](../../.gitbook/assets/image%20%28133%29.png)
 
-![](../../.gitbook/assets/image%20%28128%29.png)
+![](../../.gitbook/assets/image%20%28129%29.png)
 
 Reload the page and enjoy IORegistryExplorer from browser
 
