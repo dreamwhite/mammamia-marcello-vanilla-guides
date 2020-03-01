@@ -23,7 +23,7 @@ description: USB mapping procedure
 
 With the release of every macOS version you'll probably need a port-limit removal patch to begin your USB configuration on a new build.
 
-![Port Limit Patch for macOS 10.15.x](../../.gitbook/assets/image%20%28121%29.png)
+![Port Limit Patch for macOS 10.15.x](../../.gitbook/assets/image%20%28124%29.png)
 
 Choose the patches for your OS version
 
@@ -77,7 +77,7 @@ Choose the patches for your OS version
 
 [Mount EFI](../../bootloaders/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
 
-![](../../.gitbook/assets/image%20%2880%29.png)
+![](../../.gitbook/assets/image%20%2883%29.png)
 
 To ensure that the kext is correctly loaded in kernel cache type in a terminal window  
 
@@ -86,7 +86,7 @@ To ensure that the kext is correctly loaded in kernel cache type in a terminal w
 kextstat | grep USBInjectAll
 ```
 
-![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](../../.gitbook/assets/image%20%28123%29.png)
+![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](../../.gitbook/assets/image%20%28126%29.png)
 
 
 
@@ -106,7 +106,7 @@ On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open eve
 
  
 
-![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2861%29.png)
+![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2864%29.png)
 
 ## Step 5: drop SSDT table loading
 
@@ -131,11 +131,11 @@ DefinitionBlock (AMLFileName, TableSignature, ComplianceRevision, OEMID, TableID
 
 Open the SSDT and identify the `TableId` as depicted in the example below:
 
-![&quot;xh\_OEMBD&quot; is the TableId](../../.gitbook/assets/image%20%2819%29.png)
+![&quot;xh\_OEMBD&quot; is the TableId](../../.gitbook/assets/image%20%2820%29.png)
 
 After identifying the TableId of the SSDT that must be dropped add it inside `config.plist` 
 
-![Clover Configurator](../../.gitbook/assets/image%20%2815%29.png)
+![Clover Configurator](../../.gitbook/assets/image%20%2816%29.png)
 
 Or via code:
 
@@ -163,29 +163,29 @@ Open Hackintool and go in USB section
 
 Click on the `Clear` button \(the third button from left\)
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](../../.gitbook/assets/image%20%2871%29.png)
 
 Then click on `Refresh` button \(the third from right\)
 
-![](../../.gitbook/assets/image%20%28100%29.png)
+![](../../.gitbook/assets/image%20%28103%29.png)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for right port of mobo etc.\)  
 Then remove any port that isn't highlighted with the second button.  
   
 You should have a result like the depicted one below
 
-![](../../.gitbook/assets/image%20%2876%29.png)
+![](../../.gitbook/assets/image%20%2879%29.png)
 
  
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/image%20%2830%29.png)
 
 ## Step 7: setup the ports inside SSDT
 
 Open the previously identified SSDT with MaciASL  
 
 
-![](../../.gitbook/assets/image%20%2875%29.png)
+![](../../.gitbook/assets/image%20%2878%29.png)
 
 According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method return the following Package:
 
@@ -255,7 +255,7 @@ into scope label \_SB.PCI0.XHC.RHUB.SSxx remove_entry;
 
 Finally remove the unused external references to unused ports as depicted below
 
-![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image%20%2877%29.png)
+![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image%20%2880%29.png)
 
 ## Step 8: add the SSDT methods
 
@@ -337,15 +337,15 @@ Replace `GUPC` call with the method that defines the USB which we've discovered 
 
 Look at the figure below
 
-![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2834%29.png)
+![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2837%29.png)
 
-![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%28125%29.png)
+![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%28128%29.png)
 
 Save SSDT in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` __remove `USBInjectAll.kext` from `/Volumes/EFI/EFI/CLOVER/kexts/Other` and reboot.
 
 Repeat **Step 4** and you should see something like the depicted one below
 
-![Mapped USB ports](../../.gitbook/assets/image%20%2854%29.png)
+![Mapped USB ports](../../.gitbook/assets/image%20%2857%29.png)
 
 Enjoy your USB ports mapped
 

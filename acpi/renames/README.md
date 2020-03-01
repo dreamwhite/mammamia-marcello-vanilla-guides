@@ -79,13 +79,13 @@ This method is preferred because, if there is any external reference to the rena
 
 Note that if the device name length is less than 4 char add as many "\_" as there are missing characters to reach the length of 4 \(e.g. `EC0` will be `EC0_` \)
 
-![4543305f is EC0\_ in HEX](../../.gitbook/assets/image%20%2895%29.png)
+![4543305f is EC0\_ in HEX](../../.gitbook/assets/image%20%2898%29.png)
 
-![45435f5f is EC\_\_ in HEX](../../.gitbook/assets/image%20%2829%29.png)
+![45435f5f is EC\_\_ in HEX](../../.gitbook/assets/image%20%2831%29.png)
 
 Add the rename as depicted below
 
-![](../../.gitbook/assets/image%20%2884%29.png)
+![](../../.gitbook/assets/image%20%2887%29.png)
 
 Save `config.plist` and reboot
 

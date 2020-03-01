@@ -30,19 +30,19 @@ What you mean?
 
 Download the latest kext release and open the .pkg file
 
-![Click on &quot;Continue&quot;](../.gitbook/assets/image%20%28108%29.png)
+![Click on &quot;Continue&quot;](../.gitbook/assets/image%20%28111%29.png)
 
-![Click on &quot;Continue&quot;](../.gitbook/assets/image%20%2896%29.png)
+![Click on &quot;Continue&quot;](../.gitbook/assets/image%20%2899%29.png)
 
-![Agree the license by clicking on &quot;Agree&quot;](../.gitbook/assets/image%20%2817%29.png)
+![Agree the license by clicking on &quot;Agree&quot;](../.gitbook/assets/image%20%2818%29.png)
 
-![Click on &quot;Customize&quot;](../.gitbook/assets/image%20%2818%29.png)
+![Click on &quot;Customize&quot;](../.gitbook/assets/image%20%2819%29.png)
 
-![Expand &quot;VoodooHDA Clover UEFI/ESP&quot; if you&apos;re on a UEFI machine, else on &quot;Legacy&quot;](../.gitbook/assets/image%20%2846%29.png)
+![Expand &quot;VoodooHDA Clover UEFI/ESP&quot; if you&apos;re on a UEFI machine, else on &quot;Legacy&quot;](../.gitbook/assets/image%20%2849%29.png)
 
-![Check only the macOS version you&apos;re using ](../.gitbook/assets/image%20%2860%29.png)
+![Check only the macOS version you&apos;re using ](../.gitbook/assets/image%20%2863%29.png)
 
-![](../.gitbook/assets/image%20%2822%29.png)
+![](../.gitbook/assets/image%20%2823%29.png)
 
 Click on Install, and enter your password when it's prompted.
 
@@ -52,11 +52,19 @@ Click on Install, and enter your password when it's prompted.
 
 According to the previous screenshot, VoodooHDA installs 3 files:
 
-* _VoodooHDA.kext_ inside /ESP/EFI/CLOVER/kexts/**10.xx**
-* 
-**/**Firstly [Mount EFI](../bootloaders/mount-efi.md) then remove VoodooHDA.kext as depicted below
+* **VoodooHDA.kext** inside /ESP/EFI/CLOVER/kexts/**10.xx**
+* **VoodooHDA.prefPane** inside /Library/PreferencePanes
+* **getdump** inside /usr/local/bin/getdump
 
-![](../.gitbook/assets/image%20%2859%29.png)
+To remove the kext simply [mount EFI](../bootloaders/mount-efi.md) then remove VoodooHDA.kext as depicted below
+
+![](../.gitbook/assets/image%20%2862%29.png)
+
+![](../.gitbook/assets/image%20%2814%29.png)
+
+![Remove VoodooHDA.kext](../.gitbook/assets/image%20%2834%29.png)
+
+![If there are no more other kexts remove the 10.xx folder ](../.gitbook/assets/image%20%2827%29.png)
 
 
 
