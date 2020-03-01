@@ -40,15 +40,15 @@ What you mean?
 
 Open IORegistryExplorer and the previously downloaded same SMBIOS Mac IORegistryExplorer export file.
 
-![e.g. SMBIOS is MacBookPro15,2](../../.gitbook/assets/image%20%2825%29.png)
+![e.g. SMBIOS is MacBookPro15,2](../../.gitbook/assets/image%20%2826%29.png)
 
 Then search for every single device that is in IORegistryExplorer and compare with the same SMBIOS Mac IORegistryExplorer export file.
 
 You should have a result like the depicted below:
 
-![From my hackintosh](../../.gitbook/assets/image%20%2895%29.png)
+![From my hackintosh](../../.gitbook/assets/image%20%2898%29.png)
 
-![From a MacBookPro 15,1  ](../../.gitbook/assets/image%20%2830%29.png)
+![From a MacBookPro 15,1  ](../../.gitbook/assets/image%20%2831%29.png)
 
 _AMW0_ doesn't appear in the MacBookPro 15,1 IORegistryExplorer export so just write it down in a list
 
@@ -60,7 +60,7 @@ Syntax for MaciASL patches is available [here](https://sourceforge.net/p/maciasl
 
 Open _DSDT.aml_ with MaciASL, clean it from errors and search for each device that you've wrote down previously. 
 
-![AMW0 needs to be removed](../../.gitbook/assets/image%20%28130%29.png)
+![AMW0 needs to be removed](../../.gitbook/assets/image%20%28133%29.png)
 
 {% hint style="info" %}
 Note that _AMW0_ path is _**\_SB.AMW0**_
@@ -74,11 +74,11 @@ into device label AMW0 parent_label _SB remove_entry;
 
 _AMW0_  is the device we need to remove, _\_SB_ is the path.
 
-![Click on &quot;Apply&quot; and then &quot;Compile&quot;](../../.gitbook/assets/image%20%2873%29.png)
+![Click on &quot;Apply&quot; and then &quot;Compile&quot;](../../.gitbook/assets/image%20%2875%29.png)
 
-![There&apos;s only one error. Click on it and fix it as depicted below](../../.gitbook/assets/image%20%28105%29.png)
+![There&apos;s only one error. Click on it and fix it as depicted below](../../.gitbook/assets/image%20%28108%29.png)
 
-![There are two AMW0 references](../../.gitbook/assets/image%20%2868%29.png)
+![There are two AMW0 references](../../.gitbook/assets/image%20%2870%29.png)
 
 Open again patch menu and apply the following patch
 
@@ -86,9 +86,9 @@ Open again patch menu and apply the following patch
 into method label WMNF remove_entry;
 ```
 
-![Click on &quot;Apply&quot; then &quot;Compile&quot;](../../.gitbook/assets/image%20%28106%29.png)
+![Click on &quot;Apply&quot; then &quot;Compile&quot;](../../.gitbook/assets/image%20%28109%29.png)
 
-![Another error](../../.gitbook/assets/image%20%2853%29.png)
+![Another error](../../.gitbook/assets/image%20%2855%29.png)
 
 Repeat the patching process by using the following syntax:
 
@@ -104,13 +104,13 @@ into OBJECT_TYPE label [parent_label PARENT_LABEL] remove_entry;
 
 After removing the devices click on every error and fix it as depicted below:
 
-![Object does not exist \(EV4\_\)](../../.gitbook/assets/image%20%2843%29.png)
+![Object does not exist \(EV4\_\)](../../.gitbook/assets/image%20%2844%29.png)
 
-![Remove the line which contains the removed method](../../.gitbook/assets/image%20%286%29.png)
+![Remove the line which contains the removed method](../../.gitbook/assets/image%20%287%29.png)
 
 Proceed by fixing other errors in the same way
 
-![Remove the lines which contains the removed method](../../.gitbook/assets/image%20%2888%29.png)
+![Remove the lines which contains the removed method](../../.gitbook/assets/image%20%2890%29.png)
 
 After cleaning DSDT from errors save it in _`/Volumes/EFI/EFI/CLOVER/ACPI/patched`_and reboot.
 
@@ -118,7 +118,7 @@ The new IORegistryExplorer structure should be similar to the same SMBIOS machin
 
  
 
-![No more AMW0 device](../../.gitbook/assets/image%20%289%29.png)
+![No more AMW0 device](../../.gitbook/assets/image%20%2810%29.png)
 
 
 
