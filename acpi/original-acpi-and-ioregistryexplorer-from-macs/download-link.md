@@ -15,11 +15,11 @@ Download the file which name corresponds to your SMBIOS \(e.g. _MacBookPro14.1_ 
 
 #### Dump.ioreg
 
-![iMac Pro IORegistryExplorer dump](../../.gitbook/assets/image%20%2870%29.png)
+![iMac Pro IORegistryExplorer dump](../../.gitbook/assets/image%20%2871%29.png)
 
 #### DarwinDump 
 
-![Open IORegFileViewer.html using Safari](../../.gitbook/assets/image%20%2884%29.png)
+![Open IORegFileViewer.html using Safari](../../.gitbook/assets/image%20%2885%29.png)
 
 ![](../../.gitbook/assets/image%20%2842%29.png)
 
@@ -33,9 +33,9 @@ Tick `Show Developer menu in menu bar` from Safari preferences
 
 Then from `Develop` menu tick `Disable Local Restriction`
 
-![](../../.gitbook/assets/image%20%28118%29.png)
+![](../../.gitbook/assets/image%20%28119%29.png)
 
-![](../../.gitbook/assets/image%20%28114%29.png)
+![](../../.gitbook/assets/image%20%28115%29.png)
 
 Reload the page and enjoy IORegistryExplorer from browser
 

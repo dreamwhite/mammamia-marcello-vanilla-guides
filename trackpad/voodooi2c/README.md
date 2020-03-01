@@ -42,7 +42,7 @@ Activating I2C devices requires **working** [EC](../../acpi/renames/ec.md) and [
 
 Open GenI2C and go in Diagnosis section
 
-![](../../.gitbook/assets/image%20%2892%29.png)
+![](../../.gitbook/assets/image%20%2893%29.png)
 
 {% hint style="danger" %}
 If CPU Generation Support led is red you can't add support for I2C devices on your laptop
@@ -75,7 +75,7 @@ Please use the Rename(s) above in the given order
 ++++++++++++++++++++++++++++++++++++++
 ```
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2867%29.png)
 
 ```text
 <key>KextsToPatch</key>
@@ -150,7 +150,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
 ```
 
-![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%28116%29.png)
+![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%28117%29.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
@@ -196,17 +196,17 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 
 But there is also a second method, more brutal which removes them from `VoodooPS2Controller.kext` . Right click on the kext and click on `Show Package Contents`.
 
-![](../../.gitbook/assets/image%20%28102%29.png)
+![](../../.gitbook/assets/image%20%28103%29.png)
 
-![Open &quot;Contents&quot; folder](../../.gitbook/assets/image%20%28115%29.png)
+![Open &quot;Contents&quot; folder](../../.gitbook/assets/image%20%28116%29.png)
 
-![Open &quot;Plugins&quot; folder](../../.gitbook/assets/image%20%28108%29.png)
+![Open &quot;Plugins&quot; folder](../../.gitbook/assets/image%20%28109%29.png)
 
-![Remove highlighted kexts](../../.gitbook/assets/image%20%2868%29.png)
+![Remove highlighted kexts](../../.gitbook/assets/image%20%2869%29.png)
 
-![](../../.gitbook/assets/image%20%2891%29.png)
+![](../../.gitbook/assets/image%20%2892%29.png)
 
-![ and copy &quot;VoodooPS2Controller.kext&quot;](../../.gitbook/assets/image%20%2888%29.png)
+![ and copy &quot;VoodooPS2Controller.kext&quot;](../../.gitbook/assets/image%20%2889%29.png)
 
 Finally copy **VoodooPS2Controller.kext** to _/Volumes/EFI/EFI/CLOVER/kexts/Other_ 
 
@@ -240,9 +240,9 @@ Save and reboot
 
 ![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image%20%2835%29.png)
 
-![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%28106%29.png)
+![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%28107%29.png)
 
-![](../../.gitbook/assets/image%20%28123%29.png)
+![](../../.gitbook/assets/image%20%28124%29.png)
 
 **Enjoy the gestures &lt;3**
 
