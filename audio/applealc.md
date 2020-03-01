@@ -1,5 +1,9 @@
 # AppleALC
 
+{% hint style="danger" %}
+AppleALC and VoodooHDA are not compatible together. Use only **ONE** of them
+{% endhint %}
+
 ## Marcello, what is it?
 
 AppleALC is "an open source kernel extension enabling native macOS HD audio for not officially supported codecs without any filesystem modifications".
