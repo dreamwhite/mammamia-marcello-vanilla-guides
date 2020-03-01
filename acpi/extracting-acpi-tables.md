@@ -23,8 +23,8 @@ What you mean?
 ## Requirements
 
 * [Mount EFI](../bootloaders/mount-efi.md)
-* config.plist/ACPI/SSDT/NoDynamicExtract=Yes
-  * meaning
+* config.plist/ACPI/SSDT/NoDynamicExtract=True
+  * [meaning](../bootloaders/clover/conventions.md)
 * MAMMAMIA
 
 {% hint style="danger" %}
