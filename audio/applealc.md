@@ -110,6 +110,12 @@ Test only speakers. For the 3.5mm combojack follow the next section
 
 ![System Preferences, Sound and check Output section](../.gitbook/assets/image%20%28112%29.png)
 
+### Uninstall
+
+Remove **AppleALC.kext** from _/Volumes/ESP/EFI/CLOVER/kexts/Other_
+
+\_\_
+
 ## Credits
 
 * [https://github.com/acidanthera/AppleALC](https://github.com/acidanthera/AppleALC/)
