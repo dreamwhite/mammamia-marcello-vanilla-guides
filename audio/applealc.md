@@ -46,7 +46,7 @@ Please note that Hackintool suggest you some Layout IDs. In any case check the o
 
 ![Audio section](../.gitbook/assets/image%20%2848%29.png)
 
-### Step: identify layout ID
+### Step 2: identify layout ID
 
 ![e.g. ALC295 layout ids](../.gitbook/assets/image%20%2843%29.png)
 
@@ -66,6 +66,10 @@ Note the "layoutXX.xml" and proceed to the Installation step
 Copy the DevicePath, "PciRoot\(0x0\)/Pci\(0x1f,0x3\)" and proceed to the next step
 
 ### Step 5: Clover Configurator
+
+{% hint style="info" %}
+According to AppleALC [Installation and Usage](https://github.com/acidanthera/AppleALC/wiki/Installation-and-usage) page layout-id can be injected in different manners. Personally i prefer the following below. Check their page for more infos :\)
+{% endhint %}
 
 1. Mount your ESP 
 2. Open your config.plist
