@@ -24,6 +24,7 @@ What you mean?
 
 * [Mount EFI](../bootloaders/mount-efi.md)
 * config.plist/ACPI/SSDT/NoDynamicExtract=Yes
+  * meaning
 * MAMMAMIA
 
 {% hint style="danger" %}
