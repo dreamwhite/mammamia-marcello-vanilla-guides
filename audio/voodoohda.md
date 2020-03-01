@@ -30,17 +30,17 @@ What you mean?
 
 Download the latest kext release and open the .pkg file
 
-![Click on &quot;Continue&quot;](../.gitbook/assets/image%20%28119%29.png)
+![Click on &quot;Continue&quot;](../.gitbook/assets/image%20%28121%29.png)
 
-![Click on &quot;Continue&quot;](../.gitbook/assets/image%20%28106%29.png)
+![Click on &quot;Continue&quot;](../.gitbook/assets/image%20%28107%29.png)
 
 ![Agree the license by clicking on &quot;Agree&quot;](../.gitbook/assets/image%20%2820%29.png)
 
 ![Click on &quot;Customize&quot;](../.gitbook/assets/image%20%2821%29.png)
 
-![Expand &quot;VoodooHDA Clover UEFI/ESP&quot; if you&apos;re on a UEFI machine, else on &quot;Legacy&quot;](../.gitbook/assets/image%20%2853%29.png)
+![Expand &quot;VoodooHDA Clover UEFI/ESP&quot; if you&apos;re on a UEFI machine, else on &quot;Legacy&quot;](../.gitbook/assets/image%20%2854%29.png)
 
-![Check only the macOS version you&apos;re using ](../.gitbook/assets/image%20%2868%29.png)
+![Check only the macOS version you&apos;re using ](../.gitbook/assets/image%20%2869%29.png)
 
 ![](../.gitbook/assets/image%20%2825%29.png)
 
@@ -58,11 +58,11 @@ According to the previous screenshot, VoodooHDA installs 3 files:
 
 To remove the kext simply [mount EFI](../bootloaders/mount-efi.md) then remove VoodooHDA.kext as depicted below
 
-![](../.gitbook/assets/image%20%2867%29.png)
+![](../.gitbook/assets/image%20%2868%29.png)
 
 ![](../.gitbook/assets/image%20%2816%29.png)
 
-![Remove VoodooHDA.kext](../.gitbook/assets/image%20%2837%29.png)
+![Remove VoodooHDA.kext](../.gitbook/assets/image%20%2838%29.png)
 
 ![If there are no more other kexts remove the 10.xx folder ](../.gitbook/assets/image%20%2830%29.png)
 
@@ -70,9 +70,9 @@ To remove the preference pane just open System Preferences as depicted below
 
 ![](../.gitbook/assets/image%20%2829%29.png)
 
-![Right click on VoodooHDA icon and remove the preference pane](../.gitbook/assets/image%20%28136%29.png)
+![Right click on VoodooHDA icon and remove the preference pane](../.gitbook/assets/image%20%28138%29.png)
 
-![](../.gitbook/assets/image%20%2864%29.png)
+![](../.gitbook/assets/image%20%2865%29.png)
 
 Finally, remove **getdump** by opening a terminal window:
 
@@ -96,7 +96,7 @@ sudo rm -r /usr/local/bin/getdump
 sudo rm -r $(which getdump)
 ```
 
-![](../.gitbook/assets/image%20%28135%29.png)
+![](../.gitbook/assets/image%20%28137%29.png)
 
 {% hint style="success" %}
 VoodooHDA is successfully uninstalled from your system. Remember to reboot in order to apply changes

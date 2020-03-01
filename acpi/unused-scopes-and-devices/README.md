@@ -46,7 +46,7 @@ Then search for every single device that is in IORegistryExplorer and compare wi
 
 You should have a result like the depicted below:
 
-![From my hackintosh](../../.gitbook/assets/image%20%2898%29.png)
+![From my hackintosh](../../.gitbook/assets/image%20%2899%29.png)
 
 ![From a MacBookPro 15,1  ](../../.gitbook/assets/image%20%2831%29.png)
 
@@ -60,7 +60,7 @@ Syntax for MaciASL patches is available [here](https://sourceforge.net/p/maciasl
 
 Open _DSDT.aml_ with MaciASL, clean it from errors and search for each device that you've wrote down previously. 
 
-![AMW0 needs to be removed](../../.gitbook/assets/image%20%28133%29.png)
+![AMW0 needs to be removed](../../.gitbook/assets/image%20%28135%29.png)
 
 {% hint style="info" %}
 Note that _AMW0_ path is _**\_SB.AMW0**_
@@ -74,11 +74,11 @@ into device label AMW0 parent_label _SB remove_entry;
 
 _AMW0_  is the device we need to remove, _\_SB_ is the path.
 
-![Click on &quot;Apply&quot; and then &quot;Compile&quot;](../../.gitbook/assets/image%20%2875%29.png)
+![Click on &quot;Apply&quot; and then &quot;Compile&quot;](../../.gitbook/assets/image%20%2876%29.png)
 
-![There&apos;s only one error. Click on it and fix it as depicted below](../../.gitbook/assets/image%20%28108%29.png)
+![There&apos;s only one error. Click on it and fix it as depicted below](../../.gitbook/assets/image%20%28109%29.png)
 
-![There are two AMW0 references](../../.gitbook/assets/image%20%2870%29.png)
+![There are two AMW0 references](../../.gitbook/assets/image%20%2871%29.png)
 
 Open again patch menu and apply the following patch
 
@@ -86,9 +86,9 @@ Open again patch menu and apply the following patch
 into method label WMNF remove_entry;
 ```
 
-![Click on &quot;Apply&quot; then &quot;Compile&quot;](../../.gitbook/assets/image%20%28109%29.png)
+![Click on &quot;Apply&quot; then &quot;Compile&quot;](../../.gitbook/assets/image%20%28110%29.png)
 
-![Another error](../../.gitbook/assets/image%20%2855%29.png)
+![Another error](../../.gitbook/assets/image%20%2856%29.png)
 
 Repeat the patching process by using the following syntax:
 
@@ -104,13 +104,13 @@ into OBJECT_TYPE label [parent_label PARENT_LABEL] remove_entry;
 
 After removing the devices click on every error and fix it as depicted below:
 
-![Object does not exist \(EV4\_\)](../../.gitbook/assets/image%20%2844%29.png)
+![Object does not exist \(EV4\_\)](../../.gitbook/assets/image%20%2845%29.png)
 
 ![Remove the line which contains the removed method](../../.gitbook/assets/image%20%287%29.png)
 
 Proceed by fixing other errors in the same way
 
-![Remove the lines which contains the removed method](../../.gitbook/assets/image%20%2890%29.png)
+![Remove the lines which contains the removed method](../../.gitbook/assets/image%20%2891%29.png)
 
 After cleaning DSDT from errors save it in _`/Volumes/EFI/EFI/CLOVER/ACPI/patched`_and reboot.
 

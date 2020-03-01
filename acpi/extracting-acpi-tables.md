@@ -23,17 +23,36 @@ What you mean?
 ## Requirements
 
 * [Mount EFI](../bootloaders/mount-efi.md)
+* config.plist/ACPI/SSDT/NoDynamicExtract=Yes
 * MAMMAMIA
 
 {% hint style="danger" %}
 Don't extract ACPI tables using MaciASL or DPCIManager as they are already patched using DSDT with Clover/Opencore renames
 {% endhint %}
 
-While on Clover Boot Screen press **F1**
+### Step 1: identifying keyboard combination
 
-![](../.gitbook/assets/image%20%2852%29.png)
+While on Clover boot screen press F1 to open Help Menu
+
+![](../.gitbook/assets/image%20%2853%29.png)
 
 ![If this menu doesn&apos;t open repeat the procedure using fn+F1](../.gitbook/assets/image%20%283%29.png)
+
+In the first case **F1**will call the standard **F1** key, else it will be **fn+F1**
+
+### Step 2: extract ACPI tables
+
+{% hint style="warning" %}
+The following procedure is a background process, so don't expect any graphical output
+{% endhint %}
+
+Press **F4** \(or **fn+F4** if the fn keys are swapped\) and wait 30 seconds before booting
+
+Then boot and after mounting the EFI open ACPI/origin folder
+
+![](../.gitbook/assets/image%20%28117%29.png)
+
+![ACPI Tables extracted](../.gitbook/assets/image%20%2832%29.png)
 
 
 
