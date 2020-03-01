@@ -351,8 +351,7 @@ Enjoy your USB ports mapped
 
 ## Credits
 
-* [Olarila Native USB FIX for desktop ](https://www.olarila.com/topic/6181-guide-native-usb-fix-for-desktops-no-injectorkext-required-skylake/#comments)
-  * it's valid also for laptops :\)
+* [MacOS86](https://www.macos86.it/topic/9-mappatura-porte-usb/page/1) Italian community
 
 
 
