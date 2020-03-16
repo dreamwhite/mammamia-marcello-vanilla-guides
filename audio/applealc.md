@@ -110,9 +110,7 @@ Test only speakers. For the 3.5mm combojack follow the next section
 
 ### Uninstall
 
-Remove **AppleALC.kext** from _/Volumes/ESP/EFI/CLOVER/kexts/Other_
-
-\_\_
+Remove **AppleALC.kext** from `ECKO`
 
 ## Credits
 
