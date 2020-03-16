@@ -59,7 +59,7 @@ Note the "layoutXX.xml" and proceed to the Installation step
 ### Step 3: installation
 
 1. Verify that your Codec name is present in AppleALC layout id list
-2. Put the compiled kexts inside /Volumes/EFI/EFI/CLOVER/kexts/Other folder
+2. Put the compiled kexts inside `ECKO` folder
 
 ![Step 2: kext installation](../.gitbook/assets/image-114.png)
 
