@@ -20,8 +20,6 @@ What you mean?
 
 {% page-ref page="intel.md" %}
 
-{% page-ref page="amd.md" %}
-
 
 
 

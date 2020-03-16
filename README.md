@@ -1,9 +1,17 @@
 # Mammamia Marcello Vanilla Guides
 
 {% hint style="danger" %}
-**The following guide is still a work in progress.   
+**The following guide is still a work in progress.  
 Start: Mon 20 Jan 2020  
 ETA: 3 months**
+
+**16 Mar edit:  
+  
+ETA: 5 Months due to nCoViD19**
+
+**Please note that the images are bugged \(e.g. usb mapping inside voodooi2c \(tf 's goin' on\)**
+
+\*\*\*\*
 {% endhint %}
 
 {% hint style="warning" %}
@@ -24,7 +32,7 @@ MAMMAMIA
 
 
 {% hint style="info" %}
-[Tools]() are available in dedicated section
+[Tools](tools-1/tools.md) are available in dedicated section
 {% endhint %}
 
 
