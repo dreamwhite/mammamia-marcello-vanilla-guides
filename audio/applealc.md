@@ -67,7 +67,7 @@ Note the "layoutXX.xml" and proceed to the Installation step
 
 ![...and drag the executable &quot;gfxutil&quot; inside the terminal window and type &quot;-f HDEF&quot; ](../.gitbook/assets/image-113.png)
 
-Copy the DevicePath, "PciRoot\(0x0\)/Pci\(0x1f,0x3\)" and proceed to the next step
+Copy the DevicePath, `PciRoot(0x0)/Pci(0x1f,0x3)` and proceed to the next step
 
 ### Step 5: Clover Configurator
 
