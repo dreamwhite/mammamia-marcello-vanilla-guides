@@ -1,5 +1,9 @@
 # AppleALC
 
+{% hint style="success" %}
+**THE FOLLOWING SECTION IS FREE OF TYPOS/BROKEN IMAGES/SH\*T**
+{% endhint %}
+
 {% hint style="danger" %}
 AppleALC and VoodooHDA are not compatible together. Use only **ONE** of them
 {% endhint %}
