@@ -184,7 +184,7 @@ Click on the `Clear` button \(the third button from left\)
 
 Then click on `Refresh` button \(the third from right\)
 
-![](../../.gitbook/assets/image%20%2822%29.png)
+![](../../.gitbook/assets/image%20%2824%29.png)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for right port of mobo etc.\)  
 Then remove any port that isn't highlighted with the second button.
@@ -220,7 +220,7 @@ Type // Integer (BYTE)
 
 | Hex | USB Type |
 | :--- | :--- |
-| 0x00 | Type ‘A’ connector |
+| 0x00 | Type ‘A’ connector aka USB2 |
 | 0x01 | Mini-AB connector |
 | 0x02 | ExpressCard |
 | 0x03 | USB 3 Standard-A connector |
@@ -285,7 +285,7 @@ Just add the following method using MaciASL patch menu:
 
 into scope label \_SB.PCI0.XHC.RHUB insert
 begin
-Method ( GENG, 1, NotSerialized)\n
+Method ( GENG, 2, NotSerialized)\n
 {\n
 Name (PCKG, Package (0x04)\n
 {\n
@@ -307,15 +307,19 @@ end;
 For better reading, thought is useless, just place the methods from bottom file next to **GUPC** method
 {% endhint %}
 
-Replace `GUPC` call with the method that defines the USB which we've discovered previously
+Replace `GUPC` method calls with `GENG([One]/Zero, TYPE)` where type is the port type which we've discovered previously
 
-Look at the figure below
+![For USB-C call is GENG\(One, 0x09\) where 0x09 is USB-C connector](../../.gitbook/assets/image%20%2833%29.png)
+
+Look at the figures below
 
 ![GUPC method which sets connector type as internal](../../.gitbook/assets/image-42.png)
 
-![S3BP which sets connector type to USB3 B Powered](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28141%29.png)
+![For USB-3 Powered ports call is GENG\(One, 0x07\)](../../.gitbook/assets/image%20%2822%29.png)
 
-Save SSDT in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` \_\_remove `USBInjectAll.kext` from `/Volumes/EFI/EFI/CLOVER/kexts/Other` and reboot.
+![](../../.gitbook/assets/image%20%288%29.png)
+
+Save SSDT in `ECAP` , remove `USBInjectAll.kext` from `ECKO` and reboot.
 
 Repeat **Step 4** and you should see something like the depicted one below
 
