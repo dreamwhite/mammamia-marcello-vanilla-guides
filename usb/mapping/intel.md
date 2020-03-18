@@ -4,8 +4,6 @@ description: USB mapping procedure
 
 # Intel
 
-
-
 {% hint style="success" %}
 **THE FOLLOWING SECTION IS FREE OF TYPOS/BROKEN IMAGES/SH\*T**
 {% endhint %}
