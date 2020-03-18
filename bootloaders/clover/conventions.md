@@ -22,7 +22,7 @@ What you mean?
 
 Let's assume for example that **AddMCHC** Clover Hot-patch needs to be enabled
 
-![](../../.gitbook/assets/image%20%2831%29.png)
+![](../../.gitbook/assets/image-31.png)
 
 In this case to shortcut it we'll use the following syntax
 
@@ -35,6 +35,4 @@ So in this case AddMCHC ticked will be something like that:
 ```text
 config.plist/ACPI/Fixes/AddMCHC=True
 ```
-
-
 

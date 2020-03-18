@@ -14,15 +14,5 @@ What you mean?
 
 ## This is how to get them
 
-### 
-
 {% page-ref page="download-link.md" %}
-
-
-
-
-
-### 
-
-### 
 

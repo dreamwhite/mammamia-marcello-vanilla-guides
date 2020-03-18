@@ -35,9 +35,9 @@ Don't extract ACPI tables using MaciASL or DPCIManager as they are already patch
 
 While on Clover boot screen press F1 to open Help Menu
 
-![](../.gitbook/assets/image%20%2854%29.png)
+![](../.gitbook/assets/image-54.png)
 
-![If this menu doesn&apos;t open repeat the procedure using fn+F1](../.gitbook/assets/image%20%283%29.png)
+![If this menu doesn&apos;t open repeat the procedure using fn+F1](../.gitbook/assets/image-3.png)
 
 In the first case **F1**will call the standard **F1** key, else it will be **fn+F1**
 
@@ -51,9 +51,7 @@ Press **F4** \(or **fn+F4** if the fn keys are swapped\) and wait 30 seconds bef
 
 Then boot and after mounting the EFI open ACPI/origin folder
 
-![](../.gitbook/assets/image%20%28118%29.png)
+![](../.gitbook/assets/image-118.png)
 
-![ACPI Tables extracted](../.gitbook/assets/image%20%2833%29.png)
-
-
+![ACPI Tables extracted](../.gitbook/assets/image-33.png)
 

@@ -45,18 +45,18 @@ Don't add those renames in Clover
 
 * DPCIManager
 * Hackintool
-
-![Status/Devices section](../.gitbook/assets/image-134.png)
+* 
+![DPCIManager Status](../.gitbook/assets/image.png)
 
 {% hint style="warning" %}
 Please note that Hackintool suggest you some Layout IDs. In any case check the official AppleALC page for all layout ids
 {% endhint %}
 
-![Audio section](../.gitbook/assets/image%20%2891%29.png)
+![Audio section](../.gitbook/assets/image-91.png)
 
 ### Step 2: identify layout ID
 
-![e.g. ALC295 layout ids](../.gitbook/assets/image%20%2884%29.png)
+![e.g. ALC295 layout ids](../.gitbook/assets/image-84.png)
 
 Note the "layoutXX.xml" and proceed to the Installation step
 
@@ -65,11 +65,11 @@ Note the "layoutXX.xml" and proceed to the Installation step
 1. Verify that your Codec name is present in AppleALC layout id list
 2. Put the compiled kexts inside `ECKO` folder
 
-![Step 2: kext installation](../.gitbook/assets/image-114.png)
+![Step 2: kext installation](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image-114.png)
 
 ### Step 4: get DevicePath address using gfxutil
 
-![...and drag the executable &quot;gfxutil&quot; inside the terminal window and type &quot;-f HDEF&quot; ](../.gitbook/assets/image-113.png)
+![...and drag the executable &quot;gfxutil&quot; inside the terminal window and type &quot;-f HDEF&quot; ](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image-113.png)
 
 Copy the DevicePath, `PciRoot(0x0)/Pci(0x1f,0x3)` and proceed to the next step
 
@@ -84,9 +84,9 @@ According to AppleALC [Installation and Usage](https://github.com/acidanthera/Ap
 3. Go in Devices/Properties section
 4. Fill the fields as below
 
-![Mount EFI and open config.plist](../.gitbook/assets/image%20%2877%29.png)
+![Mount EFI and open config.plist](../.gitbook/assets/image-77.png)
 
-![Set Audio/Inject to No and change 77 with your layout-id](../.gitbook/assets/image%20%2889%29.png)
+![Set Audio/Inject to No and change 77 with your layout-id](../.gitbook/assets/image-89.png)
 
 #### Code editor
 
@@ -110,7 +110,7 @@ Make sure that _Internal Speakers_ is in Output devices
 Test only speakers. For the 3.5mm combojack follow the next section
 {% endhint %}
 
-![System Preferences, Sound and check Output section](../.gitbook/assets/image-117.png)
+![System Preferences, Sound and check Output section](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image-117.png)
 
 ### Uninstall
 

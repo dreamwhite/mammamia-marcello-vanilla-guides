@@ -9,10 +9,10 @@ description: USB mapping procedure
 **A:** The following procedure is safe your hackintosh. Just fix the ACPI errors.
 {% endhint %}
 
-##  Requirements
+## Requirements
 
 * DSDT/SSDT-USB.aml
-* *  [Extracting ACPI tables](../../acpi/extracting-acpi-tables.md)
+* * [Extracting ACPI tables](../../acpi/extracting-acpi-tables.md)
 * MaciASL
 * Hackintool
 * Clover Configurator
@@ -23,7 +23,7 @@ description: USB mapping procedure
 
 With the release of every macOS version you'll probably need a port-limit removal patch to begin your USB configuration on a new build.
 
-![Port Limit Patch for macOS 10.15.x](../../.gitbook/assets/image%20%28135%29.png)
+![Port Limit Patch for macOS 10.15.x](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28135%29.png)
 
 Choose the patches for your OS version
 
@@ -77,18 +77,15 @@ Choose the patches for your OS version
 
 [Mount EFI](../../bootloaders/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
 
-![](../../.gitbook/assets/image%20%2891%29.png)
+![](../../.gitbook/assets/image-91.png)
 
-To ensure that the kext is correctly loaded in kernel cache type in a terminal window  
-
+To ensure that the kext is correctly loaded in kernel cache type in a terminal window
 
 ```text
 kextstat | grep USBInjectAll
 ```
 
-![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](../../.gitbook/assets/image%20%28137%29.png)
-
-
+![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28137%29.png)
 
 ## Step 3: extract ACPI Tables
 
@@ -104,13 +101,11 @@ Some newer machines have USB ports still defined in DSDT, just look for **HS01**
 
 On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open every single `SSDT-X-YYYYY.aml` with MaciASL and look for a tree like depicted in the following screenshot
 
- 
-
-![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image%20%2871%29.png)
+![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image-71.png)
 
 ## Step 5: drop SSDT table loading
 
-In order to load custom USB SSDT, drop the SSDT table which defines it. 
+In order to load custom USB SSDT, drop the SSDT table which defines it.
 
 According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [1009](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=1009), `DefinitionBlock` has the following syntax:
 
@@ -131,24 +126,24 @@ DefinitionBlock (AMLFileName, TableSignature, ComplianceRevision, OEMID, TableID
 
 Open the SSDT and identify the `TableId` as depicted in the example below:
 
-![&quot;xh\_OEMBD&quot; is the TableId](../../.gitbook/assets/image%20%2822%29.png)
+![&quot;xh\_OEMBD&quot; is the TableId](../../.gitbook/assets/image-22.png)
 
-After identifying the TableId of the SSDT that must be dropped add it inside `config.plist` 
+After identifying the TableId of the SSDT that must be dropped add it inside `config.plist`
 
-![Clover Configurator](../../.gitbook/assets/image%20%2818%29.png)
+![Clover Configurator](../../.gitbook/assets/image-18.png)
 
 Or via code:
 
 ```text
 <key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>xh_OEMBD</string>
-			</dict>
-		</array>
+        <array>
+            <dict>
+                <key>Signature</key>
+                <string>SSDT</string>
+                <key>TableId</key>
+                <string>xh_OEMBD</string>
+            </dict>
+        </array>
 ```
 
 ## Step 6: identify which port is active or not
@@ -159,33 +154,30 @@ Or via code:
 
 Open Hackintool and go in USB section
 
-![](../../.gitbook/assets/image%20%288%29.png)
+![](../../.gitbook/assets/image-8.png)
 
 Click on the `Clear` button \(the third button from left\)
 
-![](../../.gitbook/assets/image%20%2879%29.png)
+![](../../.gitbook/assets/image-79.png)
 
 Then click on `Refresh` button \(the third from right\)
 
-![](../../.gitbook/assets/image%20%28112%29.png)
+![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28112%29.png)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for right port of mobo etc.\)  
-Then remove any port that isn't highlighted with the second button.  
-  
+Then remove any port that isn't highlighted with the second button.
+
 You should have a result like the depicted one below
 
-![](../../.gitbook/assets/image%20%2887%29.png)
+![](../../.gitbook/assets/image-87.png)
 
- 
-
-![](../../.gitbook/assets/image%20%2835%29.png)
+![](../../.gitbook/assets/image-35.png)
 
 ## Step 7: setup the ports inside SSDT
 
-Open the previously identified SSDT with MaciASL  
+Open the previously identified SSDT with MaciASL
 
-
-![](../../.gitbook/assets/image%20%2886%29.png)
+![](../../.gitbook/assets/image-86.png)
 
 According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method return the following Package:
 
@@ -236,7 +228,7 @@ Now just look for each port you've discovered before and fill a table like the b
 Then remove the unused ports from SSDT by applying the following patch
 
 {% hint style="warning" %}
-Replace **xx** with the unused port number previously found 
+Replace **xx** with the unused port number previously found
 {% endhint %}
 
 {% tabs %}
@@ -247,7 +239,7 @@ into scope label \_SB.PCI0.XHC.RHUB.HSxx remove_entry;
 {% endtab %}
 
 {% tab title="SSxx" %}
-```
+```text
 into scope label \_SB.PCI0.XHC.RHUB.SSxx remove_entry;
 ```
 {% endtab %}
@@ -255,7 +247,7 @@ into scope label \_SB.PCI0.XHC.RHUB.SSxx remove_entry;
 
 Finally remove the unused external references to unused ports as depicted below
 
-![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image%20%2888%29.png)
+![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image-88.png)
 
 ## Step 8: add the SSDT methods
 
@@ -287,7 +279,7 @@ end;
 {% endtab %}
 
 {% tab title="USB3" %}
-```
+```text
 # USB 3.0 METHOD #
 into scope label \_SB.PCI0.XHC.RHUB insert
 begin
@@ -308,7 +300,7 @@ end;
 {% endtab %}
 
 {% tab title="USB3 Powered" %}
-```
+```text
 # USB 3.0 Powered METHOD #
 into scope label \_SB.PCI0.XHC.RHUB insert
 begin
@@ -337,31 +329,19 @@ Replace `GUPC` call with the method that defines the USB which we've discovered 
 
 Look at the figure below
 
-![GUPC method which sets connector type as internal](../../.gitbook/assets/image%20%2842%29.png)
+![GUPC method which sets connector type as internal](../../.gitbook/assets/image-42.png)
 
-![S3BP which sets connector type to USB3 B Powered](../../.gitbook/assets/image%20%28141%29.png)
+![S3BP which sets connector type to USB3 B Powered](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28141%29.png)
 
-Save SSDT in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` __remove `USBInjectAll.kext` from `/Volumes/EFI/EFI/CLOVER/kexts/Other` and reboot.
+Save SSDT in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` \_\_remove `USBInjectAll.kext` from `/Volumes/EFI/EFI/CLOVER/kexts/Other` and reboot.
 
 Repeat **Step 4** and you should see something like the depicted one below
 
-![Mapped USB ports](../../.gitbook/assets/image%20%2863%29.png)
+![Mapped USB ports](../../.gitbook/assets/image-63.png)
 
 Enjoy your USB ports mapped
 
 ## Credits
 
 * [MacOS86](https://www.macos86.it/topic/9-mappatura-porte-usb/page/1) Italian community
-
-
-
-
-
-
-
- 
-
-
-
-
 

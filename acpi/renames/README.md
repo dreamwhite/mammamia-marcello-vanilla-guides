@@ -74,20 +74,18 @@ You can use **any** HEX calculator
 {% endhint %}
 
 {% hint style="info" %}
-This method is preferred because, if there is any external reference to the renamed device, such as a SSDT,  it will be automatically renamed by Clover
+This method is preferred because, if there is any external reference to the renamed device, such as a SSDT, it will be automatically renamed by Clover
 {% endhint %}
 
 Note that if the device name length is less than 4 char add as many "\_" as there are missing characters to reach the length of 4 \(e.g. `EC0` will be `EC0_` \)
 
-![4543305f is EC0\_ in HEX](../../.gitbook/assets/image%20%28107%29.png)
+![4543305f is EC0\_ in HEX](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28107%29.png)
 
-![45435f5f is EC\_\_ in HEX](../../.gitbook/assets/image%20%2836%29.png)
+![45435f5f is EC\_\_ in HEX](../../.gitbook/assets/image-36.png)
 
 Add the rename as depicted below
 
-![](../../.gitbook/assets/image%20%2895%29.png)
+![](../../.gitbook/assets/image-95.png)
 
 Save `config.plist` and reboot
-
-
 

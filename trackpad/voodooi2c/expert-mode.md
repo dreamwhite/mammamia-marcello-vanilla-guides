@@ -27,7 +27,7 @@ After extracting DSDT.aml and cleaning it from errors, with MaciASL, open Patch 
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2009\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2009"))) end;
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2012\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2012"))) end;
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2013"))) end;
-into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
+into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;
 ```
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzI_kiUfZn2d5fK0Ufq%2F-LzIaKrHrrtz4w43iI2Q%2Fimage.png?alt=media&token=26436759-812d-40ac-8b67-f4610ea85997)
@@ -79,7 +79,7 @@ In this case the interrupt pin is 0x00000033
 
 If your hexadecimal pin number is greater than `0x2F` then proceed to the next step.
 
- **Step 2a: Ensuring your device is GPIO-pinned**
+**Step 2a: Ensuring your device is GPIO-pinned**
 
 You have arrived at this step because Apple's drivers do not support APIC pins greater than `0x2F` \(and it would be very difficult to make them support them\). In this case, we thus make use of a kext called [VoodooGPIO](https://github.com/coolstar/VoodooGPIO) which comes bundled with all copies of VoodooI2C. VoodooGPIO allows us to get around this limitation of macOS by using GPIO interrupts instead which most new machines support.
 

@@ -20,7 +20,7 @@ What you mean?
 
 {% hint style="info" %}
 **Q:** Can this procedure break my hackintosh?  
-**A:** The following procedure is safe your hackintosh. Just fix the ACPI errors. 
+**A:** The following procedure is safe your hackintosh. Just fix the ACPI errors.
 {% endhint %}
 
 {% hint style="danger" %}
@@ -31,7 +31,7 @@ Activating I2C devices requires **working** [EC](../../acpi/renames/ec.md) and [
 
 * At least Intel Core Broadwell generation
 * DSDT.aml
-  *  [Extracting ACPI tables]()
+  * [Extracting ACPI tables](./)
 * MaciASL
 * Clover Configurator
 * GenI2C
@@ -42,7 +42,7 @@ Activating I2C devices requires **working** [EC](../../acpi/renames/ec.md) and [
 
 Open GenI2C and go in Diagnosis section
 
-![](../../.gitbook/assets/image%20%28105%29.png)
+![](../../.gitbook/assets/image-105.png)
 
 {% hint style="danger" %}
 If CPU Generation Support led is red you can't add support for I2C devices on your laptop
@@ -75,65 +75,63 @@ Please use the Rename(s) above in the given order
 ++++++++++++++++++++++++++++++++++++++
 ```
 
-![](../../.gitbook/assets/image%20%2878%29.png)
+![](../../.gitbook/assets/image-78.png)
 
 ```text
 <key>KextsToPatch</key>
-		<array>          
-			<dict>
-				<key>Comment</key>
-				<string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SU9LaXQ=
-				</data>
-				<key>InfoPlistPatch</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelLpssI2C</string>
-				<key>Replace</key>
-				<data>
-				SU9LaXM=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SU9LaXQ=
-				</data>
-				<key>InfoPlistPatch</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelLpssI2CController</string>
-				<key>Replace</key>
-				<data>
-				SU9LaXM=
-				</data>
-			</dict>
-		</array>
-	</dict>
+        <array>          
+            <dict>
+                <key>Comment</key>
+                <string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
+                <key>Disabled</key>
+                <false/>
+                <key>Find</key>
+                <data>
+                SU9LaXQ=
+                </data>
+                <key>InfoPlistPatch</key>
+                <true/>
+                <key>Name</key>
+                <string>com.apple.driver.AppleIntelLpssI2C</string>
+                <key>Replace</key>
+                <data>
+                SU9LaXM=
+                </data>
+            </dict>
+            <dict>
+                <key>Comment</key>
+                <string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
+                <key>Disabled</key>
+                <false/>
+                <key>Find</key>
+                <data>
+                SU9LaXQ=
+                </data>
+                <key>InfoPlistPatch</key>
+                <true/>
+                <key>Name</key>
+                <string>com.apple.driver.AppleIntelLpssI2CController</string>
+                <key>Replace</key>
+                <data>
+                SU9LaXM=
+                </data>
+            </dict>
+        </array>
+    </dict>
 ```
 
 Furthermore, force the loading of **IOGraphicsFamily.kext** by adding
 
 `\System\Library\Extensions\IOGraphicsFamily.kext` inside config.plist/Kernel and Kext Patches/ForceKextsToLoad
 
-![](../../.gitbook/assets/image%20%2865%29.png)
+![](../../.gitbook/assets/image-65.png)
 
 ```text
 <key>ForceKextsToLoad</key>
-		<array>
-			<string>\System\Library\Extensions\IOGraphicsFamily.kext</string>
-		</array>
+        <array>
+            <string>\System\Library\Extensions\IOGraphicsFamily.kext</string>
+        </array>
 ```
-
-
 
 ### Step 3: patching DSDT
 
@@ -147,10 +145,10 @@ After extracting DSDT.aml and cleaning it from errors, with MaciASL, open Patch 
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2009\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2009"))) end;
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2012\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2012"))) end;
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2013"))) end;
-into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;        
+into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;
 ```
 
-![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](../../.gitbook/assets/image%20%28131%29.png)
+![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28131%29.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
@@ -159,7 +157,7 @@ Save the file also in "Disassemled ASL File" for the next step
 Add `VoodooI2C.kext` and the `satellite kext`  
 More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Satellite%20Kexts)
 
-![](../../.gitbook/assets/image%20%2824%29.png)
+![](../../.gitbook/assets/image-24.png)
 
 ### Step 5: disable VoodooPS2Controller Mouse and Trackpad conflict
 
@@ -196,21 +194,19 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 
 But there is also a second method, more brutal which removes them from `VoodooPS2Controller.kext` . Right click on the kext and click on `Show Package Contents`.
 
-![](../../.gitbook/assets/image%20%28116%29.png)
+![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28116%29.png)
 
-![Open &quot;Contents&quot; folder](../../.gitbook/assets/image%20%28130%29.png)
+![Open &quot;Contents&quot; folder](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28130%29.png)
 
-![Open &quot;Plugins&quot; folder](../../.gitbook/assets/image%20%28123%29.png)
+![Open &quot;Plugins&quot; folder](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28123%29.png)
 
-![Remove highlighted kexts](../../.gitbook/assets/image%20%2880%29.png)
+![Remove highlighted kexts](../../.gitbook/assets/image-80.png)
 
-![](../../.gitbook/assets/image%20%28104%29.png)
+![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28104%29.png)
 
-![ and copy &quot;VoodooPS2Controller.kext&quot;](../../.gitbook/assets/image%20%28101%29.png)
+![ and copy &quot;VoodooPS2Controller.kext&quot;](../../.gitbook/assets/image-101.png)
 
-Finally copy **VoodooPS2Controller.kext** to _/Volumes/EFI/EFI/CLOVER/kexts/Other_ 
-
-
+Finally copy **VoodooPS2Controller.kext** to _/Volumes/EFI/EFI/CLOVER/kexts/Other_
 
 ### Step 6: GenI2C
 
@@ -220,29 +216,29 @@ Marcello suggests using GenI2C on the target machine
 
 After saving the DSDT.dsl file, open GenI2C and go in GenSSDT section
 
-![Tick &quot;Generate patches for this computer&quot; and click next](../../.gitbook/assets/image%20%2862%29.png)
+![Tick &quot;Generate patches for this computer&quot; and click next](../../.gitbook/assets/image-62.png)
 
-![Select &quot;Interrupt \(APIC or GPIO\)&quot; and then click on Generate](../../.gitbook/assets/image%20%2817%29.png)
+![Select &quot;Interrupt \(APIC or GPIO\)&quot; and then click on Generate](../../.gitbook/assets/image-17.png)
 
 It will open a folder with Finder. Just copy the .aml file inside `/Volumes/EFI/CLOVER/ACPI/patched` directory
 
-![](../../.gitbook/assets/image%20%2837%29.png)
+![](../../.gitbook/assets/image-37.png)
 
 Then open your config.plist and add the renames inside Readme.txt
 
-![](../../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image-11.png)
 
-![Clover Configurator](../../.gitbook/assets/image%20%2812%29.png)
+![Clover Configurator](../../.gitbook/assets/image-12.png)
 
 Save and reboot
 
 ### Step 7: configure trackpad
 
-![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image%20%2843%29.png)
+![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image-43.png)
 
-![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%28121%29.png)
+![System Preferences, Trackpad, Scroll &amp; Zoom](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28121%29.png)
 
-![](../../.gitbook/assets/image%20%28140%29.png)
+![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28140%29.png)
 
 **Enjoy the gestures &lt;3**
 
@@ -253,6 +249,4 @@ Save and reboot
 ## Notes
 
 For any trouble use official [Gitter chat](https://gitter.im/alexandred/VoodooI2C) from VoodooI2C.
-
-### 
 

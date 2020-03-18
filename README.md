@@ -5,9 +5,9 @@
 Start: Mon 20 Jan 2020  
 ETA: 3 months**
 
-**16 Mar edit:  
-  
-ETA: 5 Months due to nCoViD19**
+\*\*16 Mar edit:
+
+ETA: 5 Months due to nCoViD19\*\*
 
 **Please note that the images are bugged \(e.g. usb mapping inside voodooi2c \(tf 's goin' on\)**
 
@@ -28,14 +28,9 @@ Mammamia Marcello, that's not how to install Hackintosh
 What you mean?  
 This is how to install Hackintosh  
 Alberto come at look Marcello  
-MAMMAMIA  
-
+MAMMAMIA
 
 {% hint style="info" %}
 [Tools](tools-1/tools.md) are available in dedicated section
 {% endhint %}
-
-
-
-## 
 

@@ -38,8 +38,6 @@ This kext is only for 10.11+. It has no use with prior versions.
 
 Currently, only Intel controllers are supported. The most commonly used SMBIOS model identifiers are in the kext.
 
-
-
 ## Download link
 
 * [GitHub](https://github.com/Sniki/OS-X-USB-Inject-All/releases)
