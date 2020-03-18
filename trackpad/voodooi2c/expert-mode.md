@@ -14,9 +14,9 @@ The following section is only for expert. Don't follow these steps if you don't 
 
 ## Step 1: get ACPI ID using Windows Device Manager
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzImQenF-Cog1yCLqaL%2F-LzImy5wO7m868iNrnLE%2Fimage.png?alt=media&token=108a99b1-2888-4339-8106-b007260e21f2)
+![Courtesy image from https://voodooi2c.github.io/\#GPIO%20Pinning/GPIO%20Pinning](../../.gitbook/assets/image%20%2822%29.png)
 
-\\_SB.PCI0.I2C0.TPL0 is the ACPI ID of the trackpad
+In this image `\_SB.PCI0.I2C0.TPL0` is the ACPI ID of the trackpad
 
 ### MaciASL <a id="maciasl"></a>
 
@@ -30,25 +30,21 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;
 ```
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzI_kiUfZn2d5fK0Ufq%2F-LzIaKrHrrtz4w43iI2Q%2Fimage.png?alt=media&token=26436759-812d-40ac-8b67-f4610ea85997)
-
-Click on Apply, save DSDT.aml in `/Volumes/EFI/CLOVER/ACPI/patched` and reboot
+Save DSDT.aml in `ECAP` and reboot
 
 ### IORegistryExplorer <a id="ioregistryexplorer"></a>
 
-Open IORegistryExplorer and look for "GPIO"
+Open IORegistryExplorer and search "GPI"
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzIkYSnxEBkM1yuqNmt%2F-LzIkxF099BV_Lh11PE4%2Fimage.png?alt=media&token=9641aa87-1cf5-4531-8142-1c2c231ba20e)
+![](../../.gitbook/assets/image%20%2821%29.png)
 
-In this case we have a VoodooGPIOSunrisePointLP controller
+In this case we have a `VoodooGPIOSunrisePointLP` controller
 
 Search for "I2C"
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzImQenF-Cog1yCLqaL%2F-LzInyddlEGKIZzyQEKW%2Fimage.png?alt=media&token=9db39853-284b-44f0-b716-e951c028e3c9)
+![](../../.gitbook/assets/image%20%289%29.png)
 
-The ACPI ID is: \\_SB.PCI0.I2C0.TPD0
-
-​
+The ACPI ID is: `\_SB.PCI0.I2C0.TPD0`
 
 ### Interrupt Pin <a id="interrupt-pin"></a>
 
@@ -61,21 +57,23 @@ The interrupt pin can be found in two ways:
 
 Open DSDT.aml and search "TPD0"
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzImQenF-Cog1yCLqaL%2F-LzIoikKbBWLemkDbWdN%2Fimage.png?alt=media&token=c2282d22-502c-4c54-9370-cfb11948149f)
+![](../../.gitbook/assets/image%20%283%29.png)
 
 Now look for SBFI which tells us the interrupt pin
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzImQenF-Cog1yCLqaL%2F-LzIoqV50dj4WWwcI0Te%2Fimage.png?alt=media&token=4902ce29-9b17-4bc6-84e0-22ecfa6dc91e)
+![](../../.gitbook/assets/image%20%2814%29.png)
 
-In this case the interrupt pin is 0x00000033
+In this case the interrupt pin is `0x00000033` simplified to `0x33`
 
 #### IORegistryExplorer <a id="ioregistryexplorer-1"></a>
 
 Open IORegistryExplorer and search "TPD0". You should get something similar to this
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzImQenF-Cog1yCLqaL%2F-LzIpezSJCSXDjLpnUqM%2Fimage.png?alt=media&token=8954a194-0317-4e4f-a9f6-8dd345cd9eab)
+![Expand IOInterruptSpecifiers](../../.gitbook/assets/image%20%2816%29.png)
 
-In this case the interrupt pin is 0x00000033
+![](../../.gitbook/assets/image%20%287%29.png)
+
+In this case the interrupt pin is `0x00000033`
 
 If your hexadecimal pin number is greater than `0x2F` then proceed to the next step.
 
@@ -163,9 +161,11 @@ This completes the GPIO pinning process for your device.
 
 ### Kexts Installation <a id="kexts-installation"></a>
 
-Add VoodooI2C.kext and the satellite kext More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Satellite%20Kexts)​
+Add VoodooI2C.kext and the satellite kext
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-Lz9HmN8eqkDm_mnJR3I%2F-LzIkYSnxEBkM1yuqNmt%2F-LzIll1t8iqjFJo4jJjR%2Fimage.png?alt=media&token=c94e2b62-fc8a-4c08-b57b-48f395f84898)
+More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Satellite%20Kexts)​
+
+![](../../.gitbook/assets/image%20%2820%29.png)
 
 Then reboot and enjoy your trackpad gesture :\)
 
