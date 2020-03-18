@@ -45,7 +45,7 @@ Don't add those renames in Clover
 
 * DPCIManager
 * Hackintool
-* 
+
 ![DPCIManager Status](../.gitbook/assets/image%20%281%29.png)
 
 {% hint style="warning" %}
@@ -56,7 +56,7 @@ Please note that Hackintool suggest you some Layout IDs. In any case check the o
 
 ### Step 2: identify layout ID
 
-![e.g. ALC295 layout ids](../.gitbook/assets/image-84.png)
+![GitHub: AppleALC ALC295 Layout IDs](../.gitbook/assets/image%20%282%29.png)
 
 Note the "layoutXX.xml" and proceed to the Installation step
 
@@ -65,7 +65,7 @@ Note the "layoutXX.xml" and proceed to the Installation step
 1. Verify that your Codec name is present in AppleALC layout id list
 2. Put the compiled kexts inside `ECKO` folder
 
-![Step 2: kext installation](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image-114.png)
+![](../.gitbook/assets/image%20%283%29.png)
 
 ### Step 4: get DevicePath address using gfxutil
 
