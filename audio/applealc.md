@@ -65,7 +65,7 @@ Note the "layoutXX.xml" and proceed to the Installation step
 1. Verify that your Codec name is present in AppleALC layout id list
 2. Put the compiled kexts inside `ECKO` folder
 
-![](../.gitbook/assets/image%20%2830%29.png)
+![](../.gitbook/assets/image%20%2831%29.png)
 
 ### Step 4: get DevicePath address using gfxutil
 
@@ -86,7 +86,7 @@ According to AppleALC [Installation and Usage](https://github.com/acidanthera/Ap
 3. Go in Devices/Properties section
 4. Fill the fields as below
 
-![Clover Configurator: Devices/Properties add Device](../.gitbook/assets/image%20%2824%29.png)
+![Clover Configurator: Devices/Properties add Device](../.gitbook/assets/image%20%2825%29.png)
 
 ![Click on +, add layout-id property \(number type\), and change the value with the previously found layout-id ](../.gitbook/assets/image%20%2816%29.png)
 
@@ -112,7 +112,7 @@ Make sure that _Internal Speakers_ is in Output devices
 Test only speakers. For the 3.5mm combojack follow the next section
 {% endhint %}
 
-![Make sure that Internal Speakers device is fully recognized](../.gitbook/assets/image%20%2829%29.png)
+![Make sure that Internal Speakers device is fully recognized](../.gitbook/assets/image%20%2830%29.png)
 
 **N.B.** For combojack \(mic+headphone single jack\) follow the [combojack fix](3.5mm-combojack.md)
 

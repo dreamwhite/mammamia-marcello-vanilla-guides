@@ -22,7 +22,7 @@ The following section is only for expert. Don't follow these steps if you don't 
 
 ## Step 1: get ACPI ID using Windows Device Manager
 
-![Courtesy image from https://voodooi2c.github.io/\#GPIO%20Pinning/GPIO%20Pinning](../../.gitbook/assets/image%20%2823%29.png)
+![Courtesy image from https://voodooi2c.github.io/\#GPIO%20Pinning/GPIO%20Pinning](../../.gitbook/assets/image%20%2824%29.png)
 
 In this image `\_SB.PCI0.I2C0.TPL0` is the ACPI ID of the trackpad
 
@@ -44,7 +44,7 @@ Save DSDT.aml in `ECAP` and reboot
 
 Open IORegistryExplorer and search "GPI"
 
-![](../../.gitbook/assets/image%20%2822%29.png)
+![](../../.gitbook/assets/image%20%2823%29.png)
 
 In this case we have a `VoodooGPIOSunrisePointLP` controller
 

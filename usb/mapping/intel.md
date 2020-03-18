@@ -184,7 +184,7 @@ Click on the `Clear` button \(the third button from left\)
 
 Then click on `Refresh` button \(the third from right\)
 
-![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28112%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for right port of mobo etc.\)  
 Then remove any port that isn't highlighted with the second button.
@@ -271,20 +271,21 @@ Finally remove the unused external references to unused ports as depicted below
 
 ![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image-88.png)
 
-## Step 8: add the SSDT methods
+## Step 8: add the SSDT method
 
-If we look closely to `GUPC` method, we can see that it assigns for each port the **Connector Type** _**Internal**._ We need to copy this method for defining the behaviour of USB2, USB3 and USB3 powered ports.
+If we look closely to `GUPC` method, we can see that it assigns for each port the **Connector Type** _**Internal**._ We need to duplicate this method for defining the behaviour of USB2, USB3 and USB3 powered ports.
 
-Just add those methods using MaciASL patch menu:
+Just add the following method using MaciASL patch menu:
 
 {% tabs %}
-{% tab title="USB2" %}
+{% tab title="GENERIC USB METHOD" %}
 ```text
-# USB 2 METHOD #
+# GENERIC METHOD #
+# Credits to Gengik84
 
 into scope label \_SB.PCI0.XHC.RHUB insert
 begin
-Method ( USB2, 1, NotSerialized)\n
+Method ( GENG, 1, NotSerialized)\n
 {\n
 Name (PCKG, Package (0x04)\n
 {\n
@@ -294,49 +295,8 @@ Zero, \n
 Zero\n
 })\n
 PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed\n
-Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.USB2.PCKG */
-}
-end;
-```
-{% endtab %}
-
-{% tab title="USB3" %}
-```text
-# USB 3.0 METHOD #
-into scope label \_SB.PCI0.XHC.RHUB insert
-begin
-Method ( USB3, 1, NotSerialized)\n
-{\n
-Name (PCKG, Package (0x04)\n
-{\n
-Zero, \n
-0x03, //Proprietary connector aka USB3\n
-Zero, \n
-Zero\n
-})\n
-PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed\n
-Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.USB3.PCKG */
-}
-end;
-```
-{% endtab %}
-
-{% tab title="USB3 Powered" %}
-```text
-# USB 3.0 Powered METHOD #
-into scope label \_SB.PCI0.XHC.RHUB insert
-begin
-Method ( SB3P, 1, NotSerialized)\n
-{\n
-Name (PCKG, Package (0x04)\n
-{\n
-Zero, \n
-0x07, //Proprietary connector aka USB3 Powered\n
-Zero, \n
-Zero\n
-})\n
-PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed\n
-Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.SB3P.PCKG */
+PCKG [One] = Arg1 //This tells to replace the first element of our Package with the Arg0 that is passed\n
+Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.GENG.PCKG */
 }
 end;
 ```
