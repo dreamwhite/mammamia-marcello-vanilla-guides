@@ -1,6 +1,14 @@
 # Expert mode
 
+
+
+{% hint style="success" %}
+**THE FOLLOWING SECTION IS FREE OF TYPOS/BROKEN IMAGES/SH\*T**
+{% endhint %}
+
+{% hint style="danger" %}
 The following section is only for expert. Don't follow these steps if you don't know what are you doing
+{% endhint %}
 
 ### Requirements <a id="requirements"></a>
 
