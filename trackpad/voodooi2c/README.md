@@ -148,7 +148,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;
 ```
 
-![Apply the patches and save the file](../../.gitbook/assets/image%20%2831%29.png)
+![Apply the patches and save the file](../../.gitbook/assets/image%20%2832%29.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
@@ -196,15 +196,15 @@ But there is also a second method, more brutal which removes them from `VoodooPS
 
 ![](../../.gitbook/assets/image%20%282%29.png)
 
-![](../../.gitbook/assets/image%20%2825%29.png)
+![](../../.gitbook/assets/image%20%2826%29.png)
 
-![Open Contents folder](../../.gitbook/assets/image%20%2830%29.png)
+![Open Contents folder](../../.gitbook/assets/image%20%2831%29.png)
 
-![Open Plugins folder](../../.gitbook/assets/image%20%2824%29.png)
+![Open Plugins folder](../../.gitbook/assets/image%20%2825%29.png)
 
 ![Remove highlighted kexts](../../.gitbook/assets/image-80.png)
 
-![Return up two directory levels...](../../.gitbook/assets/image%20%285%29.png)
+![Return up two directory levels...](../../.gitbook/assets/image%20%286%29.png)
 
 ![ ...and copy &quot;VoodooPS2Controller.kext&quot;](../../.gitbook/assets/image-101.png)
 
@@ -238,9 +238,9 @@ Save and reboot
 
 ![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image-43.png)
 
-![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2813%29.png)
+![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2814%29.png)
 
-![](../../.gitbook/assets/image%20%2827%29.png)
+![](../../.gitbook/assets/image%20%2828%29.png)
 
 **Enjoy the gestures &lt;3**
 

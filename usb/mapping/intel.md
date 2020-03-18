@@ -19,11 +19,29 @@ description: USB mapping procedure
 * IORegistryExplorer
 * [USBInjectAll](../../installation/kexts/usb/usbinjectall.md#download-link)
 
+## Why mapping usb?
+
+{% hint style="info" %}
+This section is gently taken from [https://aplus.rs/2020/usb-mapping-how/](https://aplus.rs/2020/usb-mapping-how/). Every credits for this section goes to the author of the post
+{% endhint %}
+
+When you choose some Mac model to emulate – say iMacPro1,1 – macOS will load USB hardware map for that particular machine. Apple knows exactly what their models use as hardware configuration so they don’t really need to scan for available ports or other hardware \(like Windows or Linux must do\). Everything is known before-hand. One thing they know is that none of their machines have more than dozen ports per USB controller thus in 10.11 \(El Capitan\) they introduced hard limit of 15 ports per controller.
+
+On the other hand, general PC hardware is infinitely varying. Most motherboards feature large number of internal and external ports. It’s not uncommon to see 6-8 or even more USB ports on the back panel I/O. Additional ports which are present on chassis are connected to internal points on the motherboard. Each USB 3.0 port is also backwards compatible with USB 2.0 hence each physical port is counted as 2 logical ports. Then you have USB-C ports which are USB 3.0/2.0 compatible but are reversible so they need to be treated a bit special.
+
+In general, depending on the chipset and motherboard features, that 15-port limit can be easily blown.
+
+Saving point here is that there are usually multiple USB controllers in PC hardware; how many, it depends on the chipset and manufacturer choices. External USB hubs and other devices do not count here, since whatever you attach shares that one port where it’s attached.
+
+What all this means in practice?
+
+Most obvious consequence is that some of those ports you have will simply not work. macOS will ignore any port enumerated over 15th on particular controller. There is no specific logic which ones will that be but usually it first enumerates USB 2.0 and then 3.0 logical ports. It’s possible that some ports will be ignored even if they are below 15th, simply due to enforced port map of the emulated Mac; on my ASRock motherboard, ports 1 and 9 were removed on one of the 3 controllers.
+
+As you’ll see, this map is not sequential and physical ports map to \(more or less\) random positions in the logical map.
+
 ## Step 1: Adding port limit patch
 
 With the release of every macOS version you'll probably need a port-limit removal patch to begin your USB configuration on a new build.
-
-![Port Limit Patch for macOS 10.15.x](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28135%29.png)
 
 Choose the patches for your OS version
 
@@ -85,7 +103,7 @@ To ensure that the kext is correctly loaded in kernel cache type in a terminal w
 kextstat | grep USBInjectAll
 ```
 
-![In this case USBInjectAll kext is not loaded so isn&apos;t in kextcache](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28137%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 ## Step 3: extract ACPI Tables
 
