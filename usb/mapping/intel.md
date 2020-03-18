@@ -19,7 +19,7 @@ description: USB mapping procedure
 * IORegistryExplorer
 * [USBInjectAll](../../installation/kexts/usb/usbinjectall.md#download-link)
 
-## Why mapping usb?
+## Why mapping USB ports?
 
 {% hint style="info" %}
 This section is gently taken from [https://aplus.rs/2020/usb-mapping-how/](https://aplus.rs/2020/usb-mapping-how/). Every credits for this section goes to the author of the post
