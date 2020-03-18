@@ -56,7 +56,7 @@ Please note that Hackintool suggest you some Layout IDs. In any case check the o
 
 ### Step 2: identify layout ID
 
-![GitHub: AppleALC ALC295 Layout IDs](../.gitbook/assets/image%20%283%29.png)
+![GitHub: AppleALC ALC295 Layout IDs](../.gitbook/assets/image%20%284%29.png)
 
 Note the "layoutXX.xml" and proceed to the Installation step
 
@@ -65,13 +65,13 @@ Note the "layoutXX.xml" and proceed to the Installation step
 1. Verify that your Codec name is present in AppleALC layout id list
 2. Put the compiled kexts inside `ECKO` folder
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/image%20%287%29.png)
 
 ### Step 4: get DevicePath address using gfxutil
 
 Download gfxutil and drag the executable inside the terminal and type `-f HDEF` as depicted below
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../.gitbook/assets/image%20%283%29.png)
 
 Copy the DevicePath, `PciRoot(0x0)/Pci(0x1f,0x3)` and proceed to the next step
 
@@ -86,9 +86,9 @@ According to AppleALC [Installation and Usage](https://github.com/acidanthera/Ap
 3. Go in Devices/Properties section
 4. Fill the fields as below
 
-![Mount EFI and open config.plist](../.gitbook/assets/image-77.png)
+![Clover Configurator: Devices/Properties add Device](../.gitbook/assets/image%20%285%29.png)
 
-![Set Audio/Inject to No and change 77 with your layout-id](../.gitbook/assets/image-89.png)
+![Click on +, add layout-id property \(number type\), and change the value with the previously found layout-id ](../.gitbook/assets/image%20%282%29.png)
 
 #### Code editor
 
@@ -98,7 +98,7 @@ Add the following code inside config.plist/Devices/Properties section
 <key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
             <dict>
                 <key>layout-id</key>
-                <integer>77</integer>
+                <integer>13</integer>
             </dict>
 ```
 
@@ -112,7 +112,9 @@ Make sure that _Internal Speakers_ is in Output devices
 Test only speakers. For the 3.5mm combojack follow the next section
 {% endhint %}
 
-![System Preferences, Sound and check Output section](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image-117.png)
+![Make sure that Internal Speakers device is fully recognized](../.gitbook/assets/image%20%286%29.png)
+
+**N.B.** For combojack \(mic+headphone single jack\) follow the [combojack fix](3.5mm-combojack.md)
 
 ### Uninstall
 
@@ -120,6 +122,7 @@ Remove **AppleALC.kext** from `ECKO`
 
 ## Credits
 
-* [https://github.com/acidanthera/AppleALC](https://github.com/acidanthera/AppleALC/)
-  * check their credits page
+* Acidanthera team for AppleALC and gfxutil
+  * [https://github.com/acidanthera/AppleALC](https://github.com/acidanthera/AppleALC/) 
+    * check their credits page
 
