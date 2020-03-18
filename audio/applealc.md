@@ -56,7 +56,7 @@ Please note that Hackintool suggest you some Layout IDs. In any case check the o
 
 ### Step 2: identify layout ID
 
-![GitHub: AppleALC ALC295 Layout IDs](../.gitbook/assets/image%20%282%29.png)
+![GitHub: AppleALC ALC295 Layout IDs](../.gitbook/assets/image%20%283%29.png)
 
 Note the "layoutXX.xml" and proceed to the Installation step
 
@@ -65,11 +65,13 @@ Note the "layoutXX.xml" and proceed to the Installation step
 1. Verify that your Codec name is present in AppleALC layout id list
 2. Put the compiled kexts inside `ECKO` folder
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
 ### Step 4: get DevicePath address using gfxutil
 
-![...and drag the executable &quot;gfxutil&quot; inside the terminal window and type &quot;-f HDEF&quot; ](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image-113.png)
+Download gfxutil and drag the executable inside the terminal and type `-f HDEF` as depicted below
+
+![](../.gitbook/assets/image%20%282%29.png)
 
 Copy the DevicePath, `PciRoot(0x0)/Pci(0x1f,0x3)` and proceed to the next step
 
