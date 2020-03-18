@@ -148,7 +148,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;
 ```
 
-![Click on Apply, save DSDT.aml in /Volumes/EFI/EFI/CLOVER/ACPI/patched and reboot](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28131%29.png)
+![Apply the patches and save the file](../../.gitbook/assets/image%20%2817%29.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
@@ -194,19 +194,21 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 
 But there is also a second method, more brutal which removes them from `VoodooPS2Controller.kext` . Right click on the kext and click on `Show Package Contents`.
 
-![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28116%29.png)
+![](../../.gitbook/assets/image.png)
 
-![Open &quot;Contents&quot; folder](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28130%29.png)
+![](../../.gitbook/assets/image%20%2811%29.png)
 
-![Open &quot;Plugins&quot; folder](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28123%29.png)
+![Open Contents folder](../../.gitbook/assets/image%20%2816%29.png)
+
+![Open Plugins folder](../../.gitbook/assets/image%20%2810%29.png)
 
 ![Remove highlighted kexts](../../.gitbook/assets/image-80.png)
 
-![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28104%29.png)
+![Return up two directory levels...](../../.gitbook/assets/image%20%281%29.png)
 
-![ and copy &quot;VoodooPS2Controller.kext&quot;](../../.gitbook/assets/image-101.png)
+![ ...and copy &quot;VoodooPS2Controller.kext&quot;](../../.gitbook/assets/image-101.png)
 
-Finally copy **VoodooPS2Controller.kext** to _/Volumes/EFI/EFI/CLOVER/kexts/Other_
+Finally copy **VoodooPS2Controller.kext** to `ECKO`
 
 ### Step 6: GenI2C
 
@@ -236,9 +238,9 @@ Save and reboot
 
 ![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image-43.png)
 
-![System Preferences, Trackpad, Scroll &amp; Zoom](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28121%29.png)
+![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%285%29.png)
 
-![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28140%29.png)
+![](../../.gitbook/assets/image%20%2813%29.png)
 
 **Enjoy the gestures &lt;3**
 
