@@ -16,7 +16,7 @@ description: The following is a collection of fixes that I've found during the t
 
 Open GenI2C, Diagnosis section
 
-![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28109%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 ### Requirements
 
@@ -32,6 +32,8 @@ Open GenI2C, Diagnosis section
 4. Open DSDT.aml with MaciASL
 
 ![Step 1: search &quot;I2C&quot;](../../.gitbook/assets/image-48.png)
+
+`TPD0` attaches to `I2C0`. Remember it
 
 ![](../../.gitbook/assets/image-85.png)
 
