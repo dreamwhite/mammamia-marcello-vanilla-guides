@@ -9,16 +9,6 @@ description: USB mapping procedure
 **A:** The following procedure is safe your hackintosh. Just fix the ACPI errors.
 {% endhint %}
 
-## Requirements
-
-* DSDT/SSDT-USB.aml
-* * [Extracting ACPI tables](../../acpi/extracting-acpi-tables.md)
-* MaciASL
-* Hackintool
-* Clover Configurator
-* IORegistryExplorer
-* [USBInjectAll](../../installation/kexts/usb/usbinjectall.md#download-link)
-
 ## Why mapping USB ports?
 
 {% hint style="info" %}
@@ -38,6 +28,16 @@ What all this means in practice?
 Most obvious consequence is that some of those ports you have will simply not work. macOS will ignore any port enumerated over 15th on particular controller. There is no specific logic which ones will that be but usually it first enumerates USB 2.0 and then 3.0 logical ports. It’s possible that some ports will be ignored even if they are below 15th, simply due to enforced port map of the emulated Mac; on my ASRock motherboard, ports 1 and 9 were removed on one of the 3 controllers.
 
 As you’ll see, this map is not sequential and physical ports map to \(more or less\) random positions in the logical map.
+
+## Requirements
+
+* DSDT/SSDT-USB.aml
+* * [Extracting ACPI tables](../../acpi/extracting-acpi-tables.md)
+* MaciASL
+* Hackintool
+* Clover Configurator
+* IORegistryExplorer
+* [USBInjectAll](../../installation/kexts/usb/usbinjectall.md#download-link)
 
 ## Step 1: Adding port limit patch
 
