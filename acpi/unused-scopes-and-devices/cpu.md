@@ -16,9 +16,9 @@ In order to remove unused processors from IORegistryExplorer you need to know ho
 
 ### Step 1: determine unused PRxx
 
-Open IORegistryExplorer and look for PR entries. Write down the unused entires, whom doesn't have `AppleACPICPU` entry below. \(e.g. in the depicted screenshot `PR08 to PR15` are unused\)
+Open IORegistryExplorer and look for PR entries. Write down the unused entires, whom doesn't have `AppleACPICPU` entry below. \(e.g. in the depicted screenshot `PR12 to PR15` are unused\)
 
-![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28102%29.png)
+![](../../.gitbook/assets/image%20%288%29.png)
 
 ### Step 2: remove unused PRxx from DSDT.aml
 
@@ -45,6 +45,4 @@ We need to remove those lines because they call `_SB.PRxx` which we've removed b
 Fix the remaing errors with the same patching process.
 
 Now save DSDT.aml in `/Volumes/EFI/EFI/CLOVER/ACPI/patched` and reboot
-
-![Removed PRxx unused](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%2893%29.png)
 
