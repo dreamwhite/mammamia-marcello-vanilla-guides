@@ -20,7 +20,7 @@ The following section is only for expert. Don't follow these steps if you don't 
 
 ## Step 1: get ACPI ID using Windows Device Manager
 
-![Courtesy image from https://voodooi2c.github.io/\#GPIO%20Pinning/GPIO%20Pinning](../../.gitbook/assets/image-26%20%281%29.png)
+![Courtesy image from https://voodooi2c.github.io/\#GPIO%20Pinning/GPIO%20Pinning](../../.gitbook/assets/image%20%2823%29.png)
 
 In this image `\_SB.PCI0.I2C0.TPL0` is the ACPI ID of the trackpad
 
@@ -42,13 +42,13 @@ Save DSDT.aml in `ECAP` and reboot
 
 Open IORegistryExplorer and search "GPI"
 
-![](../../.gitbook/assets/image-25%20%281%29.png)
+![](../../.gitbook/assets/image%20%2821%29.png)
 
 In this case we have a `VoodooGPIOSunrisePointLP` controller
 
 Search for "I2C"
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/image%20%2843%29.png)
 
 The ACPI ID is: `\_SB.PCI0.I2C0.TPD0`
 
@@ -67,17 +67,15 @@ Open DSDT.aml and search "TPD0"
 
 Now look for SBFI which tells us the interrupt pin
 
-![](../../.gitbook/assets/image%20%2838%29.png)
+![](../../.gitbook/assets/image%20%2849%29.png)
 
 In this case the interrupt pin is `0x00000033` simplified to `0x33`
 
 #### IORegistryExplorer <a id="ioregistryexplorer-1"></a>
 
-Open IORegistryExplorer and search "TPD0". You should get something similar to this
+Open IORegistryExplorer and look for `IOInterruptSpecifiers` under `TPD0`. You should get something similar to this
 
-![Expand IOInterruptSpecifiers](../../.gitbook/assets/image%20%2848%29.png)
-
-![](../../.gitbook/assets/image%20%2824%29.png)
+![](../../.gitbook/assets/image%20%2810%29.png)
 
 In this case the interrupt pin is `0x00000033`
 
@@ -171,7 +169,7 @@ Add VoodooI2C.kext and the satellite kext
 
 More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Satellite%20Kexts)​
 
-![](../../.gitbook/assets/image-23%20%281%29.png)
+![](../../.gitbook/assets/image%20%2835%29.png)
 
 Then reboot and enjoy your trackpad gesture :\)
 
