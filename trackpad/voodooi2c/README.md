@@ -238,7 +238,7 @@ Save and reboot
 
 ![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image-43.png)
 
-![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2816%29.png)
+![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2817%29.png)
 
 ![](../../.gitbook/assets/image-31.png)
 

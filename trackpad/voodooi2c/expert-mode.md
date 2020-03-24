@@ -48,7 +48,7 @@ In this case we have a `VoodooGPIOSunrisePointLP` controller
 
 Search for "I2C"
 
-![](../../.gitbook/assets/image%20%2812%29.png)
+![](../../.gitbook/assets/image%20%2813%29.png)
 
 The ACPI ID is: `\_SB.PCI0.I2C0.TPD0`
 
@@ -67,7 +67,7 @@ Open DSDT.aml and search "TPD0"
 
 Now look for SBFI which tells us the interrupt pin
 
-![](../../.gitbook/assets/image%20%2817%29.png)
+![](../../.gitbook/assets/image%20%2818%29.png)
 
 In this case the interrupt pin is `0x00000033` simplified to `0x33`
 
@@ -75,9 +75,9 @@ In this case the interrupt pin is `0x00000033` simplified to `0x33`
 
 Open IORegistryExplorer and search "TPD0". You should get something similar to this
 
-![Expand IOInterruptSpecifiers](../../.gitbook/assets/image%20%2819%29.png)
+![Expand IOInterruptSpecifiers](../../.gitbook/assets/image%20%2821%29.png)
 
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image%20%2811%29.png)
 
 In this case the interrupt pin is `0x00000033`
 
