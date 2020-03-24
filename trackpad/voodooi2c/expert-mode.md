@@ -20,8 +20,6 @@ The following section is only for expert. Don't follow these steps if you don't 
 
 ## Step 1: get ACPI ID using Windows Device Manager
 
-![Courtesy image from https://voodooi2c.github.io/\#GPIO%20Pinning/GPIO%20Pinning](../../.gitbook/assets/image%20%2824%29.png)
-
 In this image `\_SB.PCI0.I2C0.TPL0` is the ACPI ID of the trackpad
 
 ### MaciASL <a id="maciasl"></a>
@@ -48,7 +46,7 @@ In this case we have a `VoodooGPIOSunrisePointLP` controller
 
 Search for "I2C"
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2844%29.png)
 
 The ACPI ID is: `\_SB.PCI0.I2C0.TPD0`
 
@@ -67,7 +65,7 @@ Open DSDT.aml and search "TPD0"
 
 Now look for SBFI which tells us the interrupt pin
 
-![](../../.gitbook/assets/image%20%2853%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
 In this case the interrupt pin is `0x00000033` simplified to `0x33`
 
@@ -169,7 +167,7 @@ Add VoodooI2C.kext and the satellite kext
 
 More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Satellite%20Kexts)​
 
-![](../../.gitbook/assets/image%20%2839%29.png)
+![](../../.gitbook/assets/image%20%2836%29.png)
 
 Then reboot and enjoy your trackpad gesture :\)
 

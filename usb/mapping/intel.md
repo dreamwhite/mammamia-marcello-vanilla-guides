@@ -315,9 +315,9 @@ Look at the figures below
 
 ![GUPC method which sets connector type as internal](../../.gitbook/assets/image-42.png)
 
-![For USB-3 ports, method is GENG\(One, 0x03\)](../../.gitbook/assets/image%20%2836%29.png)
+![For USB-3 ports, method is GENG\(One, 0x03\)](../../.gitbook/assets/image%20%2833%29.png)
 
-![](../../.gitbook/assets/image%20%2825%29.png)
+![](../../.gitbook/assets/image%20%2824%29.png)
 
 Save SSDT in `ECAP` , remove `USBInjectAll.kext` from `ECKO` and reboot.
 

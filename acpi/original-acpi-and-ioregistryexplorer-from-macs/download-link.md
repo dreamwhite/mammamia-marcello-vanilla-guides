@@ -33,7 +33,7 @@ Tick `Show Developer menu in menu bar` from Safari preferences
 
 Then from `Develop` menu tick `Disable Local Restriction` 
 
-![](../../.gitbook/assets/image%20%2830%29.png)
+![](../../.gitbook/assets/image%20%2829%29.png)
 
 Reload the page and enjoy IORegistryExplorer from browser
 

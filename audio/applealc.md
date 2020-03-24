@@ -46,17 +46,17 @@ Don't add those renames in Clover
 * DPCIManager
 * Hackintool
 
-![Figure 1: DPCIManager, Status](../.gitbook/assets/image%20%2857%29.png)
+![Figure 1: DPCIManager, Status](../.gitbook/assets/1_dpcimanager_status.png)
 
 {% hint style="warning" %}
 Please note that Hackintool suggest you some Layout IDs. In any case check the official AppleALC page for all layout ids
 {% endhint %}
 
-![Hackintool: Sound section](../.gitbook/assets/image%20%2821%29.png)
+![Figure 2: Hackintool, Sound section](../.gitbook/assets/2_hackintool_sound.png)
 
 ### Step 2: identify layout ID
 
-![Figure 3: GitHub AppleALC Resources of ALC295](../.gitbook/assets/image%20%2845%29.png)
+![Figure 3: GitHub AppleALC Resources of ALC295](../.gitbook/assets/image%20%2842%29.png)
 
 Note the "layoutXX.xml" and proceed to the Installation step
 
@@ -65,7 +65,7 @@ Note the "layoutXX.xml" and proceed to the Installation step
 1. Verify that your Codec name is present in AppleALC layout id list
 2. Put the compiled kexts inside `ECKO` folder
 
-![Figure 4: AppleALC.kext in ECKO](../.gitbook/assets/image%20%2861%29.png)
+![Figure 4: AppleALC.kext in ECKO](../.gitbook/assets/image%20%2856%29.png)
 
 ### Step 4: get DevicePath address using gfxutil
 
@@ -109,8 +109,6 @@ Make sure that _Internal Speakers_ is in Output devices
 {% hint style="info" %}
 Test only speakers. For the 3.5mm combojack follow the next section
 {% endhint %}
-
-![Figure 7: System Preferences, Sound, Output section](../.gitbook/assets/image%20%2833%29.png)
 
 **N.B.** For combojack \(mic+headphone single jack\) follow the [combojack fix](3.5mm-combojack.md)
 
