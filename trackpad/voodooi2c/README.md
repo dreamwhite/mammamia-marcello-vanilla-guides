@@ -194,7 +194,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 
 But there is also a second method, more brutal which removes them from `VoodooPS2Controller.kext` . Right click on the kext and click on `Show Package Contents`.
 
-![](../../.gitbook/assets/image%20%282%29.png)
+![](../../.gitbook/assets/image%20%283%29.png)
 
 ![](../../.gitbook/assets/image-29%20%282%29.png)
 
@@ -204,7 +204,7 @@ But there is also a second method, more brutal which removes them from `VoodooPS
 
 ![Remove highlighted kexts](../../.gitbook/assets/image-80.png)
 
-![Return up two directory levels...](../../.gitbook/assets/image%20%287%29.png)
+![Return up two directory levels...](../../.gitbook/assets/image%20%2812%29.png)
 
 ![ ...and copy &quot;VoodooPS2Controller.kext&quot;](../../.gitbook/assets/image-101.png)
 
@@ -238,7 +238,7 @@ Save and reboot
 
 ![System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image-43.png)
 
-![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2817%29.png)
+![System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2827%29.png)
 
 ![](../../.gitbook/assets/image-31.png)
 

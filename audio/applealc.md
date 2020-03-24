@@ -46,17 +46,17 @@ Don't add those renames in Clover
 * DPCIManager
 * Hackintool
 
-![DPCIManager Status](../.gitbook/assets/image%20%2814%29.png)
+![DPCIManager Status](../.gitbook/assets/image%20%2820%29.png)
 
 {% hint style="warning" %}
 Please note that Hackintool suggest you some Layout IDs. In any case check the official AppleALC page for all layout ids
 {% endhint %}
 
-![Hackintool: Sound section](../.gitbook/assets/image%20%288%29.png)
+![Hackintool: Sound section](../.gitbook/assets/image%20%2813%29.png)
 
 ### Step 2: identify layout ID
 
-![GitHub: AppleALC ALC295 Layout IDs](../.gitbook/assets/image%20%2824%29.png)
+![GitHub: AppleALC ALC295 Layout IDs](../.gitbook/assets/image%20%2837%29.png)
 
 Note the "layoutXX.xml" and proceed to the Installation step
 
@@ -71,7 +71,7 @@ Note the "layoutXX.xml" and proceed to the Installation step
 
 Download gfxutil and drag the executable inside the terminal and type `-f HDEF` as depicted below
 
-![](../.gitbook/assets/image%20%2822%29.png)
+![](../.gitbook/assets/image%20%2834%29.png)
 
 Copy the DevicePath, `PciRoot(0x0)/Pci(0x1f,0x3)` and proceed to the next step
 
@@ -88,7 +88,7 @@ According to AppleALC [Installation and Usage](https://github.com/acidanthera/Ap
 
 ![Clover Configurator: Devices/Properties add Device](../.gitbook/assets/image-27.png)
 
-![Click on +, add layout-id property \(number type\), and change the value with the previously found layout-id ](../.gitbook/assets/image%20%2820%29.png)
+![Click on +, add layout-id property \(number type\), and change the value with the previously found layout-id ](../.gitbook/assets/image%20%2832%29.png)
 
 #### Code editor
 

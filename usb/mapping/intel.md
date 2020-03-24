@@ -107,7 +107,7 @@ To ensure that the kext is correctly loaded in kernel cache type in a terminal w
 kextstat | grep USBInjectAll
 ```
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%2810%29.png)
 
 ## Step 3: extract ACPI Tables
 
@@ -317,7 +317,7 @@ Look at the figures below
 
 ![For USB-3 Powered ports call is GENG\(One, 0x07\)](../../.gitbook/assets/image-22%20%282%29.png)
 
-![For USB-3 Standard ports call is GENG\(One, 0x03\)](../../.gitbook/assets/image%20%289%29.png)
+![For USB-3 Standard ports call is GENG\(One, 0x03\)](../../.gitbook/assets/image%20%2814%29.png)
 
 Save SSDT in `ECAP` , remove `USBInjectAll.kext` from `ECKO` and reboot.
 
