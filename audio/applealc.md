@@ -46,13 +46,13 @@ Don't add those renames in Clover
 * DPCIManager
 * Hackintool
 
-![Figure 1: DPCIManager, Status](../.gitbook/assets/1_dpcimanager_status.png)
+![Figure 1: DPCIManager, Status](../.gitbook/assets/audio_applealc_1_dpcimanager_status.png)
 
 {% hint style="warning" %}
 Please note that Hackintool suggest you some Layout IDs. In any case check the official AppleALC page for all layout ids
 {% endhint %}
 
-![Figure 2: Hackintool, Sound section](../.gitbook/assets/2_hackintool_sound.png)
+![Figure 2: Hackintool, Sound section](../.gitbook/assets/audio_applealc_2_hackintool_sound.png)
 
 ### Step 2: identify layout ID
 
