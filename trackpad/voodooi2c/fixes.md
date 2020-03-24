@@ -16,7 +16,7 @@ description: The following is a collection of fixes that I've found during the t
 
 Open GenI2C, Diagnosis section
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2848%29.png)
 
 ### Requirements
 

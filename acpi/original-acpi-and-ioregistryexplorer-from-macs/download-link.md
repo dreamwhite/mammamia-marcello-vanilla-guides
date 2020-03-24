@@ -31,11 +31,9 @@ Tick `Show Developer menu in menu bar` from Safari preferences
 
 ![](../../.gitbook/assets/image-5.png)
 
-Then from `Develop` menu tick `Disable Local Restriction`
+Then from `Develop` menu tick `Disable Local Restriction` 
 
-![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28133%29.png)
-
-![](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28129%29.png)
+![](../../.gitbook/assets/image%20%2829%29.png)
 
 Reload the page and enjoy IORegistryExplorer from browser
 

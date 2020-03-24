@@ -48,7 +48,7 @@ In this case we have a `VoodooGPIOSunrisePointLP` controller
 
 Search for "I2C"
 
-![](../../.gitbook/assets/image%20%2845%29.png)
+![](../../.gitbook/assets/image%20%2846%29.png)
 
 The ACPI ID is: `\_SB.PCI0.I2C0.TPD0`
 
@@ -67,7 +67,7 @@ Open DSDT.aml and search "TPD0"
 
 Now look for SBFI which tells us the interrupt pin
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image%20%2852%29.png)
 
 In this case the interrupt pin is `0x00000033` simplified to `0x33`
 
@@ -169,7 +169,7 @@ Add VoodooI2C.kext and the satellite kext
 
 More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Satellite%20Kexts)​
 
-![](../../.gitbook/assets/image%20%2837%29.png)
+![](../../.gitbook/assets/image%20%2838%29.png)
 
 Then reboot and enjoy your trackpad gesture :\)
 

@@ -238,7 +238,7 @@ Save and reboot
 
 ![Figure 18: System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2826%29.png)
 
-![Figure 19: System Preferences, Trackpad, More Gestures](../../.gitbook/assets/image%20%2854%29.png)
+![Figure 19: System Preferences, Trackpad, More Gestures](../../.gitbook/assets/image%20%2855%29.png)
 
 
 

@@ -315,7 +315,7 @@ Look at the figures below
 
 ![GUPC method which sets connector type as internal](../../.gitbook/assets/image-42.png)
 
-![For USB-3 ports, method is GENG\(One, 0x03\)](../../.gitbook/assets/image%20%2834%29.png)
+![For USB-3 ports, method is GENG\(One, 0x03\)](../../.gitbook/assets/image%20%2835%29.png)
 
 ![](../../.gitbook/assets/image%20%2824%29.png)
 
