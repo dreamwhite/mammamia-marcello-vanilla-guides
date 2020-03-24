@@ -65,7 +65,7 @@ Note the "layoutXX.xml" and proceed to the Installation step
 1. Verify that your Codec name is present in AppleALC layout id list
 2. Put the compiled kexts inside `ECKO` folder
 
-![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3befce3cbb6e6c0685df078371a0992f6f849dad/.gitbook/assets/image%20%2834%29.png)
+![](../.gitbook/assets/image%20%2837%29.png)
 
 ### Step 4: get DevicePath address using gfxutil
 
