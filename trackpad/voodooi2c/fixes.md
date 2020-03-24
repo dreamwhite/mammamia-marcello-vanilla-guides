@@ -6,7 +6,7 @@ description: The following is a collection of fixes that I've found during the t
 
 ## Trackpad is unresponsive and no trackpad preference panel in System Preferences
 
-![From gitter.im/alexandred/VoodooI2C](../../.gitbook/assets/image-27.png)
+![From gitter.im/alexandred/VoodooI2C](../../.gitbook/assets/image-27%20%281%29.png)
 
 ## Missing SSCN or FMCN bus speed config
 
@@ -16,7 +16,7 @@ description: The following is a collection of fixes that I've found during the t
 
 Open GenI2C, Diagnosis section
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/image%20%2814%29.png)
 
 ### Requirements
 

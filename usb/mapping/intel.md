@@ -107,7 +107,7 @@ To ensure that the kext is correctly loaded in kernel cache type in a terminal w
 kextstat | grep USBInjectAll
 ```
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%286%29.png)
 
 ## Step 3: extract ACPI Tables
 
@@ -184,7 +184,7 @@ Click on the `Clear` button \(the third button from left\)
 
 Then click on `Refresh` button \(the third from right\)
 
-![](../../.gitbook/assets/image%20%2824%29.png)
+![](../../.gitbook/assets/image-24%20%282%29.png)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for right port of mobo etc.\)  
 Then remove any port that isn't highlighted with the second button.
@@ -309,15 +309,15 @@ For better reading, thought is useless, just place the methods from bottom file 
 
 Replace `GUPC` method calls with `GENG([One]/Zero, TYPE)` where type is the port type which we've discovered previously
 
-![For USB-C call is GENG\(One, 0x09\) where 0x09 is USB-C connector](../../.gitbook/assets/image%20%2833%29.png)
+![For USB-C call is GENG\(One, 0x09\) where 0x09 is USB-C connector](../../.gitbook/assets/image-33%20%282%29.png)
 
 Look at the figures below
 
 ![GUPC method which sets connector type as internal](../../.gitbook/assets/image-42.png)
 
-![For USB-3 Powered ports call is GENG\(One, 0x07\)](../../.gitbook/assets/image%20%2822%29.png)
+![For USB-3 Powered ports call is GENG\(One, 0x07\)](../../.gitbook/assets/image-22%20%282%29.png)
 
-![For USB-3 Standard ports call is GENG\(One, 0x03\)](../../.gitbook/assets/image%20%288%29.png)
+![For USB-3 Standard ports call is GENG\(One, 0x03\)](../../.gitbook/assets/image%20%289%29.png)
 
 Save SSDT in `ECAP` , remove `USBInjectAll.kext` from `ECKO` and reboot.
 

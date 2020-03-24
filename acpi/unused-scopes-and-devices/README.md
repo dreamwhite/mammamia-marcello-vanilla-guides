@@ -48,7 +48,7 @@ You should have a result like the depicted below:
 
 ![From my hackintosh](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28100%29.png)
 
-![From a MacBookPro 15,1 ](../../.gitbook/assets/image-32.png)
+![From a MacBookPro 15,1 ](../../.gitbook/assets/image-32%20%281%29.png)
 
 _AMW0_ doesn't appear in the MacBookPro 15,1 IORegistryExplorer export so just write it down in a list
 
