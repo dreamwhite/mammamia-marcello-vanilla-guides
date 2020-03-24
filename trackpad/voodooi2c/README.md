@@ -196,13 +196,13 @@ But there is also a second method, more brutal which removes them from `VoodooPS
 
 ![Figure 6: VoodooPS2Controller.kext](../../.gitbook/assets/image%20%285%29.png)
 
-![Figure 7: Show Package Contents](../../.gitbook/assets/image%20%2814%29.png)
+![Figure 7: Show Package Contents](../../.gitbook/assets/image%20%2815%29.png)
 
-![Figure 8: open Contents/Plugins folder](../../.gitbook/assets/image%20%2818%29.png)
+![Figure 8: open Contents/Plugins folder](../../.gitbook/assets/image%20%2819%29.png)
 
 ![Figure 9: remove highlighted kexts](../../.gitbook/assets/image-80.png)
 
-![Figure 10: return up two directory levels...](../../.gitbook/assets/image%20%2816%29.png)
+![Figure 10: return up two directory levels...](../../.gitbook/assets/image%20%2817%29.png)
 
 ![ Figure 11: ...and copy &quot;VoodooPS2Controller.kext&quot;](../../.gitbook/assets/image-101.png)
 
@@ -236,9 +236,9 @@ Save and reboot
 
 ![Figure 17: System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image-43.png)
 
-![Figure 18: System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2820%29.png)
+![Figure 18: System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2821%29.png)
 
-![Figure 19: System Preferences, Trackpad, More Gestures](../../.gitbook/assets/image%20%2843%29.png)
+![Figure 19: System Preferences, Trackpad, More Gestures](../../.gitbook/assets/image%20%2845%29.png)
 
 
 
