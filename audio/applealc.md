@@ -46,7 +46,7 @@ Don't add those renames in Clover
 * DPCIManager
 * Hackintool
 
-![DPCIManager Status](../.gitbook/assets/image%20%2820%29.png)
+![Figure 1: DPCIManager, Status](../.gitbook/assets/image%20%2833%29.png)
 
 {% hint style="warning" %}
 Please note that Hackintool suggest you some Layout IDs. In any case check the official AppleALC page for all layout ids
@@ -56,7 +56,7 @@ Please note that Hackintool suggest you some Layout IDs. In any case check the o
 
 ### Step 2: identify layout ID
 
-![GitHub: AppleALC ALC295 Layout IDs](../.gitbook/assets/image%20%2837%29.png)
+![Figure 3: GitHub AppleALC Resources of ALC295](../.gitbook/assets/image%20%2827%29.png)
 
 Note the "layoutXX.xml" and proceed to the Installation step
 
@@ -71,7 +71,7 @@ Note the "layoutXX.xml" and proceed to the Installation step
 
 Download gfxutil and drag the executable inside the terminal and type `-f HDEF` as depicted below
 
-![](../.gitbook/assets/image%20%2834%29.png)
+![](../.gitbook/assets/image%20%2836%29.png)
 
 Copy the DevicePath, `PciRoot(0x0)/Pci(0x1f,0x3)` and proceed to the next step
 
@@ -88,7 +88,7 @@ According to AppleALC [Installation and Usage](https://github.com/acidanthera/Ap
 
 ![Clover Configurator: Devices/Properties add Device](../.gitbook/assets/image-27.png)
 
-![Click on +, add layout-id property \(number type\), and change the value with the previously found layout-id ](../.gitbook/assets/image%20%2832%29.png)
+![Click on +, add layout-id property \(number type\), and change the value with the previously found layout-id ](../.gitbook/assets/image%20%2834%29.png)
 
 #### Code editor
 
@@ -114,7 +114,7 @@ Test only speakers. For the 3.5mm combojack follow the next section
 
 ![Make sure that Internal Speakers device is fully recognized](../.gitbook/assets/image-32.png)
 
-**N.B.** For combojack \(mic+headphone single jack\) follow the [combojack fix]()
+**N.B.** For combojack \(mic+headphone single jack\) follow the [combojack fix](3.5mm-combojack.md)
 
 ### Uninstall
 

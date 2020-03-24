@@ -67,7 +67,7 @@ Open DSDT.aml and search "TPD0"
 
 Now look for SBFI which tells us the interrupt pin
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/image%20%2829%29.png)
 
 In this case the interrupt pin is `0x00000033` simplified to `0x33`
 
@@ -75,7 +75,7 @@ In this case the interrupt pin is `0x00000033` simplified to `0x33`
 
 Open IORegistryExplorer and search "TPD0". You should get something similar to this
 
-![Expand IOInterruptSpecifiers](../../.gitbook/assets/image%20%2833%29.png)
+![Expand IOInterruptSpecifiers](../../.gitbook/assets/image%20%2835%29.png)
 
 ![](../../.gitbook/assets/image%20%2816%29.png)
 
