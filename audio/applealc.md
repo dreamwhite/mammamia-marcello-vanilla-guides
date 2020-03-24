@@ -110,7 +110,7 @@ Make sure that _Internal Speakers_ is in Output devices
 Test only speakers. For the 3.5mm combojack follow the next section
 {% endhint %}
 
-![Figure](../.gitbook/assets/image%20%2821%29.png)
+![Figure 7: System Preferences ](../.gitbook/assets/image%20%2821%29.png)
 
 **N.B.** For combojack \(mic+headphone single jack\) follow the [combojack fix](3.5mm-combojack.md)
 
