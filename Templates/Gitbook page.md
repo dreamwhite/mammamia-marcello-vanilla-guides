@@ -19,3 +19,8 @@ Special thanks goes to:
 - X Y for _app/os/help_
 
 ###END PAGE###
+
+The images will be stored inside:
+
+- `.gitbook/assets/MAIN_SECTION/PAGE/Install` folder for Install steps images
+- `.gitbook/assets/MAIN_SECTION/PAGE/Uninstall` folder for Uninstall steps images
