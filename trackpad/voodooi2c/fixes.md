@@ -79,5 +79,5 @@ Or if you're a terminal-bro like me
 
 where `/Volumes/EFI/EFI/CLOVER/kexts/Other/VoodooI2CHID.kext/Contents/Info.plist` is the path to `VoodooI2CHID.kext`. 
 
-Reboot and you won't get any panic after putting in sleep your hackintosh :\)
+Reboot and you won't get more any panic after putting in sleep your hackintosh :\)
 
