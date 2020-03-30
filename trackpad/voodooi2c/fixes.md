@@ -71,5 +71,13 @@ After opening `VoodooI2CHID.kext/Contents/Info.plist` with any .plist editor, I'
 
 ![](../../.gitbook/assets/image%20%285%29.png)
 
+Or if you're a terminal-bro like me
 
+```text
+/usr/libexec/PlistBuddy -c "Set IOKitPersonalities:'VoodooI2CHIDDevice Precision Touchpad HID Event Driver':QuietTimeAfterTyping 0" /Volumes/EFI/EFI/CLOVER/kexts/Other/VoodooI2CHID.kext/Contents/Info.plist
+```
+
+where `/Volumes/EFI/EFI/CLOVER/kexts/Other/VoodooI2CHID.kext/Contents/Info.plist` is the path to `VoodooI2CHID.kext`. 
+
+Reboot and you won't get any panic after putting in sleep your hackintosh :\)
 
