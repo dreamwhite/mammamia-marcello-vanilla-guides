@@ -55,7 +55,7 @@ It should be as depicted in the following screenshot
 
 ## Kernel PANIC after resuming from long sleep
 
-It can occur sometimes that after resuming from sleep, you will get a `Problem Report for macOS` related to `com.alexandredVoodooI2CHID`.
+It can occur sometimes that after resuming from sleep, you will get a `Problem Report for macOS` related to `com.alexandred.VoodooI2CHID`.
 
 ![](../../.gitbook/assets/image%20%2855%29.png)
 
