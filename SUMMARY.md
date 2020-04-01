@@ -26,7 +26,8 @@
 ## Connectivity
 
 * [WiFi](connectivity/wifi.md)
-* [Bluetooth](connectivity/bluetooth.md)
+* [Bluetooth](connectivity/bluetooth/README.md)
+  * [Disabling unsupported BT chip](connectivity/bluetooth/disabling-unsupported-bt-chip.md)
 * [Ethernet](connectivity/ethernet/README.md)
   * [Intel](connectivity/ethernet/intel.md)
   * [Realtek](connectivity/ethernet/realtek.md)

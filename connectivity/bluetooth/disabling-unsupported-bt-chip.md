@@ -1,0 +1,2 @@
+# Disabling unsupported BT chip
+
