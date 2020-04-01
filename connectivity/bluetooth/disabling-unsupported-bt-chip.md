@@ -39,7 +39,7 @@ As said before the ACPI path is `\_SB.PCI0.XHC.RHUB.HS08`. Remember this path an
 {% hint style="info" %}
 **NOTE: the following step is optional.**
 
-This procedure is same as [USB Mapping for Intel](../../usb/mapping/intel.md) chipset. You can skip directly to the linked guide or write a custom 
+This procedure is same as [USB Mapping for Intel](../../usb/mapping/intel.md) chipset. You can skip directly to the linked guide or write a custom SSDT only for disabling the Bluetooth
 {% endhint %}
 
 ### Step 2: write a disabler SSDT for BT
