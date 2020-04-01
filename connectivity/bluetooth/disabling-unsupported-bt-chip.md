@@ -1,5 +1,11 @@
 # Disabling unsupported BT chip
 
+{% hint style="info" %}
+**NOTE: the following guide is optional.**
+
+This guide is same as [USB Mapping for Intel](../../usb/mapping/intel.md) chipset. You can skip directly to the linked guide or write a custom SSDT only for disabling the Bluetooth
+{% endhint %}
+
 ## Marcello, what is it?
 
 The following guide is supposed to help users for disabling unsupported Bluetooth chip
@@ -35,12 +41,6 @@ Right click on `Intel(R) Wireless Bluetooth(R)` and click on `Information`:
 ![...and select from Property menu &quot;BIOS Name&quot;](../../.gitbook/assets/1.3-acpi-path.png)
 
 As said before the ACPI path is `\_SB.PCI0.XHC.RHUB.HS08`. Remember this path and let's shut down the device in our SSDT.
-
-{% hint style="info" %}
-**NOTE: the following step is optional.**
-
-This procedure is same as [USB Mapping for Intel](../../usb/mapping/intel.md) chipset. You can skip directly to the linked guide or write a custom SSDT only for disabling the Bluetooth
-{% endhint %}
 
 ### Step 2: write a disabler SSDT for BT
 
