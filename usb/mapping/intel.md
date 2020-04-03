@@ -45,6 +45,10 @@ As you’ll see, this map is not sequential and physical ports map to \(more or 
 
 ## Step 1: Adding port limit patch
 
+{% hint style="info" %}
+**The following step is only for deskies. Laptops don't need this patch as they have less than 15 ports.** 
+{% endhint %}
+
 With the release of every macOS version you'll probably need a port-limit removal patch to begin your USB configuration on a new build.
 
 Choose the patches for your OS version
@@ -118,7 +122,7 @@ kextstat | grep USBInjectAll
 From Intel Haswell generation onwards, USB ports are no more defined inside `DSDT.aml` but in an SSDT table.
 
 {% hint style="info" %}
-Some newer machines have USB ports still defined in DSDT, just look for **HS01**
+Some newer machines have USB ports still defined in DSDT, just look for **HS01** and **\_UPC** method definition
 {% endhint %}
 
 On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open every single `SSDT-X-YYYYY.aml` with MaciASL and look for a tree like depicted in the following screenshot
