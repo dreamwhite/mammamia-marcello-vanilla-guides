@@ -129,6 +129,10 @@ On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open eve
 
 ![\\_SB.PCI0.XHC.RHUB.HS01](../../.gitbook/assets/image-71.png)
 
+{% hint style="warning" %}
+NOTE: the following step isn't needed if USB ports behaviour is defined inside DSDT
+{% endhint %}
+
 ## Step 5: drop SSDT table loading
 
 In order to load custom USB SSDT, drop the SSDT table which defines it.
@@ -251,25 +255,16 @@ Now just look for each port you've discovered before and fill a table like the b
 | SS01 | USB 3 Standard-B connector |
 | SS04 | USB 3 Standard-A connector |
 
-Then remove the unused ports from SSDT by applying the following patch
+Then remove the unused ports from SSDT by making \_UPC method return `GUPC (Zero)` 
 
-{% hint style="warning" %}
-Replace **xx** with the unused port number previously found
-{% endhint %}
-
-{% tabs %}
-{% tab title="HSxx" %}
 ```text
-into scope label \_SB.PCI0.XHC.RHUB.HSxx remove_entry;
+ Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
+        {
+            Return (GUPC (Zero))
+        }
 ```
-{% endtab %}
 
-{% tab title="SSxx" %}
-```text
-into scope label \_SB.PCI0.XHC.RHUB.SSxx remove_entry;
-```
-{% endtab %}
-{% endtabs %}
+
 
 Finally remove the unused external references to unused ports as depicted below
 
