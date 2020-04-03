@@ -2,6 +2,10 @@
 
 * [Mammamia Marcello Vanilla Guides](README.md)
 
+## Introduction
+
+* [Shortening list](introduction/shortening-list.md)
+
 ## Audio
 
 * [AppleALC](audio/applealc.md)
