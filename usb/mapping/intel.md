@@ -203,9 +203,9 @@ You should have a result like the depicted one below
 
 ![](../../.gitbook/assets/image-35.png)
 
-## Step 7: setup the ports inside SSDT
+## Step 7: setup the ports inside ACPI table
 
-Open the previously identified SSDT with MaciASL
+Open the previously identified AML file with MaciASL
 
 ![](../../.gitbook/assets/image-86.png)
 
@@ -255,7 +255,7 @@ Now just look for each port you've discovered before and fill a table like the b
 | SS01 | USB 3 Standard-B connector |
 | SS04 | USB 3 Standard-A connector |
 
-Then remove the unused ports from SSDT by making \_UPC method return `GUPC (Zero)` 
+Then remove the unused ports from the ACPI table by making \_UPC method return `GUPC (Zero)` 
 
 ```text
  Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
@@ -270,7 +270,7 @@ Finally remove the unused external references to unused ports as depicted below
 
 ![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image-88.png)
 
-## Step 8: add the SSDT method
+## Step 8: add the ACPI method
 
 If we look closely to `GUPC` method, we can see that it assigns for each port the **Connector Type** _**Internal**._ We need to duplicate this method for defining the behaviour of USB2, USB3 and USB3 powered ports.
 
