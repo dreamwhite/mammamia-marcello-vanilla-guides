@@ -58,7 +58,7 @@ Please note that Hackintool suggest you some Layout IDs. In any case check the o
 
 ![Figure 3: GitHub AppleALC Resources of ALC295](../.gitbook/assets/3_applealc_resources.png)
 
-Note the "layoutXX.xml" and proceed to the Installation step
+Note the `layoutXX.xml` and proceed to the Installation step
 
 ### Step 3: installation
 
