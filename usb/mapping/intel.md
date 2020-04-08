@@ -192,7 +192,10 @@ Click on the `Clear` button \(the third button from left\)
 
 Then click on `Refresh` button \(the third from right\)
 
-![](../../.gitbook/assets/image-24%20%282%29.png)
+You should have a result such as the following GIF:  
+
+
+![](../../.gitbook/assets/hackintool_clear_refresh.gif)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for right port of mobo etc.\)  
 Then remove any port that isn't highlighted with the second button.
@@ -320,7 +323,9 @@ Look at the figures below
 
 Save SSDT in `ECAP` , remove `USBInjectAll.kext` from `ECKO` and reboot.
 
-Repeat **Step 4** and you should see something like the depicted one below
+Repeat **Step 4** and after connecting USB 2.0 and USB3.0 devices, you should see something like the depicted one below
+
+![](../../.gitbook/assets/hackintool_usb_mapping_finished.gif)
 
 ![Mapped USB ports](../../.gitbook/assets/image-63.png)
 
