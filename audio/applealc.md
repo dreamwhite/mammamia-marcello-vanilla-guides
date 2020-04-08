@@ -52,11 +52,11 @@ Don't add those renames in Clover
 Please note that Hackintool suggest you some Layout IDs. In any case check the official AppleALC page for all layout ids
 {% endhint %}
 
-![Figure 2: Hackintool, Sound section](../.gitbook/assets/Audio/AppleALC/2_hackintool_sound.png)
+![Figure 2: Hackintool, Sound section](../.gitbook/assets/2_hackintool_sound%20%282%29.png)
 
 ### Step 2: identify layout ID
 
-![Figure 3: GitHub AppleALC Resources of ALC295](../.gitbook/assets/Audio/AppleALC/3_applealc_resources.png)
+![Figure 3: GitHub AppleALC Resources of ALC295](../.gitbook/assets/3_applealc_resources.png)
 
 Note the `layoutXX.xml` and proceed to the Installation step
 
@@ -65,13 +65,13 @@ Note the `layoutXX.xml` and proceed to the Installation step
 1. Verify that your Codec name is present in AppleALC layout id list
 2. Put the compiled kexts inside `ECKO` folder
 
-![Figure 4: AppleALC.kext in ECKO](../.gitbook/assets/Audio/AppleALC/4_applealc_ecko.png)
+![Figure 4: AppleALC.kext in ECKO](../.gitbook/assets/4_applealc_ecko%20%281%29.png)
 
 ### Step 4: get DevicePath address using gfxutil
 
 Download gfxutil and drag the executable inside the terminal and type `-f HDEF` as depicted below
 
-![Figure 5: gfxutil -f HDEF](../.gitbook/assets/Audio/AppleALC/5_gfxutil_hdef.png)
+![Figure 5: gfxutil -f HDEF](../.gitbook/assets/5_gfxutil_hdef.png)
 
 Copy the DevicePath, `PciRoot(0x0)/Pci(0x1f,0x3)` and proceed to the next step
 
@@ -86,7 +86,7 @@ According to AppleALC [Installation and Usage](https://github.com/acidanthera/Ap
 3. Go in Devices/Properties section
 4. Set Audio/Inject to No and add a property as depicted below
 
-![Figure 6: HDEF audio](../.gitbook/assets/Audio/AppleALC/6_cc_dev_prop.png)
+![Figure 6: HDEF audio](../.gitbook/assets/6_cc_dev_prop.png)
 
 #### Code editor
 
@@ -106,7 +106,7 @@ Add the following code inside config.plist/Devices/Properties section
 Make sure that _Internal Speakers_ is in Output devices
 {% endhint %}
 
-![Figure 7: System Preferences, Sound, Output device](../.gitbook/assets/Audio/AppleALC/7_sysprefs_sound.png)
+![Figure 7: System Preferences, Sound, Output device](../.gitbook/assets/7_sysprefs_sound%20%281%29.png)
 
 {% hint style="info" %}
 Test only speakers. For the 3.5mm combojack follow the next section

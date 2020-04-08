@@ -31,6 +31,6 @@ Alberto come at look Marcello
 MAMMAMIA
 
 {% hint style="info" %}
-[Tools](tools-1/tools.md) are available in dedicated section
+[Tools]() are available in dedicated section
 {% endhint %}
 

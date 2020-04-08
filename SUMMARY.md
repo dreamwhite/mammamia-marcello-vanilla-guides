@@ -106,15 +106,5 @@
 * [PS2](keyboard/ps2.md)
 * [USB](keyboard/usb.md)
 
-## EFI
-
-* [ACPI](efi/acpi.md)
-* [config.plist](efi/config.plist/README.md)
-  * [ACPI](efi/config.plist/acpi.md)
-* [kexts](efi/kexts.md)
-* [drivers](efi/drivers.md)
-
 ## Tools <a id="tools-1"></a>
-
-* [Tools](tools-1/tools.md)
 
