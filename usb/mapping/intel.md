@@ -267,12 +267,6 @@ Then remove the unused ports from the ACPI table by making \_UPC method return `
         }
 ```
 
-
-
-Finally remove the unused external references to unused ports as depicted below
-
-![e.g. SS01 is unused therefore remove the external reference](../../.gitbook/assets/image-88.png)
-
 ## Step 8: add the ACPI method
 
 If we look closely to `GUPC` method, we can see that it assigns for each port the **Connector Type** _**Internal**._ We need to duplicate this method for defining the behaviour of USB2, USB3 and USB3 powered ports.
