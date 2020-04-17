@@ -16,7 +16,7 @@ description: The following is a collection of fixes that I've found during the t
 
 Open GenI2C, Diagnosis section
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2854%29.png)
 
 ### Requirements
 
@@ -57,11 +57,11 @@ It should be as depicted in the following screenshot
 
 It can occur sometimes that after resuming from sleep, you will get a `Problem Report for macOS` related to `com.alexandred.VoodooI2CHID`.
 
-![](../../.gitbook/assets/image%20%2855%29.png)
+![](../../.gitbook/assets/image%20%2861%29.png)
 
 After digging up on Google & Co, finally I've found a working solution on VoodooI2C [Issue \#192](https://github.com/alexandred/VoodooI2C/issues/192#issuecomment-546703371)
 
-![](../../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image%20%2812%29.png)
 
 After opening `VoodooI2CHID.kext/Contents/Info.plist` with any .plist editor, I've set up `QuietTimeAfterTyping` to `0`.
 
@@ -69,7 +69,7 @@ After opening `VoodooI2CHID.kext/Contents/Info.plist` with any .plist editor, I'
 
 ![](../../.gitbook/assets/image%20%283%29.png)
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%286%29.png)
 
 Or if you're a terminal-bro like me
 

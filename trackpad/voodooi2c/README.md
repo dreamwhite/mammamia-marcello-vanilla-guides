@@ -194,15 +194,15 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 
 But there is also a second method, more brutal which removes them from `VoodooPS2Controller.kext` . Right click on the kext and click on `Show Package Contents`.
 
-![Figure 6: VoodooPS2Controller.kext](../../.gitbook/assets/image%20%287%29.png)
+![Figure 6: VoodooPS2Controller.kext](../../.gitbook/assets/image%20%288%29.png)
 
-![Figure 7: Show Package Contents](../../.gitbook/assets/image%20%2821%29.png)
+![Figure 7: Show Package Contents](../../.gitbook/assets/image%20%2822%29.png)
 
-![Figure 8: open Contents/Plugins folder](../../.gitbook/assets/image%20%2826%29.png)
+![Figure 8: open Contents/Plugins folder](../../.gitbook/assets/image%20%2829%29.png)
 
 ![Figure 9: remove highlighted kexts](../../.gitbook/assets/image-80.png)
 
-![Figure 10: return up two directory levels...](../../.gitbook/assets/image%20%2823%29.png)
+![Figure 10: return up two directory levels...](../../.gitbook/assets/image%20%2824%29.png)
 
 ![ Figure 11: ...and copy &quot;VoodooPS2Controller.kext&quot;](../../.gitbook/assets/image-101.png)
 
@@ -236,9 +236,9 @@ Save and reboot
 
 ![Figure 17: System Preferences, Trackpad, Point &amp; Click](../../.gitbook/assets/image-43.png)
 
-![Figure 18: System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2829%29.png)
+![Figure 18: System Preferences, Trackpad, Scroll &amp; Zoom](../../.gitbook/assets/image%20%2832%29.png)
 
-![Figure 19: System Preferences, Trackpad, More Gestures](../../.gitbook/assets/image%20%2856%29.png)
+![Figure 19: System Preferences, Trackpad, More Gestures](../../.gitbook/assets/image%20%2862%29.png)
 
 
 

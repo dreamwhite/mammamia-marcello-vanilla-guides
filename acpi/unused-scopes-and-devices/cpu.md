@@ -18,7 +18,7 @@ In order to remove unused processors from IORegistryExplorer you need to know ho
 
 Open IORegistryExplorer and look for PR entries. Write down the unused entires, whom doesn't have `AppleACPICPU` entry below. \(e.g. in the depicted screenshot `PR12 to PR15` are unused\)
 
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](../../.gitbook/assets/image%20%2811%29.png)
 
 ### Step 2: remove unused PRxx from DSDT.aml
 

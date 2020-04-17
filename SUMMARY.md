@@ -110,5 +110,5 @@
 
 ## Post Installation
 
-* [Untitled](post-installation/untitled.md)
+* [Fix missing battery percentage](post-installation/untitled.md)
 
