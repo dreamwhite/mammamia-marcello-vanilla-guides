@@ -9,10 +9,20 @@ ETA: 3 months**
 
 ETA: 5 Months due to nCoViD19\*\*
 
-**Please note that the images are bugged \(e.g. usb mapping inside voodooi2c \(tf 's goin' on\)**
-
-\*\*\*\*
+**Please note that the images are bugged \(tf 's goin' on\)**
 {% endhint %}
+
+{% hint style="danger" %}
+\*\***17 APR edit:**
+
+Need to define a structure for the guide such as:
+{% endhint %}
+
+* Introduction
+* Preparations
+* Configuring Clover
+* Installation
+* Post Install
 
 {% hint style="warning" %}
 This repository is a collection of sporadic guides across the network. Please note that many of this guides include other guides embedded as well. Please note that I do NOT own this guides, but I find them useful for educational purposes only. This list may be incomplete or defective, we are going to maintain this list as much as we can.
