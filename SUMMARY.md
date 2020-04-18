@@ -36,8 +36,6 @@
 
 * [Information](connectivity/information.md)
 
-## USB
-
 ## Bootloaders
 
 * [Clover](bootloaders/clover/README.md)
