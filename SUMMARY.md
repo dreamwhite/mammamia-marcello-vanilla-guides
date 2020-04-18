@@ -12,6 +12,10 @@
 * [VoodooHDA](audio/voodoohda.md)
 * [3.5mm combojack](audio/3.5mm-combojack.md)
 
+## BIOS Settings
+
+* [Recommended settings](bios-settings/bioses.md)
+
 ## Graphics
 
 * [Intel](graphics/intel/README.md)
@@ -61,10 +65,6 @@
   * [gfxutil](tools/debugging/gfxutil.md)
   * [Hackintool](tools/debugging/hackintool.md)
   * [IORegistryExplorer](tools/debugging/ioregistryexplorer.md)
-
-## BIOS Settings
-
-* [Recommended settings](bios-settings/bioses.md)
 
 ## Post Installation
 
