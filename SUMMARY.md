@@ -64,14 +64,9 @@
 * [\[EXTREME\] DSDT cleaning 100%](acpi/extreme-dsdt-cleaning-100.md)
 * [Extracting ACPI tables](acpi/extracting-acpi-tables.md)
 
-## Installation
+## BIOS Settings
 
-* [BIOS](installation/bioses.md)
-
-## Keyboard
-
-* [PS2](keyboard/ps2.md)
-* [USB](keyboard/usb.md)
+* [Recommended settings](bios-settings/bioses.md)
 
 ## Tools <a id="tools-1"></a>
 
