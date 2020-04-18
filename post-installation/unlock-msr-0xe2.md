@@ -62,7 +62,7 @@ Many guides found on the web only mentions "BIOS firmware image". The purpose of
 
 ### Requirements
 
-* BIOS firmware image
+* BIOS upgrade package \(downloadable from motherboard vendor site\)
 * [UEFITool](https://github.com/LongSoft/UEFITool/releases)
 * [Universal-IFR-Extractor](https://github.com/LongSoft/Universal-IFR-Extractor/releases)
 
