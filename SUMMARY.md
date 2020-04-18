@@ -6,8 +6,6 @@
 
 * [Shortening list](introduction/shortening-list.md)
 
-## Audio
-
 ## BIOS Settings
 
 * [Recommended settings](bios-settings/bioses.md)
