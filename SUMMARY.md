@@ -54,7 +54,6 @@
   * [CPU](acpi/unused-scopes-and-devices/cpu.md)
 * [Original ACPI and IORegistryExplorer from Macs](acpi/original-acpi-and-ioregistryexplorer-from-macs/README.md)
   * [Reading dump](acpi/original-acpi-and-ioregistryexplorer-from-macs/download-link.md)
-* [\[EXTREME\] DSDT cleaning 100%](acpi/extreme-dsdt-cleaning-100.md)
 
 ## Tools
 
