@@ -53,7 +53,7 @@ Field (ECRM, ByteAcc, NoLock, Preserve)
 }
 ```
 
-Standing to AML language specification, variables are defined with a **identificator**, a string of 4 chars, and can't start with a number \(e.g. `0ABC` is an invalid name, `ABC0` is a valid name\), and the **size** of the variable expressed with decimal notation or even in hexadecimal notation. 
+According to AML language specification, variables are defined with a **identificator**, a string of 4 chars, and can't start with a number \(e.g. `0ABC` is an invalid name, `ABC0` is a valid name\), and the **size** of the variable expressed with decimal notation or even in hexadecimal notation. 
 
 Note down `ECRM` \(which we'll call `Field name`\) and proceed to the next step
 
