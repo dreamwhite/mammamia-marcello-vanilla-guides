@@ -12,6 +12,14 @@
   * [AppleALC](post-installation/audio/applealc.md)
   * [3.5mm combojack](post-installation/audio/3.5mm-combojack.md)
   * [VoodooHDA](post-installation/audio/voodoohda.md)
+* [Trackpad](post-installation/trackpad/README.md)
+  * [VoodooI2C](post-installation/trackpad/voodooi2c/README.md)
+    * [Expert mode](post-installation/trackpad/voodooi2c/expert-mode.md)
+    * [Fixes](post-installation/trackpad/voodooi2c/fixes.md)
+* [Graphics](post-installation/graphics/README.md)
+  * [Intel](post-installation/graphics/intel/README.md)
+    * [Check hardware encoding](post-installation/graphics/intel/check-hardware-encoding.md)
+    * [HD3000 series](post-installation/graphics/intel/hd3000-series.md)
 * [Power management](post-installation/power-management/README.md)
   * [Unlock MSR 0xE2](post-installation/power-management/unlock-msr-0xe2.md)
   * [Fix missing battery percentage](post-installation/power-management/fix-battery-percentage.md)
@@ -19,18 +27,6 @@
 ## BIOS Settings
 
 * [Recommended settings](bios-settings/bioses.md)
-
-## Graphics
-
-* [Intel](graphics/intel/README.md)
-  * [Check hardware encoding](graphics/intel/check-hardware-encoding.md)
-  * [HD3000 series](graphics/intel/hd3000-series.md)
-
-## Trackpad
-
-* [VoodooI2C](trackpad/voodooi2c/README.md)
-  * [Expert mode](trackpad/voodooi2c/expert-mode.md)
-  * [Fixes](trackpad/voodooi2c/fixes.md)
 
 ## Connectivity
 
