@@ -29,6 +29,9 @@ What you mean?
 * [Extracted DSDT.aml](../acpi/extracting-acpi-tables.md)
 * [MaciASL](../tools/useful-tools/maciasl.md)
 * MAMMAMIA
+* Battery kext \(only one of them\)
+  * [ACPIBatteryManager.kext](https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/)
+  * SMCBatteryManager \(bundled with VirtualSMC\)
 
 {% hint style="danger" %}
 Please note, the following procedure isn't intended for those who don't have basic knowledge of ACPI patching. Please go back if you don't know what are you doing
