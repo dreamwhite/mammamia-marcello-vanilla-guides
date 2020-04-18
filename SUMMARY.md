@@ -54,6 +54,7 @@
 
 ## ACPI
 
+* [Extracting ACPI tables](acpi/extracting-acpi-tables.md)
 * [Renames](acpi/renames/README.md)
   * [EC](acpi/renames/ec.md)
 * [Remove unused scopes and devices](acpi/unused-scopes-and-devices/README.md)
@@ -61,7 +62,6 @@
 * [Original ACPI and IORegistryExplorer from Macs](acpi/original-acpi-and-ioregistryexplorer-from-macs/README.md)
   * [Reading dump](acpi/original-acpi-and-ioregistryexplorer-from-macs/download-link.md)
 * [\[EXTREME\] DSDT cleaning 100%](acpi/extreme-dsdt-cleaning-100.md)
-* [Extracting ACPI tables](acpi/extracting-acpi-tables.md)
 
 ## BIOS Settings
 
