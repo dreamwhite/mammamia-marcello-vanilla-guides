@@ -15,6 +15,7 @@
 ## Graphics
 
 * [Intel](graphics/intel/README.md)
+  * [Check hardware encoding](graphics/intel/check-hardware-encoding.md)
   * [HD3000 series](graphics/intel/hd3000-series.md)
 
 ## Trackpad
