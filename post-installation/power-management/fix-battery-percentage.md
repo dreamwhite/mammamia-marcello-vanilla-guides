@@ -27,7 +27,7 @@ What you mean?
 ## Requirements
 
 * [Extracted DSDT.aml](../../acpi/extracting-acpi-tables.md)
-* [MaciASL](../../tools/useful-tools/maciasl.md)
+* [MaciASL]()
 * MAMMAMIA
 * Battery kext \(only one of them\)
   * [ACPIBatteryManager.kext](https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/)

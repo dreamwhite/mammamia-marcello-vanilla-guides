@@ -41,17 +41,6 @@
 * [Opencore](bootloaders/opencore.md)
 * [Mount EFI](bootloaders/mount-efi.md)
 
-## Tools
-
-* [ACPI](tools/useful-tools/README.md)
-  * [MaciASL](tools/useful-tools/maciasl.md)
-* [GenI2C](tools/geni2c.md)
-* [Debugging](tools/debugging/README.md)
-  * [DPCIManager](tools/debugging/dpcimanager.md)
-  * [gfxutil](tools/debugging/gfxutil.md)
-  * [Hackintool](tools/debugging/hackintool.md)
-  * [IORegistryExplorer](tools/debugging/ioregistryexplorer.md)
-
 ## ACPI
 
 * [Extracting ACPI tables](acpi/extracting-acpi-tables.md)
@@ -62,6 +51,16 @@
 * [Original ACPI and IORegistryExplorer from Macs](acpi/original-acpi-and-ioregistryexplorer-from-macs/README.md)
   * [Reading dump](acpi/original-acpi-and-ioregistryexplorer-from-macs/download-link.md)
 * [\[EXTREME\] DSDT cleaning 100%](acpi/extreme-dsdt-cleaning-100.md)
+
+## Tools
+
+* [MaciASL](tools/maciasl.md)
+* [GenI2C](tools/geni2c.md)
+* [Debugging](tools/debugging/README.md)
+  * [DPCIManager](tools/debugging/dpcimanager.md)
+  * [gfxutil](tools/debugging/gfxutil.md)
+  * [Hackintool](tools/debugging/hackintool.md)
+  * [IORegistryExplorer](tools/debugging/ioregistryexplorer.md)
 
 ## BIOS Settings
 
