@@ -33,10 +33,6 @@
     * [AMD](post-installation/usb/mapping/amd.md)
     * [Intel](post-installation/usb/mapping/intel.md)
 
-## Connectivity
-
-* [Information](connectivity/information.md)
-
 ## ACPI
 
 * [Renames](acpi/renames/README.md)
