@@ -73,9 +73,29 @@ Iterate this process until you have a filtered list such as the below one:
 
 ![](../.gitbook/assets/image%20%2834%29.png)
 
-The above variables are used in DSDT at least one time, and need to be patched.
+The above variables are used in DSDT at least one time, and need to be splitted into two \(or four if their size is 32\).
 
 ### Step 3: add the B1B2/B1B4 method 
+
+Imagine that the field is like a cracker: you have two pieces merged together. Splitting them into two pieces and placing side by side still is the same. We're applying the same method: we split the variable into two, or more, fields.  
+To split them simply rename the variable into two, or more, variables whose size is of 8.
+
+e.g.
+
+```text
+BDC,   16, // This variable has 16 as size
+
+//let's split it, without making name conflicts in the DSDT
+//let's split it, for example, with BDC0 and BDC1, so you'll have:
+
+BDC0,   8,
+BDC1,   8,
+
+```
+
+After you've splitted the variable into two, or more, and you try to compile the DSDT you'll get some errors, due to DSDT still trying to access to the original field \(`BDC`in the e.g.\). To fix this we'll use an utility called `B1B2` for **16-bit** fields, and `B1B4` for **32-bit** fields.
+
+The mechanism is simple. The two variables can be seen as `low-byte` and `high-byte`.
 
 For **16-bit** fields add the following patch on MaciASL:
 
