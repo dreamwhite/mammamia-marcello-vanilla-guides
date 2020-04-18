@@ -14,8 +14,6 @@
 
 ## Graphics
 
-* [AMD](graphics/amd/README.md)
-  * [iGPU](graphics/amd/igpu.md)
 * [Intel](graphics/intel/README.md)
   * [HD3000 series](graphics/intel/hd3000-series.md)
 * [NVidia](graphics/nvidia/README.md)
