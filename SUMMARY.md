@@ -101,6 +101,7 @@
 
 ## Post Installation
 
-* [Fix missing battery percentage](post-installation/fix-battery-percentage.md)
-* [Unlock MSR 0xE2](post-installation/unlock-msr-0xe2.md)
+* [Power management](post-installation/power-management/README.md)
+  * [Unlock MSR 0xE2](post-installation/power-management/unlock-msr-0xe2.md)
+  * [Fix missing battery percentage](post-installation/power-management/fix-battery-percentage.md)
 
