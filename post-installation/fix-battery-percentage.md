@@ -133,7 +133,7 @@ The job isn't finished yet, you still need to find the other variables and patch
 
 Finally save `DSDT.aml`in `ECAP` and reboot.
 
-## Credits:
+## Credits
 
 * Rehabman for his contribute in the Hackintosh scene and the [battery patching guide](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/)
 
