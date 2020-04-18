@@ -16,8 +16,6 @@
 
 * [Intel](graphics/intel/README.md)
   * [HD3000 series](graphics/intel/hd3000-series.md)
-* [NVidia](graphics/nvidia/README.md)
-  * [Web Drivers](graphics/nvidia/web-drivers.md)
 
 ## Trackpad
 
@@ -27,9 +25,7 @@
 
 ## Connectivity
 
-* [WiFi](connectivity/wifi.md)
-* [Bluetooth](connectivity/bluetooth/README.md)
-  * [Disabling unsupported BT chip](connectivity/bluetooth/disabling-unsupported-bt-chip.md)
+* [Information](connectivity/information.md)
 
 ## USB
 
