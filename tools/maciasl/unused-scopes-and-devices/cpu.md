@@ -10,7 +10,7 @@ In order to remove unused processors from IORegistryExplorer you need to know ho
 
 * Core/Threads of your CPU
 * DSDT.aml cleaned from errors
-  * [Extracting ACPI tables](../../../acpi/extracting-acpi-tables.md)
+  * [Extracting ACPI tables](../extracting-acpi-tables.md)
 * [MaciASL](../)
 * [IORegistryExplorer](../../debugging/ioregistryexplorer.md)
 

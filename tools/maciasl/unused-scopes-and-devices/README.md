@@ -26,9 +26,9 @@ What you mean?
 ## Requirements
 
 * DSDT.aml
-* * [Extracting ACPI tables](../../../acpi/extracting-acpi-tables.md)
+* * [Extracting ACPI tables](../extracting-acpi-tables.md)
 * [MaciASL]()
-* [Mount EFI](../../mount-efi.md)
+* [Mount EFI](../mount-efi.md)
 * [IORegistryExplorer](../../debugging/ioregistryexplorer.md)
 * IOReg export from same SMBIOS Mac
 

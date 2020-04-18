@@ -26,7 +26,7 @@ What you mean?
 
 ## Requirements
 
-* [Extracted DSDT.aml](../../acpi/extracting-acpi-tables.md)
+* [Extracted DSDT.aml](../../tools/maciasl/extracting-acpi-tables.md)
 * [MaciASL]()
 * MAMMAMIA
 * Battery kext \(only one of them\)

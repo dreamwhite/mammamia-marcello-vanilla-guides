@@ -21,7 +21,7 @@ I'm trying to get my hackintosh more stable
 ### Requirements
 
 * IORegistryExplorer
-* [Mount EFI](../../tools/mount-efi.md)
+* [Mount EFI](../../tools/maciasl/mount-efi.md)
 * Editing config.plist
 
 ## Step 1: determine which devices needs rename

@@ -7,6 +7,10 @@
 * [Shortening list](introduction/shortening-list.md)
 * [Conventions](introduction/conventions.md)
 
+## BIOS Settings
+
+* [Recommended settings](bios-settings/bioses.md)
+
 ## Post Installation
 
 * [Audio](post-installation/audio/README.md)
@@ -29,24 +33,20 @@
     * [AMD](post-installation/usb/mapping/amd.md)
     * [Intel](post-installation/usb/mapping/intel.md)
 
-## BIOS Settings
-
-* [Recommended settings](bios-settings/bioses.md)
-
 ## Connectivity
 
 * [Information](connectivity/information.md)
 
 ## ACPI
 
-* [Extracting ACPI tables](acpi/extracting-acpi-tables.md)
 * [Renames](acpi/renames/README.md)
   * [EC](acpi/renames/ec.md)
 
 ## Tools
 
-* [Mount EFI](tools/mount-efi.md)
 * [MaciASL](tools/maciasl/README.md)
+  * [Mount EFI](tools/maciasl/mount-efi.md)
+  * [Extracting ACPI tables](tools/maciasl/extracting-acpi-tables.md)
   * [Original ACPI and IORegistryExplorer from Macs](tools/maciasl/original-acpi-and-ioregistryexplorer-from-macs/README.md)
     * [Reading dump](tools/maciasl/original-acpi-and-ioregistryexplorer-from-macs/download-link.md)
   * [Remove unused scopes and devices](tools/maciasl/unused-scopes-and-devices/README.md)
