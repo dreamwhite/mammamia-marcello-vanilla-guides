@@ -23,6 +23,10 @@
 * [Power management](post-installation/power-management/README.md)
   * [Unlock MSR 0xE2](post-installation/power-management/unlock-msr-0xe2.md)
   * [Fix missing battery percentage](post-installation/power-management/fix-battery-percentage.md)
+* [USB](post-installation/usb/README.md)
+  * [Mapping](post-installation/usb/mapping/README.md)
+    * [AMD](post-installation/usb/mapping/amd.md)
+    * [Intel](post-installation/usb/mapping/intel.md)
 
 ## BIOS Settings
 
@@ -33,10 +37,6 @@
 * [Information](connectivity/information.md)
 
 ## USB
-
-* [Mapping](usb/mapping/README.md)
-  * [AMD](usb/mapping/amd.md)
-  * [Intel](usb/mapping/intel.md)
 
 ## Bootloaders
 
