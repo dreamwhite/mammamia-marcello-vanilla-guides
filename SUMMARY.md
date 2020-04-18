@@ -37,10 +37,6 @@
 
 * [Information](connectivity/information.md)
 
-## Bootloaders
-
-* [Clover](bootloaders/clover.md)
-
 ## ACPI
 
 * [Extracting ACPI tables](acpi/extracting-acpi-tables.md)
