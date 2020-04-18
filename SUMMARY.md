@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Mammamia Marcello Vanilla Guides](README.md)
+* [Mammamia Marcello Vanilla Guide](README.md)
 
 ## Introduction
 

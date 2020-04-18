@@ -1,4 +1,4 @@
-# Mammamia Marcello Vanilla Guides
+# Mammamia Marcello Vanilla Guide
 
 {% hint style="danger" %}
 **The following guide is still a work in progress.  
