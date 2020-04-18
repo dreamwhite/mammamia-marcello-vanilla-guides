@@ -87,11 +87,6 @@
   * [createinstallmedia](installation/usb-creation/createinstallmedia.md)
   * [\[Beta\] Premade vanilla images](installation/usb-creation/beta-premade-vanilla-images.md)
 
-## CPU
-
-* [AMD](cpu/amd.md)
-* [Intel](cpu/intel.md)
-
 ## Keyboard
 
 * [PS2](keyboard/ps2.md)
