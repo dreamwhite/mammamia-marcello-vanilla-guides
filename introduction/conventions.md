@@ -6,7 +6,7 @@ description: Conventions used in this wiki for better reading
 
 ## Marcello, what is it?
 
-The following page is an explanation of the conventions used here.
+The following page is an explanation of the conventions used in this guide.
 
 ## What you doin'?
 
@@ -22,7 +22,7 @@ What you mean?
 
 Let's assume for example that **AddMCHC** Clover Hot-patch needs to be enabled
 
-![](../../.gitbook/assets/image-31%20%281%29.png)
+![](../.gitbook/assets/image-31%20%281%29.png)
 
 In this case to shortcut it we'll use the following syntax
 

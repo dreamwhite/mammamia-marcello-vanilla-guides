@@ -58,7 +58,7 @@ According to the previous screenshot, VoodooHDA installs 3 files:
 * **VoodooHDA.prefPane** inside /Library/PreferencePanes
 * **getdump** inside /usr/local/bin/getdump
 
-To remove the kext simply [mount EFI](../../bootloaders/mount-efi.md) then remove VoodooHDA.kext as depicted below
+To remove the kext simply [mount EFI](../../tools/mount-efi.md) then remove VoodooHDA.kext as depicted below
 
 ![](../../.gitbook/assets/image-69.png)
 

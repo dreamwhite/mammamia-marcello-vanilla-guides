@@ -22,9 +22,9 @@ What you mean?
 
 ## Requirements
 
-* [Mount EFI](../bootloaders/mount-efi.md)
+* [Mount EFI](../tools/mount-efi.md)
 * config.plist/ACPI/SSDT/NoDynamicExtract=True
-  * [meaning](../bootloaders/clover/conventions.md)
+  * [meaning](../introduction/conventions.md)
 * MAMMAMIA
 
 {% hint style="danger" %}

@@ -5,6 +5,7 @@
 ## Introduction
 
 * [Shortening list](introduction/shortening-list.md)
+* [Conventions](introduction/conventions.md)
 
 ## Post Installation
 
@@ -38,24 +39,22 @@
 
 ## Bootloaders
 
-* [Clover](bootloaders/clover/README.md)
-  * [Conventions](bootloaders/clover/conventions.md)
-* [Opencore](bootloaders/opencore.md)
-* [Mount EFI](bootloaders/mount-efi.md)
+* [Clover](bootloaders/clover.md)
 
 ## ACPI
 
 * [Extracting ACPI tables](acpi/extracting-acpi-tables.md)
 * [Renames](acpi/renames/README.md)
   * [EC](acpi/renames/ec.md)
-* [Remove unused scopes and devices](acpi/unused-scopes-and-devices/README.md)
-  * [CPU](acpi/unused-scopes-and-devices/cpu.md)
-* [Original ACPI and IORegistryExplorer from Macs](acpi/original-acpi-and-ioregistryexplorer-from-macs/README.md)
-  * [Reading dump](acpi/original-acpi-and-ioregistryexplorer-from-macs/download-link.md)
 
 ## Tools
 
-* [MaciASL](tools/maciasl.md)
+* [Mount EFI](tools/mount-efi.md)
+* [MaciASL](tools/maciasl/README.md)
+  * [Original ACPI and IORegistryExplorer from Macs](tools/maciasl/original-acpi-and-ioregistryexplorer-from-macs/README.md)
+    * [Reading dump](tools/maciasl/original-acpi-and-ioregistryexplorer-from-macs/download-link.md)
+  * [Remove unused scopes and devices](tools/maciasl/unused-scopes-and-devices/README.md)
+    * [CPU](tools/maciasl/unused-scopes-and-devices/cpu.md)
 * [GenI2C](tools/geni2c.md)
 * [Debugging](tools/debugging/README.md)
   * [DPCIManager](tools/debugging/dpcimanager.md)

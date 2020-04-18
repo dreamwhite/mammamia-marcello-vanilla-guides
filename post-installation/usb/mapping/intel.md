@@ -101,7 +101,7 @@ Choose the patches for your OS version
 
 ## Step 2: Installing the kext
 
-[Mount EFI](../../../bootloaders/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
+[Mount EFI](../../../tools/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
 
 ![](../../../.gitbook/assets/image-91.png)
 
