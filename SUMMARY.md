@@ -60,15 +60,12 @@
   * [CPU](acpi/unused-scopes-and-devices/cpu.md)
 * [Original ACPI and IORegistryExplorer from Macs](acpi/original-acpi-and-ioregistryexplorer-from-macs/README.md)
   * [Reading dump](acpi/original-acpi-and-ioregistryexplorer-from-macs/download-link.md)
-  * [Adding \_DSM methods](acpi/original-acpi-and-ioregistryexplorer-from-macs/adding-_dsm-methods.md)
 * [\[EXTREME\] DSDT cleaning 100%](acpi/extreme-dsdt-cleaning-100.md)
 * [Extracting ACPI tables](acpi/extracting-acpi-tables.md)
 
 ## BIOS Settings
 
 * [Recommended settings](bios-settings/bioses.md)
-
-## Tools <a id="tools-1"></a>
 
 ## Post Installation
 
