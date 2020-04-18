@@ -54,5 +54,34 @@ In OpenCore bootloader the patches are:
 
 In order to grant native power management of CPU, you need to flip this bit to `0x0`.
 
-##  
+## How to flip CFG Lock bit to 0x0?
+
+{% hint style="info" %}
+Many guides found on the web only mentions "BIOS firmware image". The purpose of the following guide is helping the people extract the BIOS Firmware image from their vendor BIOS upgrade package
+{% endhint %}
+
+### Requirements
+
+* BIOS firmware image
+* [UEFITool](https://github.com/LongSoft/UEFITool/releases)
+* [Universal-IFR-Extractor](https://github.com/LongSoft/Universal-IFR-Extractor/releases)
+
+## Step 1: getting the BIOS image from vendor
+
+Below the list of the steps to take in order to extract the BIOS image from the BIOS upgrade package divided for vendor.
+
+* ASRock
+* ASUS
+* [Dell](https://github.com/dreamwhite/bios-extraction-guide/blob/master/Dell/README.md)
+* Gigabyte
+* HP
+* Lenovo
+* MSI
+* Xiaomi
+
+
+
+
+
+### 
 
