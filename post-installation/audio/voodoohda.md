@@ -34,19 +34,19 @@ What you mean?
 
 Download the latest kext release and open the .pkg file
 
-![Click on &quot;Continue&quot;](../.gitbook/assets/image-122.png)
+![Click on &quot;Continue&quot;](../../.gitbook/assets/image-122.png)
 
-![Click on &quot;Continue&quot;](../.gitbook/assets/image-108.png)
+![Click on &quot;Continue&quot;](../../.gitbook/assets/image-108.png)
 
-![Agree the license by clicking on &quot;Agree&quot;](../.gitbook/assets/image-20.png)
+![Agree the license by clicking on &quot;Agree&quot;](../../.gitbook/assets/image-20.png)
 
-![Click on &quot;Customize&quot;](../.gitbook/assets/image-21.png)
+![Click on &quot;Customize&quot;](../../.gitbook/assets/image-21.png)
 
-![Expand &quot;VoodooHDA Clover UEFI/ESP&quot; if you&apos;re on a UEFI machine, else on &quot;Legacy&quot;](../.gitbook/assets/image-55.png)
+![Expand &quot;VoodooHDA Clover UEFI/ESP&quot; if you&apos;re on a UEFI machine, else on &quot;Legacy&quot;](../../.gitbook/assets/image-55.png)
 
-![Check only the macOS version you&apos;re using ](../.gitbook/assets/image-70.png)
+![Check only the macOS version you&apos;re using ](../../.gitbook/assets/image-70.png)
 
-![](../.gitbook/assets/image-25.png)
+![](../../.gitbook/assets/image-25.png)
 
 Click on Install, and enter your password when it's prompted.
 
@@ -58,23 +58,23 @@ According to the previous screenshot, VoodooHDA installs 3 files:
 * **VoodooHDA.prefPane** inside /Library/PreferencePanes
 * **getdump** inside /usr/local/bin/getdump
 
-To remove the kext simply [mount EFI](../bootloaders/mount-efi.md) then remove VoodooHDA.kext as depicted below
+To remove the kext simply [mount EFI](../../bootloaders/mount-efi.md) then remove VoodooHDA.kext as depicted below
 
-![](../.gitbook/assets/image-69.png)
+![](../../.gitbook/assets/image-69.png)
 
-![](../.gitbook/assets/image-16.png)
+![](../../.gitbook/assets/image-16.png)
 
-![Remove VoodooHDA.kext](../.gitbook/assets/image-39.png)
+![Remove VoodooHDA.kext](../../.gitbook/assets/image-39.png)
 
-![If there are no more other kexts remove the 10.xx folder ](../.gitbook/assets/image-30.png)
+![If there are no more other kexts remove the 10.xx folder ](../../.gitbook/assets/image-30.png)
 
 To remove the preference pane just open System Preferences as depicted below
 
-![](../.gitbook/assets/image-29.png)
+![](../../.gitbook/assets/image-29.png)
 
-![Right click on VoodooHDA icon and remove the preference pane](../.gitbook/assets/image-139.png)
+![Right click on VoodooHDA icon and remove the preference pane](../../.gitbook/assets/image-139.png)
 
-![](../.gitbook/assets/image-66.png)
+![](../../.gitbook/assets/image-66.png)
 
 Finally, remove **getdump** by opening a terminal window:
 
@@ -84,7 +84,7 @@ Get the path to the executable with
 which getdump
 ```
 
-![/usr/local/bin/getdump is the path](../.gitbook/assets/image-6.png)
+![/usr/local/bin/getdump is the path](../../.gitbook/assets/image-6.png)
 
 Then remove the executable with
 
@@ -98,7 +98,7 @@ sudo rm -r /usr/local/bin/getdump
 sudo rm -r $(which getdump)
 ```
 
-![](../.gitbook/assets/image-138.png)
+![](../../.gitbook/assets/image-138.png)
 
 {% hint style="success" %}
 VoodooHDA is successfully uninstalled from your system. Remember to reboot in order to apply changes

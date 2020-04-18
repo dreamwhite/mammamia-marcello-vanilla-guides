@@ -8,10 +8,6 @@
 
 ## Audio
 
-* [AppleALC](audio/applealc.md)
-* [VoodooHDA](audio/voodoohda.md)
-* [3.5mm combojack](audio/3.5mm-combojack.md)
-
 ## BIOS Settings
 
 * [Recommended settings](bios-settings/bioses.md)
@@ -67,6 +63,10 @@
 
 ## Post Installation
 
+* [Audio](post-installation/audio/README.md)
+  * [AppleALC](post-installation/audio/applealc.md)
+  * [3.5mm combojack](post-installation/audio/3.5mm-combojack.md)
+  * [VoodooHDA](post-installation/audio/voodoohda.md)
 * [Power management](post-installation/power-management/README.md)
   * [Unlock MSR 0xE2](post-installation/power-management/unlock-msr-0xe2.md)
   * [Fix missing battery percentage](post-installation/power-management/fix-battery-percentage.md)
