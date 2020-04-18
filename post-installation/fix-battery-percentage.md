@@ -77,8 +77,7 @@ The above variables are used in DSDT at least one time, and need to be splitted 
 
 ### Step 3: add the B1B2/B1B4 method 
 
-Imagine that the field is like a cracker: you have two pieces merged together. Splitting them into two pieces and placing side by side still is the same. We're applying the same method: we split the variable into two, or more, fields.  
-To split them simply rename the variable into two, or more, variables whose size is of 8.
+Imagine that the field is like a cracker: you have two pieces merged together. Splitting them into two pieces and placing side by side still is the same. We're applying the same method: we split the variable into two, or more, fields. To split them simply rename the variable into two, or more, variables whose size is of 8.
 
 e.g.
 
@@ -93,12 +92,10 @@ BDC1,   8,
 
 ```
 
-After you've splitted the variable into two, or more, and you try to compile the DSDT you'll get some errors, due to DSDT still trying to access to the original field \(`BDC`in the e.g.\). To fix this we'll use an utility called `B1B2` for **16-bit** fields, and `B1B4` for **32-bit** fields.
+After splitting the variable into two, or more, variables and you try to compile the DSDT you'll get some errors, due to DSDT still trying to access to the original field \(`BDC`in the e.g.\). To fix this we'll use an utility called `B1B2` for **16-bit** fields, and `B1B4` for **32-bit** fields, which will take the **8-bit** variables as input and return a **16-bit** or **32-bit** field. Below the patches:
 
-The mechanism is simple. The two variables can be seen as `low-byte` and `high-byte`.
-
-For **16-bit** fields add the following patch on MaciASL:
-
+{% tabs %}
+{% tab title="16-bit" %}
 ```text
 #Maintained by: RehabMan for: Laptop Patches
 #b1b2-method.txt
@@ -112,9 +109,11 @@ Method (B1B2, 2, NotSerialized) { Return(Or(Arg0, ShiftLeft(Arg1, 8))) }\n
 end;
 ```
 
-For **32-bit** fields add the following patch instead:
+This method takes two **8-bit** fields and return one **16-bit** field.
+{% endtab %}
 
-```text
+{% tab title="32-bit" %}
+```
 #Maintained by: RehabMan for: Laptop Patches
 #b1b4-method.txt
 
@@ -133,6 +132,10 @@ Method (B1B4, 4, NotSerialized)\n
 }\n
 end;
 ```
+
+This patch takes four **8-bit** fields as input and returns one **32-bit** field
+{% endtab %}
+{% endtabs %}
 
 ### Step 4: split the variables and fixing the errors
 
