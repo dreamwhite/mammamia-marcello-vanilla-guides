@@ -57,7 +57,7 @@ In order to grant native power management of CPU, you need to flip this bit to `
 ## How to flip CFG Lock bit to 0x0?
 
 {% hint style="info" %}
-Many guides found on the web only mentions "BIOS firmware image". The purpose of the following guide is helping the people extract the BIOS Firmware image from their vendor BIOS upgrade package
+Many guides found on the web only mentions "BIOS firmware image". The purpose of the following guide is helping the user extract the BIOS Firmware image from their vendor BIOS upgrade package
 {% endhint %}
 
 ### Requirements
