@@ -16,7 +16,7 @@ description: The following is a collection of fixes that I've found during the t
 
 Open GenI2C, Diagnosis section
 
-![](../../.gitbook/assets/image%20%2854%29.png)
+![](../../.gitbook/assets/image%20%2855%29.png)
 
 ### Requirements
 
@@ -57,7 +57,7 @@ It should be as depicted in the following screenshot
 
 It can occur sometimes that after resuming from sleep, you will get a `Problem Report for macOS` related to `com.alexandred.VoodooI2CHID`.
 
-![](../../.gitbook/assets/image%20%2861%29.png)
+![](../../.gitbook/assets/image%20%2862%29.png)
 
 After digging up on Google & Co, finally I've found a working solution on VoodooI2C [Issue \#192](https://github.com/alexandred/VoodooI2C/issues/192#issuecomment-546703371)
 
