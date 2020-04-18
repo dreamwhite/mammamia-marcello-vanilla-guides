@@ -66,11 +66,7 @@
 
 ## Installation
 
-* [BIOS](installation/bioses/README.md)
-  * [ASRock](installation/bioses/asrock.md)
-  * [Asus](installation/bioses/asus.md)
-  * [Gigabyte](installation/bioses/gigabyte.md)
-  * [MSI](installation/bioses/msi.md)
+* [BIOS](installation/bioses.md)
 
 ## Keyboard
 
