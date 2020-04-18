@@ -71,21 +71,6 @@
   * [Asus](installation/bioses/asus.md)
   * [Gigabyte](installation/bioses/gigabyte.md)
   * [MSI](installation/bioses/msi.md)
-* [Kexts](installation/kexts/README.md)
-  * [Audio](installation/kexts/audio.md)
-  * [Bluetooth](installation/kexts/bluetooth.md)
-  * [SMC](installation/kexts/smc.md)
-  * [Keyboard](installation/kexts/keyboard.md)
-  * [Trackpad](installation/kexts/trackpad.md)
-  * [USB](installation/kexts/usb/README.md)
-    * [USBInjectAll](installation/kexts/usb/usbinjectall.md)
-  * [Lilu](installation/kexts/lilu.md)
-* [USB Creation](installation/usb-creation/README.md)
-  * [gibMacOS](installation/usb-creation/gibmacos/README.md)
-    * [Windows](installation/usb-creation/gibmacos/windows/README.md)
-      * [Internet recovery install](installation/usb-creation/gibmacos/windows/internet-recovery-install.md)
-  * [createinstallmedia](installation/usb-creation/createinstallmedia.md)
-  * [\[Beta\] Premade vanilla images](installation/usb-creation/beta-premade-vanilla-images.md)
 
 ## Keyboard
 

@@ -41,7 +41,7 @@ As you’ll see, this map is not sequential and physical ports map to \(more or 
 * Hackintool
 * Clover Configurator
 * IORegistryExplorer
-* [USBInjectAll](../../installation/kexts/usb/usbinjectall.md#download-link)
+* [USBInjectAll]()
 
 ## Step 1: Adding port limit patch
 
