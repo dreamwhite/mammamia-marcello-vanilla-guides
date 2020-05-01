@@ -1,6 +1,0 @@
-# BIOS
-
-## ASRock
-
-## ASUS
-
