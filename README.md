@@ -1,8 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Initial page
+=======
+=======
+>>>>>>> parent of d685c20... GitBook: [master] 2 pages modified
 # Mammamia Marcello Vanilla Guides
-
-
-
-## Mammamia Marcello Vanilla Guides
 
 {% hint style="danger" %}
 **The following guide is still a work in progress.  
@@ -45,8 +47,7 @@ Alberto come at look Marcello
 MAMMAMIA
 
 {% hint style="info" %}
-[Tools](./) are available in dedicated section
+[Tools]() are available in dedicated section
 {% endhint %}
-
-
+>>>>>>> parent of d685c20... GitBook: [master] 2 pages modified
 

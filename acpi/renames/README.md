@@ -21,7 +21,7 @@ I'm trying to get my hackintosh more stable
 ### Requirements
 
 * IORegistryExplorer
-* [Mount EFI](../../tools-1/maciasl/mount-efi.md)
+* [Mount EFI](../../tools/maciasl/mount-efi.md)
 * Editing config.plist
 
 ## Step 1: determine which devices needs rename
@@ -49,7 +49,7 @@ Now take note of the devices that you've found previously and calculate the HEX 
 ## Step 2: add renames from Clover
 
 {% hint style="info" %}
-TgtBridge is not needed for the majority of renames. Thus leave it blank. It's needed only for some renames like as done in [GenI2C](../../tools-1/geni2c.md)
+TgtBridge is not needed for the majority of renames. Thus leave it blank. It's needed only for some renames like as done in [GenI2C](../../tools/geni2c.md)
 {% endhint %}
 
 #### Renames:

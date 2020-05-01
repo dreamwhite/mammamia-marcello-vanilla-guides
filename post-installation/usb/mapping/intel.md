@@ -36,7 +36,7 @@ As you’ll see, this map is not sequential and physical ports map to \(more or 
 ## Requirements
 
 * DSDT/SSDT-USB.aml
-* * [Extracting ACPI tables](../../../tools-1/maciasl/extracting-acpi-tables.md)
+* * [Extracting ACPI tables](../../../tools/maciasl/extracting-acpi-tables.md)
 * MaciASL
 * Hackintool
 * Clover Configurator
@@ -101,7 +101,7 @@ Choose the patches for your OS version
 
 ## Step 2: Installing the kext
 
-[Mount EFI](../../../tools-1/maciasl/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
+[Mount EFI](../../../tools/maciasl/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
 
 ![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-91.png)
 
@@ -115,7 +115,7 @@ kextstat | grep USBInjectAll
 
 ## Step 3: extract ACPI Tables
 
-{% page-ref page="../../../tools-1/maciasl/extracting-acpi-tables.md" %}
+{% page-ref page="../../../tools/maciasl/extracting-acpi-tables.md" %}
 
 ## Step 4: identify the SSDT which defines USB ports
 

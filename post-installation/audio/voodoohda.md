@@ -58,7 +58,7 @@ According to the previous screenshot, VoodooHDA installs 3 files:
 * **VoodooHDA.prefPane** inside /Library/PreferencePanes
 * **getdump** inside /usr/local/bin/getdump
 
-To remove the kext simply [mount EFI](../../tools-1/maciasl/mount-efi.md) then remove VoodooHDA.kext as depicted below
+To remove the kext simply [mount EFI](../../tools/maciasl/mount-efi.md) then remove VoodooHDA.kext as depicted below
 
 ![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-69.png)
 

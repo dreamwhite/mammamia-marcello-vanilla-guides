@@ -24,7 +24,7 @@ What you mean?
 
 * [Mount EFI](mount-efi.md)
 * config.plist/ACPI/SSDT/NoDynamicExtract=True
-  * [meaning](../../introduction-1/conventions.md)
+  * [meaning](../../introduction/conventions.md)
 * MAMMAMIA
 
 {% hint style="danger" %}
