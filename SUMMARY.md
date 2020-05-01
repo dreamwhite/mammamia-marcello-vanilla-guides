@@ -1,8 +1,11 @@
 # Table of contents
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [Initial page](README.md)
 =======
+=======
+>>>>>>> parent of d685c20... GitBook: [master] 2 pages modified
 * [Mammamia Marcello Vanilla Guides](README.md)
 
 ## Introduction
