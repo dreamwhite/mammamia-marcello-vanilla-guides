@@ -18,13 +18,13 @@ In order to remove unused processors from IORegistryExplorer you need to know ho
 
 Open IORegistryExplorer and look for PR entries. Write down the unused entires, whom doesn't have `AppleACPICPU` entry below. \(e.g. in the depicted screenshot `PR12 to PR15` are unused\)
 
-![](../../../.gitbook/assets/image%20%2811%29.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2811%29.png)
 
 ### Step 2: remove unused PRxx from DSDT.aml
 
 Open DSDT.aml with MaciASL and search the previously found `PRxx` like in the following screenshot
 
-![PR08 till PR15 are unused](../../../.gitbook/assets/image-89.png)
+![PR08 till PR15 are unused](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-89.png)
 
 Now open Patch menu and apply the following patch, where `xx` is the `PRxx` that is unused.
 
@@ -32,13 +32,13 @@ Now open Patch menu and apply the following patch, where `xx` is the `PRxx` that
 into processor label PRxx parent_label _SB remove_entry;
 ```
 
-![Click on &quot;Apply&quot;](../../../.gitbook/assets/image-76.png)
+![Click on &quot;Apply&quot;](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-76.png)
 
 Repeat the patching process for each `Processor` that you need to remove.
 
 Then compile and fix the remaining errors
 
-![](../../../.gitbook/assets/image-83.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-83.png)
 
 We need to remove those lines because they call `_SB.PRxx` which we've removed before.
 

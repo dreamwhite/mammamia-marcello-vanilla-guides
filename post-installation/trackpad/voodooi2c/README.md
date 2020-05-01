@@ -42,7 +42,7 @@ Activating I2C devices requires **working** [EC](../../../acpi/renames/ec.md) an
 
 Open GenI2C and go in Diagnosis section
 
-![Figure 1: GenI2C Diagnosis](../../../.gitbook/assets/image-105.png)
+![Figure 1: GenI2C Diagnosis](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-105.png)
 
 {% hint style="danger" %}
 If CPU Generation Support led is red you can't add support for I2C devices on your laptop
@@ -75,7 +75,7 @@ Please use the Rename(s) above in the given order
 ++++++++++++++++++++++++++++++++++++++
 ```
 
-![Figure 2: Add Coolstar I2C Patches](../../../.gitbook/assets/image-78.png)
+![Figure 2: Add Coolstar I2C Patches](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-78.png)
 
 ```text
 <key>KextsToPatch</key>
@@ -124,7 +124,7 @@ Furthermore, force the loading of **IOGraphicsFamily.kext** by adding
 
 `\System\Library\Extensions\IOGraphicsFamily.kext` inside config.plist/Kernel and Kext Patches/ForceKextsToLoad
 
-![Figure 3: Force IOGraphicsFamily.kext to load](../../../.gitbook/assets/image-65.png)
+![Figure 3: Force IOGraphicsFamily.kext to load](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-65.png)
 
 ```text
 <key>ForceKextsToLoad</key>
@@ -148,7 +148,7 @@ into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2013\"\)\) replace_ma
 into_all method code_regex If\s+\([\\]?_OSI\s+\(\"Windows\s2015\"\)\) replace_matched begin If(LOr(_OSI("Darwin"),_OSI("Windows 2015"))) end;
 ```
 
-![Figure 4: apply \_OSI patches in DSDT.aml](../../../.gitbook/assets/image.png)
+![Figure 4: apply \_OSI patches in DSDT.aml](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image.png)
 
 Save the file also in "Disassemled ASL File" for the next step
 
@@ -157,7 +157,7 @@ Save the file also in "Disassemled ASL File" for the next step
 Add `VoodooI2C.kext` and the `satellite kext`  
 More infos can be found [here](https://voodooi2c.github.io/#Satellite%20Kexts/Satellite%20Kexts)
 
-![Figure 5: install VoodooI2C in ECKO](../../../.gitbook/assets/image-24.png)
+![Figure 5: install VoodooI2C in ECKO](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-24.png)
 
 ### Step 5: disable VoodooPS2Controller Mouse and Trackpad conflict
 
@@ -194,17 +194,17 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 
 But there is also a second method, more brutal which removes them from `VoodooPS2Controller.kext` . Right click on the kext and click on `Show Package Contents`.
 
-![Figure 6: VoodooPS2Controller.kext](../../../.gitbook/assets/image%20%288%29.png)
+![Figure 6: VoodooPS2Controller.kext](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%288%29.png)
 
-![Figure 7: Show Package Contents](../../../.gitbook/assets/image%20%2822%29.png)
+![Figure 7: Show Package Contents](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2822%29.png)
 
-![Figure 8: open Contents/Plugins folder](../../../.gitbook/assets/image%20%2830%29.png)
+![Figure 8: open Contents/Plugins folder](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2830%29.png)
 
-![Figure 9: remove highlighted kexts](../../../.gitbook/assets/image-80.png)
+![Figure 9: remove highlighted kexts](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-80.png)
 
-![Figure 10: return up two directory levels...](../../../.gitbook/assets/image%20%2825%29.png)
+![Figure 10: return up two directory levels...](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2825%29.png)
 
-![ Figure 11: ...and copy &quot;VoodooPS2Controller.kext&quot;](../../../.gitbook/assets/image-101.png)
+![ Figure 11: ...and copy &quot;VoodooPS2Controller.kext&quot;](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-101.png)
 
 Finally copy **VoodooPS2Controller.kext** to `ECKO`
 
@@ -216,31 +216,29 @@ Marcello suggests using GenI2C on the target machine
 
 After saving the DSDT.dsl file, open GenI2C and go in GenSSDT section
 
-![Figure 12: tick &quot;Generate patches for this computer&quot; and click next](../../../.gitbook/assets/image-62.png)
+![Figure 12: tick &quot;Generate patches for this computer&quot; and click next](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-62.png)
 
-![Figure 13: select &quot;Interrupt \(APIC or GPIO\)&quot; and then click on Generate](../../../.gitbook/assets/image-17.png)
+![Figure 13: select &quot;Interrupt \(APIC or GPIO\)&quot; and then click on Generate](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-17.png)
 
 It will open a folder with Finder. Just copy the .aml file inside `/Volumes/EFI/CLOVER/ACPI/patched` directory
 
-![Figure 14: GenI2C Patch folder](../../../.gitbook/assets/image-37.png)
+![Figure 14: GenI2C Patch folder](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-37.png)
 
 Then open your config.plist and add the renames inside Readme.txt
 
-![Figure 15: Readme.txt](../../../.gitbook/assets/image-11.png)
+![Figure 15: Readme.txt](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-11.png)
 
-![Figure 16: Add renames in Clover Configurator](../../../.gitbook/assets/image-12.png)
+![Figure 16: Add renames in Clover Configurator](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-12.png)
 
 Save and reboot
 
 ### Step 7: configure trackpad
 
-![Figure 17: System Preferences, Trackpad, Point &amp; Click](../../../.gitbook/assets/image-43.png)
+![Figure 17: System Preferences, Trackpad, Point &amp; Click](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-43.png)
 
-![Figure 18: System Preferences, Trackpad, Scroll &amp; Zoom](../../../.gitbook/assets/image%20%2833%29.png)
+![Figure 18: System Preferences, Trackpad, Scroll &amp; Zoom](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2833%29.png)
 
-![Figure 19: System Preferences, Trackpad, More Gestures](../../../.gitbook/assets/image%20%2863%29.png)
-
-
+![Figure 19: System Preferences, Trackpad, More Gestures](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2863%29.png)
 
 **Enjoy the gestures &lt;3**
 

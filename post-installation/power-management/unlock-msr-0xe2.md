@@ -47,7 +47,7 @@ In Clover bootloader the patches are:
 * `KernelPM`
 * `KernelXCPM`
 
-In OpenCore bootloader the patches are: 
+In OpenCore bootloader the patches are:
 
 * `AppleCpuPmCfgLock`
 * `AppleXcpmCfgLock`
@@ -78,12 +78,4 @@ Below the list of the steps to take in order to extract the BIOS image from the 
 * Lenovo
 * MSI
 * Xiaomi
-
-
-
-
-
-
-
-### 
 
