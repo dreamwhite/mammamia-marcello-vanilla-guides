@@ -1,6 +1,7 @@
 # Table of contents
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [Initial page](README.md)
 * [installation](installation/README.md)
   * [BIOS](installation/bioses/README.md)
@@ -70,6 +71,8 @@
 * [Templates](templates/README.md)
   * [Gitbook page](templates/gitbook-page.md)
 =======
+=======
+>>>>>>> parent of d685c20... GitBook: [master] 2 pages modified
 * [Mammamia Marcello Vanilla Guides](README.md)
 
 ## Introduction
