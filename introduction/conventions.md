@@ -22,7 +22,7 @@ What you mean?
 
 Let's assume for example that **AddMCHC** Clover Hot-patch needs to be enabled
 
-![](../.gitbook/assets/image-31%20%281%29.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-31%20%281%29.png)
 
 In this case to shortcut it we'll use the following syntax
 
