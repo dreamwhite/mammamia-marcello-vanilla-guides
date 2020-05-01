@@ -27,7 +27,7 @@ What you mean?
 ## Requirements
 
 * [Extracted DSDT.aml](../../tools/maciasl/extracting-acpi-tables.md)
-* [MaciASL]()
+* [MaciASL](fix-battery-percentage.md)
 * MAMMAMIA
 * Battery kext \(only one of them\)
   * [ACPIBatteryManager.kext](https://bitbucket.org/RehabMan/os-x-acpi-battery-driver/downloads/)
@@ -39,9 +39,9 @@ Please note, the following procedure isn't intended for those who don't have bas
 
 ### Step 1: identify field name
 
-Look for `EmbeddedControl` inside `DSDT.aml` 
+Look for `EmbeddedControl` inside `DSDT.aml`
 
-![](../../.gitbook/assets/image%20%2829%29.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2829%29.png)
 
 Let's focus on the following lines:
 
@@ -53,7 +53,7 @@ Field (ECRM, ByteAcc, NoLock, Preserve)
 }
 ```
 
-According to AML language specification, variables are defined with a **identificator**, a string of 4 chars, and can't start with a number \(e.g. `0ABC` is an invalid name, `ABC0` is a valid name\), and the **size** of the variable expressed with decimal notation or even in hexadecimal notation. 
+According to AML language specification, variables are defined with a **identificator**, a string of 4 chars, and can't start with a number \(e.g. `0ABC` is an invalid name, `ABC0` is a valid name\), and the **size** of the variable expressed with decimal notation or even in hexadecimal notation.
 
 Note down `ECRM` \(which we'll call `Field name`\) and proceed to the next step
 
@@ -61,21 +61,21 @@ Note down `ECRM` \(which we'll call `Field name`\) and proceed to the next step
 
 Let's identify the variables which size is more than 8 \(usually multiples, such as 16, 32 etc...\). Open a text editor and paste the whole `Field name` field content and make a list like the depicted below:
 
-![](../../.gitbook/assets/image%20%2841%29.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2841%29.png)
 
 Now search inside DSDT how many times the variable is used
 
-![This variable is found only 1 time inside DSDT, so let&apos;s skip it and proceed to the next one](../../.gitbook/assets/image%20%2826%29.png)
+![This variable is found only 1 time inside DSDT, so let&apos;s skip it and proceed to the next one](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2826%29.png)
 
-![There&apos;s more than 1 match so let&apos;s note down the name of the variable, then look for the next one](../../.gitbook/assets/image%20%285%29.png)
+![There&apos;s more than 1 match so let&apos;s note down the name of the variable, then look for the next one](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%285%29.png)
 
 Iterate this process until you have a filtered list such as the below one:
 
-![](../../.gitbook/assets/image%20%2834%29.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2834%29.png)
 
 The above variables are used in DSDT at least one time, and need to be splitted into two \(or four if their size is 32\).
 
-### Step 3: add the B1B2/B1B4 method 
+### Step 3: add the B1B2/B1B4 method
 
 Imagine that the field is like a cracker: you have two pieces merged together. Splitting them into two pieces and placing side by side still is the same. We're applying the same method: we split the variable into two, or more, fields. To split them simply rename the variable into two, or more, variables whose size is of 8.
 
@@ -89,7 +89,6 @@ BDC,   16, // This variable has 16 as size
 
 BDC0,   8,
 BDC1,   8,
-
 ```
 
 After splitting the variable into two, or more, variables and you try to compile the DSDT you'll get some errors, due to DSDT still trying to access to the original field \(`BDC`in the e.g.\). To fix this we'll use an utility called `B1B2` for **16-bit** fields, and `B1B4` for **32-bit** fields, which will take the **8-bit** variables as input and return a **16-bit** or **32-bit** field. Below the patches:
@@ -113,7 +112,7 @@ This method takes two **8-bit** fields and return one **16-bit** field.
 {% endtab %}
 
 {% tab title="32-bit" %}
-```
+```text
 #Maintained by: RehabMan for: Laptop Patches
 #b1b4-method.txt
 
@@ -141,17 +140,17 @@ This patch takes four **8-bit** fields as input and returns one **32-bit** field
 
 Look for each variable you've noted down before and split it into two variables as depicted below:
 
-![](../../.gitbook/assets/image%20%2823%29.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2823%29.png)
 
 `BCV4`is a field of 16bit which needs to be splitted into two sub-fields. How to do it?
 
 Simply, rename, without making name conflicts, `BCV4` into `CV40` and `CV41` and try to compile
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2866%29.png)
 
 You'll probably find some errors such as `Object does not exist (BCV4)`. To fix this error replace every single use of the variable with `B1B2(CV40, CV41)` as depicted below
 
-![](../../.gitbook/assets/image%20%2873%29.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2873%29.png)
 
 Iterate through this process until you've patched every variable noted down before.
 

@@ -41,12 +41,12 @@ As you’ll see, this map is not sequential and physical ports map to \(more or 
 * Hackintool
 * Clover Configurator
 * IORegistryExplorer
-* [USBInjectAll]()
+* [USBInjectAll](intel.md)
 
 ## Step 1: Adding port limit patch
 
 {% hint style="info" %}
-**The following step is only for deskies. Laptops don't need this patch as they have less than 15 ports.** 
+**The following step is only for deskies. Laptops don't need this patch as they have less than 15 ports.**
 {% endhint %}
 
 With the release of every macOS version you'll probably need a port-limit removal patch to begin your USB configuration on a new build.
@@ -103,7 +103,7 @@ Choose the patches for your OS version
 
 [Mount EFI](../../../tools/maciasl/mount-efi.md) and place in `/Volumes/EFI/EFI/CLOVER/kexts/Other` **USBInjectAll.kext**
 
-![](../../../.gitbook/assets/image-91.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-91.png)
 
 To ensure that the kext is correctly loaded in kernel cache type in a terminal window
 
@@ -111,7 +111,7 @@ To ensure that the kext is correctly loaded in kernel cache type in a terminal w
 kextstat | grep USBInjectAll
 ```
 
-![](../../../.gitbook/assets/image%20%2819%29.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2819%29.png)
 
 ## Step 3: extract ACPI Tables
 
@@ -127,7 +127,7 @@ Some newer machines have USB ports still defined in DSDT, just look for **HS01**
 
 On my machine, USB ports are defined inside `SSDT-2-xh_OEMBD.aml`. Just open every single `SSDT-X-YYYYY.aml` with MaciASL and look for a tree like depicted in the following screenshot
 
-![\\_SB.PCI0.XHC.RHUB.HS01](../../../.gitbook/assets/image-71.png)
+![\\_SB.PCI0.XHC.RHUB.HS01](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-71.png)
 
 {% hint style="warning" %}
 NOTE: the following step isn't needed if USB ports behaviour is defined inside DSDT
@@ -156,11 +156,11 @@ DefinitionBlock (AMLFileName, TableSignature, ComplianceRevision, OEMID, TableID
 
 Open the SSDT and identify the `TableId` as depicted in the example below:
 
-![&quot;xh\_OEMBD&quot; is the TableId](../../../.gitbook/assets/image-22.png)
+![&quot;xh\_OEMBD&quot; is the TableId](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-22.png)
 
 After identifying the TableId of the SSDT that must be dropped add it inside `config.plist`
 
-![Clover Configurator](../../../.gitbook/assets/image-18.png)
+![Clover Configurator](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-18.png)
 
 Or via code:
 
@@ -184,33 +184,32 @@ Or via code:
 
 Open Hackintool and go in USB section
 
-![](../../../.gitbook/assets/image-8.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-8.png)
 
 Click on the `Clear` button \(the third button from left\)
 
-![](../../../.gitbook/assets/image-79.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-79.png)
 
 Then click on `Refresh` button \(the third from right\)
 
-You should have a result such as the following GIF:  
+You should have a result such as the following GIF:
 
-
-![](../../../.gitbook/assets/hackintool_clear_refresh.gif)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/hackintool_clear_refresh.gif)
 
 Finally connect a USB 2.0 in each port and note the `Name` of the USB port \(e.g. HS01 for right port of mobo etc.\)  
 Then remove any port that isn't highlighted with the second button.
 
 You should have a result like the depicted one below
 
-![](../../../.gitbook/assets/image-87.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-87.png)
 
-![](../../../.gitbook/assets/image-35.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-35.png)
 
 ## Step 7: setup the ports inside ACPI table
 
 Open the previously identified AML file with MaciASL
 
-![](../../../.gitbook/assets/image-86.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-86.png)
 
 According to [Advanced Configuration and Power Interface \(ACPI\) Specification, version 6.3](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf), page [673](https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=673), `_UPC` method return the following Package:
 
@@ -258,7 +257,7 @@ Now just look for each port you've discovered before and fill a table like the b
 | SS01 | USB 3 Standard-B connector |
 | SS04 | USB 3 Standard-A connector |
 
-Then remove the unused ports from the ACPI table by making \_UPC method return `GUPC (Zero)` 
+Then remove the unused ports from the ACPI table by making \_UPC method return `GUPC (Zero)`
 
 ```text
  Method (_UPC, 0, NotSerialized)  // _UPC: USB Port Capabilities
@@ -305,23 +304,23 @@ For better reading, thought is useless, just place the methods from bottom file 
 
 Replace `GUPC` method calls with `GENG([One]/Zero, TYPE)` where type is the port type which we've discovered previously
 
-![For USB-C call is GENG\(One, 0x09\) where 0x09 is USB-C connector](../../../.gitbook/assets/image-33%20%282%29.png)
+![For USB-C call is GENG\(One, 0x09\) where 0x09 is USB-C connector](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-33%20%282%29.png)
 
 Look at the figures below
 
-![GUPC method which sets connector type as internal](../../../.gitbook/assets/image-42.png)
+![GUPC method which sets connector type as internal](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-42.png)
 
-![For USB-3 ports, method is GENG\(One, 0x03\)](../../../.gitbook/assets/image%20%2842%29.png)
+![For USB-3 ports, method is GENG\(One, 0x03\)](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2842%29.png)
 
-![](../../../.gitbook/assets/image%20%2831%29.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image%20%2831%29.png)
 
 Save SSDT in `ECAP` , remove `USBInjectAll.kext` from `ECKO` and reboot.
 
 Repeat **Step 4** and after connecting USB 2.0 and USB3.0 devices, you should see something like the depicted one below
 
-![](../../../.gitbook/assets/hackintool_usb_mapping_finished.gif)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/hackintool_usb_mapping_finished.gif)
 
-![Mapped USB ports](../../../.gitbook/assets/image-63.png)
+![Mapped USB ports](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-63.png)
 
 Enjoy your USB ports mapped
 

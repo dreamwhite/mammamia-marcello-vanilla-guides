@@ -14,7 +14,7 @@ AppleALC and VoodooHDA are not compatible together. Use only **ONE** of them
 
 ## Marcello, what is it?
 
-If you already have a working brightness slides in System Preferences > Displays, mapping brightness key ACPI/patched may be useful for you to have enable native brightness hotkeys
+If you already have a working brightness slides in System Preferences &gt; Displays, mapping brightness key ACPI/patched may be useful for you to have enable native brightness hotkeys
 
 ## What you doin'?
 
@@ -30,32 +30,32 @@ What you mean?
 
 * [ACPIDebug kext](https://bitbucket.org/RehabMan/os-x-acpi-debug/downloads/)
 * [MaciASL](https://github.com/acidanthera/MaciASL/releases)
-* [SSDT-BKEY](/.gitbook/assets/acpi-fixes/brightness-keys/SSDT-BKEY.aml)
+* [SSDT-BKEY](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/6d460bb49ac2e2205e975a7a83bcaa89be726641/.gitbook/assets/acpi-fixes/brightness-keys/SSDT-BKEY.aml)
 * MAMMAMIA
 
 ### Step 1: put ACPIDebug.kext int kexts folder
 
 Copy `ACPIDebug.kext` into `C/k/O` if you are using Clover Bootloader. Into `OpenCore/Kexts` if you are using OpenCore
 
-![Figure 1: Clover, kexts/Other](/.gitbook/assets/acpi-fixes/brightness-keys/ACPIDebug-kext.png)
+![Figure 1: Clover, kexts/Other](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/6d460bb49ac2e2205e975a7a83bcaa89be726641/.gitbook/assets/acpi-fixes/brightness-keys/ACPIDebug-kext.png)
 
 ### Step 2: include required patches into MaciASL
 
-Open MaciASL > Preferences and add RehabMan's ACPI patches repo: `http://raw.github.com/RehabMan/OS-X-ACPI-Debug/master`
+Open MaciASL &gt; Preferences and add RehabMan's ACPI patches repo: `http://raw.github.com/RehabMan/OS-X-ACPI-Debug/master`
 
-![Figure 2: MaciASL, Preferences](/.gitbook/assets/acpi-fixes/brightness-keys/1_brightness_keys.png)
+![Figure 2: MaciASL, Preferences](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/6d460bb49ac2e2205e975a7a83bcaa89be726641/.gitbook/assets/acpi-fixes/brightness-keys/1_brightness_keys.png)
 
 ### Step 3: patch DSDT to expose the right keys
 
-Apply `Add DSDT Debug Methods` and `Instrument﻿ EC Queries` patches from the repo we previously added
+Apply `Add DSDT Debug Methods` and `Instrument EC Queries` patches from the repo we previously added
 
-![Figure 4: MaciASL, Patch](/.gitbook/assets/acpi-fixes/brightness-keys/2_brightness-keys.png)
+![Figure 4: MaciASL, Patch](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/6d460bb49ac2e2205e975a7a83bcaa89be726641/.gitbook/assets/acpi-fixes/brightness-keys/2_brightness-keys.png)
 
 ### Step 4: compile your DSDT and save it
 
 Click `Compile`to compile your patched DSDT. Hopefully you won't face any errors, if you applied the patches correctly
 
-![Figure 5: gfxutil -f HDEF](/.gitbook/assets/acpi-fixes/brightness-keys/3_brightness-keys.png)
+![Figure 5: gfxutil -f HDEF](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/6d460bb49ac2e2205e975a7a83bcaa89be726641/.gitbook/assets/acpi-fixes/brightness-keys/3_brightness-keys.png)
 
 Then you can save it and put it into `patched` folder
 
@@ -71,7 +71,7 @@ log show --last 5 | grep ACPIDebug
 
 You should see something like this
 
-![Figure 6: Terminal, brightness hotkeys](/.gitbook/assets/4_brightness-keys.png)
+![Figure 6: Terminal, brightness hotkeys](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/6d460bb49ac2e2205e975a7a83bcaa89be726641/.gitbook/assets/4_brightness-keys.png)
 
 `_Q11` would be my brightness-down key, and `_Q12` would be brightness-up
 
@@ -81,7 +81,9 @@ Put `SSDT-BKEY.aml` into `patched` folder, and replace `_Q11` and `_Q12` with th
 
 Compile and save it
 
-{% hint style="warning" %} If it generates errors, change `PS2K` to `PS2X` according to the one found in your DSDT (usually `PS2M`) {% endhint %}
+{% hint style="warning" %}
+If it generates errors, change `PS2K` to `PS2X` according to the one found in your DSDT \(usually `PS2M`\)
+{% endhint %}
 
 You should now enjoy your functioning brightness keys
 
@@ -112,8 +114,9 @@ Lastly, add these renames to your config.plist, with your favourite plist editor
 </dict>
 ```
 
-![Figure 6: Clover Configurator, DSDT Patches](/.gitbook/assets/acpi-fixes/brightness-keys/bkeys-rename.png)
+![Figure 6: Clover Configurator, DSDT Patches](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/6d460bb49ac2e2205e975a7a83bcaa89be726641/.gitbook/assets/acpi-fixes/brightness-keys/bkeys-rename.png)
 
 ## Credits
 
 * Rehabman for his [post](https://www.insanelymac.com/forum/topic/290687-hp-envy-17t-j000-quad-haswell-108510951010x1011x1012x1013x1014x/?do=findComment&comment=1997112) and patches
+

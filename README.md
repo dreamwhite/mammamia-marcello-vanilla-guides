@@ -1,5 +1,3 @@
-# Mammamia Marcello Vanilla Guide
-
 {% hint style="danger" %}
 **The following guide is still a work in progress.  
 Start: Mon 20 Jan 2020  
@@ -43,4 +41,3 @@ MAMMAMIA
 {% hint style="info" %}
 [Tools]() are available in dedicated section
 {% endhint %}
-

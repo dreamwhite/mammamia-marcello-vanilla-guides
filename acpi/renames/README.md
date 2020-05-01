@@ -81,11 +81,11 @@ Note that if the device name length is less than 4 char add as many "\_" as ther
 
 ![4543305f is EC0\_ in HEX](https://github.com/mammamiamarcello/mammamia-marcello-vanilla-guides/tree/664b37540b1eb3eddabd08075a7cff9210e60efd/.gitbook/assets/image%20%28107%29.png)
 
-![45435f5f is EC\_\_ in HEX](../../.gitbook/assets/image-36.png)
+![45435f5f is EC\_\_ in HEX](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-36.png)
 
 Add the rename as depicted below
 
-![](../../.gitbook/assets/image-95.png)
+![](https://github.com/dreamwhite/mammamia-marcello-vanilla-guides/tree/3e094b2a4c55a47687b1dc786680ba5f3a2a1494/.gitbook/assets/image-95.png)
 
 Save `config.plist` and reboot
 

@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Mammamia Marcello Vanilla Guide](README.md)
+* [Mammamia Marcello Vanilla Guides](README.md)
 
 ## Introduction
 
@@ -53,4 +53,3 @@
   * [gfxutil](tools/debugging/gfxutil.md)
   * [Hackintool](tools/debugging/hackintool.md)
   * [IORegistryExplorer](tools/debugging/ioregistryexplorer.md)
-
