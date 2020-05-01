@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Initial page
 =======
+=======
+>>>>>>> parent of d685c20... GitBook: [master] 2 pages modified
 =======
 >>>>>>> parent of d685c20... GitBook: [master] 2 pages modified
 # Mammamia Marcello Vanilla Guides
